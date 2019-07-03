@@ -2,319 +2,217 @@
 
 # Cutoffs and neighbourhoods are given in kilobases
 
-RULE T1PKS
-    COMMENT Type-I PKS
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS cds(PKS_AT and (PKS_KS or ene_KS or mod_KS or hyb_KS or itr_KS or tra_KS))
-
-RULE T2PKS
-    COMMENT Type-II PKS
-    RELATED t2pks2, ksIII
-    CUTOFF 20
-    NEIGHBOURHOOD 35  # lysolipin (AM492533) has a range of ~33kb
-    CONDITIONS t2ks and t2clf
-
-RULE T3PKS
-    COMMENT Type-III PKS
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS Chal_sti_synt_C or Chal_sti_synt_N
-
-RULE transAT-PKS
-    CUTOFF 45  # kirromycin (CP006259) has a range of ~42kb
-    NEIGHBOURHOOD 20
-    CONDITIONS cds(ATd and (PKS_KS or ene_KS or mod_KS or hyb_KS or itr_KS or tra_KS))
-               and cds(PKS_AT and not (PKS_KS or ene_KS or mod_KS or hyb_KS or itr_KS or tra_KS))
-
-RULE hglE-KS
-    COMMENT heterocyst glycolipid synthase like PKS such as KC489223
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS hglE or hglD
-
-RULE arylpolyene
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS APE_KS1 or APE_KS2
-
-RULE resorcinol
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS DarB
-
-RULE ladderane
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS ladderane
-
-RULE PUFA
-    COMMENT PolyUnsaturated Fatty Acid
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS PUFA_KS
-
-RULE NRPS
-    COMMENT non-ribosomal peptide synthase
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS cds(Condensation and (AMP-binding or A-OX))
-               or (Condensation and AMP-binding)  #TODO: dubious
-
-RULE CDPS
-    COMMENT tRNA-dependent cyclodipeptide synthases like BGC0001468 aka
-            bicyclomycin
-    RELATED Flavoprotein, 2OG-FeII_Oxy, p450
-    CUTOFF 5
-    NEIGHBOURHOOD 10
-    CONDITIONS CDPS or cycdipepsynth
-
-RULE thioamide-NRP
-    COMMENT thioamide-containing non-ribosomal peptides (https://doi.org/10.1002/anie.201807970)
-    RELATED Chor_lyase
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS ATP-grasp and AMP-binding and PP-binding and DUF98
-
-RULE terpene
+RULE hydroxybenzoate2phenol
+    COMMENT HadBCD operon, hydroxybenzoate to phenol
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS Terpene_synth or Terpene_synth_C or phytoene_synt or Lycopene_cycl
-               or terpene_cyclase or NapT7 or fung_ggpps or fung_ggpps2
-               or trichodiene_synth or TRI5
+    CONDITIONS Flavoprotein and UbiD and not ubi_syn
 
-RULE lanthipeptide
+RULE pdu
+    COMMENT propanediol degradation pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS (LANC_like and (Lant_dehydr_N or Lant_dehydr_C)  # Class I
-                   or cds(LANC_like and (Pkinase or DUF4135)))  # Classes II, III and IV
-               and not (YcaO or TIGR03882) # because then it'd be a thiopeptide
+    CONDITIONS minimum(4, [BMC, PduV-EutP, PTAC, Aldedh, Dehydratase_MU, Dehydratase_LU, Dehydratase_SU]) and  Dehydratase_MU and Dehydratase_SU and Dehydratase_LU
 
-RULE lipolanthine
-    COMMENT Lanthipeptide class containing N-terminal fatty acids such as MG673929
-            See https://doi.org/10.1038/s41589-018-0068-6
-    RELATED PKS_KS, AMP-binding, PP-binding
+RULE EUT_pathway
+    COMMENT ethanolamine degradation pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS micKC and Flavoprotein
+    CONDITIONS minimum(3, [Aldedh, BMC, EutH, EutA]) and EutB and EutC
 
-RULE bacteriocin
-    CUTOFF 20
-    NEIGHBOURHOOD 5
-    CONDITIONS strepbact or Antimicrobial14 or Bacteriocin_IId or BacteriocIIc_cy
-               or Bacteriocin_II or Bacteriocin_IIi or Lactococcin
-               or Antimicrobial17 or Lactococcin_972 or Bacteriocin_IIc
-               or LcnG-beta or Cloacin or Linocin_M18 or TIGR03603 or TIGR03604
-               or TIGR03651 or TIGR03678 or TIGR03693 or TIGR03798
-               or TIGR03601 or TIGR03602 or TIGR03795 or TIGR03793
-               or TIGR03975 or DUF692 or TIGR01193
-
-RULE thiopeptide
+RULE TMA
+    COMMENT trimethylamine synthesis
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS (YcaO or TIGR03882)
-               and ((thio_amide and (PF06968 or PF04055 or PF07366))
-                         or Lant_dehydr_C or Lant_dehydr_N
-                         or PF07366 or PF06968 or PF04055)
-               or thiostrepton
+    CONDITIONS minimum(8, [PduV-EutP, RSAM_130_tma, Fer4_14, Fer4_12, PFL-like, Gly_8-9_TMA, BMC, Aldedh_7_tma, Fer4_21, Fer4_7, Fer4_9, Fer4_16])
+               and  PFL-like and Gly_8-9_TMA and Aldedh_7_tma #specific hmms have been built: Radical SAM, Glycine radical and Aldehyde dehydrogenase
 
-RULE linaridin
+RULE p-cresol
+    COMMENT p-cresol synthesis or HpdBCA operon
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS cypemycin or cypI
+    CONDITIONS  cds(PFL-like and Gly_430_pcre) and (Radical_SAM or RSAM_130_tma)## Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
 
-RULE cyanobactin
+
+RULE arginine2spermitine_via_agmatine
+    COMMENT putative arginine degradation pathway via agmatine (arg-putr-sper)
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS cyanobactin_synth
+    CONDITIONS minimum(3, [Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, Ala_racemase_N ]) and Arginase and (OKR_DC_1_7_arginine or OKR_DC_1) and AdoMet_dc ##original pathway via agmatinase
 
-RULE glycocin
+RULE arginine2spermitine_N_carbomyl_Putrescine
+    COMMENT putative arginine degradation pathway via agmatine (arg-N-carbomyl-putr-sper)
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS glycocin or sublancin
+    CONDITIONS minimum(3, [Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, PAD_porph, OTCace, CN_hydrolase, Ala_racemase_N]) and (OKR_DC_1_7_arginine or OKR_DC_1) and Amidinotransf and Arginase #arginine degradation via N-carbomyl-Putrescine
 
-RULE LAP
-    COMMENT Linear azol(in)e-containing peptides like goadsporin (AB205012) or
-            microcin B17 (FM877811)
-    RELATED TIGR04424
+RULE proline2aminovalerate
+    COMMENT proline to aminovalerate pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS (goadsporin_like or PF00881 or TIGR03605)
-               and (YcaO or TIGR03882)
+    CONDITIONS Proline_reductase and (Pro_racemase or GRDB) and not ACP_syn_III_C ##ACP_syn_III_C belongs to the gly reductase pathway
+    
+RULE Leucine_reduction
+    COMMENT Leucine reductive branch
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(3, [Hacid_dh_C, HCDH, Acyl-CoA_dh_1, Acyl-CoA_dh_2, AdoHcyase_NAD, AlaDh_PNT_C, BcrAD_BadFG, CoA_transf_3, ETF, ETF_alpha, FGGY_C, MreB_Mbl, NAD_binding_2, Peptidase_M22, UDPG_MGDP_dh_N])
+               and  minimum(2, [HleuD1, HleuD2, HleuS1, HleuS2]) # 2 specific pHMMS that define 2-hydroxyglutaryl-CoA dehydratase are required (from C. sporogenes or difficile)
 
-RULE lassopeptide
+RULE gallic_acid_met
+    COMMENT Gallic acid metabolism
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [Flavoprotein, Semialdhyde_dh, gallic_acid]) and gallic_acid #specific UbiD protein domain involved in gallic acid metabolism is required (sometimes is not clustered)
+
+RULE bai_operon
+    COMMENT From primary to secondary bile acids  via bai operon
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS (minimum(3, [AMP-binding, adh_short, adh_short_C2, KR, CoA_transf_3, Pyr_redox, NAD_binding_8, FAD_oxidored, FAD_binding_2]) and baiH and baiCD) or (minimum(3, [Dala_Dala_lig_C, Dala_Dala_lig_N, CPSase_L_D2, ATP-grasp_4, ATP-grasp_3, GARS_A, Acyltransferase, AMP-binding, adh_short, adh_short_C2, KR, CoA_transf_3, Pyr_redox, NAD_binding_8, FAD_oxidored, FAD_binding_2, LysM, GHMP_kinases_C, GHMP_kinases_N]) and baiH and baiCD)
+
+RULE AAA_reductive_branch
+    COMMENT Aromatic amino acid reductive branch
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(5, [HCDH, ACP_syn_III, ACP_syn_III_C, Acyl-CoA_dh_1, Acyl-CoA_dh_2, ECH_1, ECH_2, ETF, ETF_alpha, F420_oxidored, NAD_Gly3P_dh_N, SpoVAD, Thiolase_C, Thiolase_N, ketoacyl-synt]) and (HGD-D or Lactoyl-CoA1 or Lactoyl-CoA2)
+
+RULE porA
+    COMMENT porA metabolism
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(3, [Transketolase_C, TPP_enzyme_C, PGM_PMM_I, PGM_PMM_III]) and POR and POR_N and PFOR_II
+               and not cds(PFOR_II and POR_N and TPP_enzyme_C) #avoid capturing pyruvate (flavoprotein) oxidoreductase only (not sure about it)
+
+RULE Lysine_degradation
+    COMMENT Lysine degradation pathway (to butyrate)
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [HBT, Fer4_12, Fer4_14, Lys-AminoMut_A]) and BKACE and LAM_C and RSAM_2_lys and B12-binding and OAM_dimer
+
+RULE glutamate2butyric
+    COMMENT glutamate to butyric acid pathway
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(4, [OAD_gamma, Biotin_lipoyl, Peptidase_M23, OAD_beta, CoA_trans, AcetylCoA_hydro, Carboxyl_trans, FGGY_C,FGGY_N, HGD-D]) and BcrAD_BadFG and HG2B1 and HG2B2
+
+RULE acetate2butyrate
+    COMMENT Acetate to butyrate pathway
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(4, [ECH_2, Thiolase_N, Thiolase_C, ketoacyl-synt, Acyl-CoA_dh_1, Acyl-CoA_dh_2, ETF, ETF_alpha]) and ECH_1 and HCDH
+
+
+RULE caffeate_respiration
+    COMMENT caffeate respiration
+    SUPERIORS acetate2butyrate
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(2, [Acyl-CoA_dh_2, HpaB_N, HpaB]) and CoA_trans_2_CAF and Acyl-CoA_dh_1 #specific CoA_transferase for caffeate respiration is required
+
+RULE carnitine_degradaion_caiTABCDE
+    COMMENT carnitine degradation via caiTABCDE operon
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(4, [BCCT, CoA_transf_3, AMP-binding, ECH_2, Hexapep, Hexapep_2, Acyl-CoA_dh_1, Acyl-CoA_dh_2]) and Hexapep and ECH1_8_CARC #specific ECH_1 for carnitine met is required
+
+RULE carnitine_degradation_fixABCX
+    COMMENT carnitine degradation via fixABCX operon
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(5, [ETF, ETF_alpha, DAO, FAD_binding_3, FAD_binding_2, NAD_binding_8, Trp_halogenase, GMC_oxred_N, Pyr_redox, Lycopene_cycl, Pyr_redox_3, ApbA, NAD_binding_9, ETF_QO]) and Pyr_redox_2 and FAD_oxidored
+
+RULE aminobutyrate2Butyrate
+    COMMENT butyrate synthesis from (4)aminobutyrate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS PF13471 and Asn_synthase or micJ25 or mcjC
+    CONDITIONS (cds(Fe-ADH and Fe-ADH_2) and cds(AcetylCoA_hyd_C and AcetylCoA_hydro)) or (cds(Fe-ADH and Fe-ADH_2) and cds(AcetylCoA_hyd_C and AcetylCoA_hydro) and  cds(HpaB_N and HpaB)) #either from 4-hydroxybutyrate or via crotonoyl-CoA
 
-RULE sactipeptide
+RULE succinate2propionate
+    COMMENT succinate to propionate pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS subtilosin or thuricin or TIGR04404 or TIGR03973
+    CONDITIONS (minimum(3, [AcetylCoA_hyd_C, AcetylCoA_hydro, MM_CoA_mutase, B12-binding, MeaB, ATP_bind_1, Glyoxalase_4, Glyoxalase, Glyoxalase_3, MdcE]) and (CT_Propionyl_CoA1 or CT_Propionyl_CoA2 or CT_Propionyl_CoA3))
+               #or (CT_Propionyl_CoA1 or CT_Propionyl_CoA2 or CT_Propionyl_CoA3) #succinate2propionate complete pathway or priopionyl-CoA (transferase) marker
 
-RULE bottromycin
+RULE acrylate2propionate
+    COMMENT acrylate to propionate pathway
+    SUPERIORS AAA_reductive_branch
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS botH
+    CONDITIONS minimum(3, [CoA_trans, CoA_trans_230_acto, Mal_decarbox_Al, AcetylCoA_hydro, BcrAD_BadFG, FGGY_C, FGGY_N, Acyl-CoA_dh_1]) and minimum(1, [Lactoyl-CoA2, Lactoyl-CoA1]) #(Lactoyl-CoA2 or Lactoyl-CoA1) #complete pathway or just the pHMMs specific to the Lactoyl-CoA transferase (markers)
 
-RULE head_to_tail
+
+RULE Threonine2propionate
+    COMMENT Threonine to propionate pathway via tdcABCDEFG operon
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS Subtilosin_A or skfc
+    CONDITIONS minimum(3, [SDH_alpha, SDH_beta, MmgE_PrpD, Acetate_kinase, Trp_Tyr_perm, LysR_substrate]) and PFL-like and Gly_radical and PALP
 
-RULE microviridin
+
+RULE Arginine2_Hcarbonate
+    COMMENT Arginine to hydrogene carbonate pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS mvd or mvnA
+    CONDITIONS Amidinotransf and OTCace and OTCace_N and AA_kinase ##Arginine to hydrogene carbonate pathway
 
-RULE proteusin
+RULE Glycine_reductase
+    COMMENT Glycine reductase, from glycine to acetyl-P
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS PoyD
+    CONDITIONS minimum(3, [ACP_syn_III_C, GRDB, GRDA, ACP_syn_III, FA_synthesis]) and Glycine_reductase and not Pro_racemase #Pro_racemase belongs to the proline2aminovalerate cluster
 
-RULE blactam
-    COMMENT beta-lactam
+RULE Glycine_cleavage
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS BLS or CAS or tabtoxin
+    CONDITIONS minimum(2, [GCV_T, SoxG, GCV_H, GDC-P, Aminotran_5]) and GCV_H and GCV_T_C
 
-RULE amglyccycl
+RULE arginine_degradation_astABCDE_operon
+    COMMENT Arginine degradation to pytruvate via astABCDE operon
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS strH or strK1 or strK2 or NeoL or DOIS or ValA or SpcFG
-               or SpcDK_glyc or salQ
+    CONDITIONS minimum(3, [Met_asp_mut_E, Aminotran_3, Aminotran_1_2, Aldedh, AstE_AspA, ICL, PEP_mutase, Malate_synthase]) and AstA and AstB
 
-RULE aminocoumarin
+RULE histidine2glutamate_hutHGIU_operon
+    COMMENT Histidine to glutamate via hutHGIU operon
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS novK or novJ or novI or novH or SpcDK_cou
+    CONDITIONS minimum(2, [Lyase_aromatic, Urocanase, Amidohydro_3, Amidohydro_1, FGase]) and Arginase and Urocanase_C
 
-RULE siderophore
-    CUTOFF 20
-    NEIGHBOURHOOD 5
-    CONDITIONS IucA_IucC
-
-RULE ectoine
-    CUTOFF 20
-    NEIGHBOURHOOD 5
-    CONDITIONS ectoine_synt
-
-RULE NAGGN
-    COMMENT N-acetylglutaminylglutamine amide cluster (Psyr_3747-Psyr_3749 in NC_007005.1)
-            see https://doi.org/10.1128/AEM.00686-10
-    CUTOFF 10
-    NEIGHBOURHOOD 5
-    CONDITIONS (TIGR03104 or cds(GATase_7 and Asn_synthase))  # amidotransferase ggnA
-               and TIGR03103                                  # acetyltransferase ggnB
-               and (TIGR03106 or Peptidase_M42)               # aminopeptidase ggnC
-
-RULE butyrolactone
-    CUTOFF 20
-    NEIGHBOURHOOD 5
-    CONDITIONS AfsA
-
-RULE indole
+RULE Glutamate2pyruvate
+    COMMENT Glutamate degradation to pyruvate (to CHECK)
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS indsynth or dmat or indole_PTase
+    CONDITIONS minimum(2, [MR_MLE_C, Met_asp_mut_E, B12-binding]) and MAAL_C or MAAL_N
 
-RULE nucleoside
+RULE Galacturonate_degradation
+    COMMENT Galacturonate degradation to dehydro3deoxyDgluconate via uxaABC operon
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS LipM or LipV or LipU or ToyB or TunD or pur6 or pur10 or nikJ or nikO or truD
+    CONDITIONS minimum(2, [UxaC, Mannitol_dh_C, Mannitol_dh]) and GD_AH_C
 
-RULE phosphoglycolipid
+RULE Leucine2acetoacetate
+    COMMENT Leucine degradation to acetoacetate
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS MoeO5 or moeGT
+    CONDITIONS minimum(5, [Aminotran_4, Carboxyl_trans, ECH_1, ECH_2, HMGL-like, oxoacid_dh, Transket_pyr,Transketolase_C, OxoDH_E1alpha_N]) and minimum(1, [Acyl-CoA_dh_1, Acyl-CoA_dh_2]) and not Thiolase_C ##Thiolase_C is present in acetate2butyrate, helps to differentiate
 
-RULE melanin
-    CUTOFF 20
-    NEIGHBOURHOOD 5
-    CONDITIONS melC
-
-RULE oligosaccharide
+RULE Glycerol2glyceroneP
+    COMMENT Glycerol degradation to glycerone phosphate
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3,[Glycos_transf_1,Glycos_transf_2,Glyco_transf_28,MGT,DUF1205])
-               and minscore(MGT, 150)
+    CONDITIONS Fe-ADH and Fe-ADH_2 and Dak1 and Dak2
 
-RULE furan
+RULE Pyruvate2succinyl
+    COMMENT Pyruvate fermentation to succinyl_CoA
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS mmyO or AvrD
+    CONDITIONS minimum(7, [Biotin_lipoyl, Biotin_lipoyl_2, PYC_OADA, HMGL-like, Carboxyl_trans, MdcE, Ldh_1_C, Ldh_1_N, Lyase_1, FumaraseC_C, FAD_binding_2, Succ_DH_flav_C, Fumarate_red_D, Fumarate_red_C, AcetylCoA_hydro, AcetylCoA_hyd_C, CitF])
 
-RULE hserlactone
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS Autoind_synth
 
-RULE phenazine
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS phzB
+#RULE GABA_synthesis
+#    COMMENT from glutamate or putrescine to GABA
+#    CUTOFF 20
+#    NEIGHBOURHOOD 10
+#    CONDITIONS minimum(4, [Gln-synt_C, Peptidase_C26, GATase, Aldedh, DAO, NAD_binding_8, FAD_binding_3])
 
-RULE phosphonate
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS phosphonates
-
-RULE fused
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS pgm1 and pgm_amidino
-
-RULE other
-    CUTOFF 20
-    NEIGHBOURHOOD 20
-    CONDITIONS LmbU or Neocarzinostat or fom1 or bcpB
-               or frbD or mitE or vlmB or prnB or CaiA or bacilysin or orf2_PTase
-
-RULE acyl_amino_acids
-    CUTOFF 30
-    NEIGHBOURHOOD 30
-    CONDITIONS NasY
-
-RULE PBDE
-    COMMENT polybrominated diphenyl ethers (PBDEs) such as KX588877
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS FMO-like and p450 and DUF98
-
-RULE PpyS-KS
-    COMMENT PPY-like specific ketosynthases (PPYSKS) such as KT373879
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS PpyS
-
-RULE betalactone
-    COMMENT beta-lactone containing protease inhibitor such as KY249118
-    RELATED RimK, Abhydrolase_6
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS HMGL-like and AMP-binding
-
-RULE RaS-RiPP
-    COMMENT streptide-like thioether-bond RiPPs such as FR875178
-            See https://pubs.acs.org/doi/10.1021/jacs.8b11060 and
-            https://pubs.acs.org/doi/full/10.1021/jacs.8b10266
-    CUTOFF 5
-    NEIGHBOURHOOD 10
-    CONDITIONS PF04055 and TIGR01716
-
-RULE fungal-RiPP
-    COMMENT fungal RiPP with POP or UstH peptidase types and a modification
-    CUTOFF 15
-    NEIGHBOURHOOD 15
-    CONDITIONS (pop or ustH) and (p450 or TP_methylase)
-               or
-               #DUF3228 seems to be quite specific and also co-occurs with these peptidases
-               DUF3328 and (Peptidase_S41 or Peptidase_S28 or pop or ustH)
-
-RULE tropodithietic-acid
-    COMMENT tropodithietic acid like cluster as described in DOI: 10.1039/C4CC01924E
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS (GST_N_3 or GST_C)
-               and (Acyl-CoA_dh_N or Acyl-CoA_dh_M or Acyl-CoA_dh_1)
-               and TIGR02278

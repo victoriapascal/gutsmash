@@ -2,24 +2,69 @@
 
 # Cutoffs and neighbourhoods are given in kilobases
 
-RULE NRPS-like
-    COMMENT Catches NRPS-like fragments that are not detected by the NRPS rule
-    SUPERIORS NRPS
-    CUTOFF 0  # since we're really looking at single CDS fragments
-    NEIGHBOURHOOD 20
-    CONDITIONS cds((PP-binding or NAD_binding_4) and (AMP-binding or A-OX))
+RULE Glutamate_met
+    COMMENT Glutamate metabolism
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(3, [CoA_trans_6_Glutaconate, ELFV_dehydrog_1_glu2, ELFV_dehydrog_8_glu1,  ELFV_dehydrog_N])
+               #or Glutaminase) #Capture either glutaconyl-CoA decarboxylase&glutaconate CoA-transferase or Gluataminase
+               and not (BcrAD_BadFG and HG2B1 and HG2B2) and not (ELFV_dehydrog_2_val or ELFV_dehydrog_3_phe or ELFV_dehydrog_4_leu) #not glutamate2butyrate neither Leu/Phe/Val dehydrog
 
-RULE PKS-like
-    COMMENT Catches PKS-like fragments that are not detected by another PKS rule
-    SUPERIORS T2PKS
+RULE Flavoenzyme_AA_peptides_catabolism
+    COMMENT AA and peptide catabolism operons ncluding flavoenzyme
     CUTOFF 10
-    NEIGHBOURHOOD 20
-    CONDITIONS t2pks2 or ksIII
+    NEIGHBOURHOOD 10
+    CONDITIONS (cds(Pyr_redox_2 and Oxidored_FMN) or baiCD or baiH) and  minimum(2, [Shikimate_DH, BKACE, Aminotran_3, Aminotran_1_2,Aminotran_5, GalP_UDP_transf, Urocanase, Urocanase_N, Urocanase_C, OPT, Peptidase_M20, Peptidase_M23, Peptidase_M24, Peptidase_M3, Peptidase_S11, Peptidase_U32, Trypsin_2, Hydrolase_4, Abhydrolase_1, Lyase_aromatic, HGD-D, AA_permease_2, AA_permease])
 
-RULE transAT-PKS-like
-    COMMENT Marks partial transAT-PKS clusters, specifically those with an AT-docking domain,
-            but no AT domain.
-    SUPERIORS transAT-PKS
-    CUTOFF 45
-    NEIGHBOURHOOD 20
-    CONDITIONS cds(ATd and (PKS_KS or ene_KS or mod_KS or hyb_KS or itr_KS or tra_KS) and not PKS_AT)
+
+RULE Flavoenzyme_sugar_catabolism
+    COMMENT sugar catabolism operons ncluding flavoenzyme
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS (cds(Pyr_redox_2 and Oxidored_FMN) or baiCD or baiH)  and  minimum(2, [Glycos_transf_3, Glyco_hydro_25, Alpha-amylase, Glyco_hydro_1, Glyco_hydro_36, Polysacc_deac_1, PTS_EIIC])
+
+RULE Flavoenzyme_nucleotide_catabolism
+    COMMENT nucleotide catabolism operons ncluding flavoenzyme
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS (cds(Pyr_redox_2 and Oxidored_FMN) or baiCD or baiH) and minimum(2, [AICARFT_IMPCHas, Fer4_20, IMP_cyclohyd, IspD, SbcCD_C, TsaE, Amidohydro_1])
+
+RULE Flavoenzyme_lipids_catabolism
+    COMMENT lipids catabolism operons including flavoenzyme
+    SUPERIORS bai_operon
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS (cds(Pyr_redox_2 and Oxidored_FMN) or baiCD or baiH) and minimum(2, [Lipase_GDSL_2, MBOAT, ADC, ECH_1, ECH_2, Acyl-CoA_dh_N, Acyl-CoA_dh_2, Acyl-CoA_dh_1, Acyl-CoA_dh_C, Acetate_kinase, Thiolase_N, Thiolase_C, adh_short, KR, HBT])
+
+#RULE test_acrylate2propionate
+#    COMMENT lipids catabolism operons ncluding flavoenzyme
+#    SUPERIORS AAA_reductive_branch, acrylate2propionate
+#    CUTOFF 20
+#    NEIGHBOURHOOD 10
+#    CONDITIONS minimum(1, [Acyl-CoA_dh_1, Acyl-CoA_dh_M, Acyl-CoA_dh_N, Acyl-CoA_dh_2, Acyl-CoA_dh_C, AcetylCoA_hydro]) and minimum(1, [Lactoyl-CoA2,Lactoyl-CoA1,HGD-D, HleuD1, HleuD2, HleuS1, HleuS2])
+
+RULE OD_GR_AA_metabolism
+    COMMENT AA biosynthesis or degradation
+    SUPERIORS AAA_reductive_branch, Threonine2propionate
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [TPP_enzyme_C, Gly_radical, PFL-like]) and minimum(3, [DAPDH_C, AlaDh_PNT_C, Glu_synthase, Glu_syn_central, GATase_2, Aminotran_3, GRDB, Sacchrp_dh_C, Sacchrp_dh_NADP, SDH_alpha, SDH_beta , Acetate_kinase , PALP , Trp_Tyr_perm , ILVD_EDD, Aminotran_5, Hacid_dh_C, Aminotran_1_2, AA_kinase, BKACE, IlvN, Cys_Met_Meta_PP, Semialdhyde_dh, CPSase_L_D2, ALS_ss_C,Thr_dehydrat_C])
+
+RULE OD_GR_fatty_acids_metabolism
+    COMMENT fatty acids metabolsim
+    SUPERIORS acetate2butyrate
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [TPP_enzyme_C, Gly_radical, PFL-like]) and minimum(3, [Lipase_GDSL_2, Butyrate_kinase, Acyl-CoA_dh_1, ADH_zinc_N, adh_short, ADH_N, adh_short_C2, Aldolase_II, E1_dh, Transket_pyr, Transketolase_C, oxoacid_dh, HBT, HBT_2, ECH_1, ECH_2, AcetylCoA_hyd_C, AcetylCoA_hydro, Acetyltransf_1, Acetyltransf_7, Acetyltransf_10, Thiolase_C, ketoacyl-synt, HCDH, BKACE, ACP_syn_III_C, CDP-OH_P_transf]) and not cds(Transketolase_C and TPP_enzyme_C and Transket_pyr and E1_dh)
+
+RULE OD_GR_molybdopterin_synthesis
+    COMMENT fatty acids metabolsim
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [TPP_enzyme_C, Gly_radical, PFL-like]) and minimum(2, [MoCF_biosynth, Beta_HSD, MoeA_N, MreB_Mbl, Molybdopterin, Molybdop_Fe4S4])
+
+RULE OD_GR_pyruvate_metabolism
+    COMMENT pyruvate metabolsim
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [TPP_enzyme_C, Gly_radical, PFL-like]) and minimum(2, [PEP-utilizers_C, PPDK_N, HMGL-like, PFOR_II, POR, PEP_mutase]) and not cds(POR and PFOR_II and TPP_enzyme_C)

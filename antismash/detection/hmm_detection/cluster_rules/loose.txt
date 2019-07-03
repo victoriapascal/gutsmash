@@ -3,26 +3,3 @@
 
 # Cutoffs and neighbourhoods are given in kilobases
 
-RULE saccharide
-    COMMENT from clusterfinder
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS minimum(2,[Alpha-amylase, Alpha-amylase_C, Bac_transf,
-                          Capsule_synth, CBM_48, DegT_DnrJ_EryC1, dTDP_sugar_isom,
-                          Epimerase_2, Glycos_transf_1, Glycos_transf_2,
-                          Glycos_transf_4, Glyco_tran_28_C, Glyco_transf_28,
-                          Glyco_transf_8, Glyco_transf_8C, Glyco_transf_9,
-                          MannoseP_isomer, PIG-L, Poly_export, Polysacc_synt,
-                          Polysacc_synt_2, RmlD_sub_bind, Wzy_C])
-
-RULE fatty_acid
-    COMMENT from clusterfinder
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS  bt1fas or ft1fas or t2fas or fabH
-
-RULE halogenated
-    COMMENT Halogenases are frequently involved in secondary metabolite biosynthesis
-    CUTOFF 5
-    NEIGHBOURHOOD 10
-    CONDITIONS Trp_halogenase
