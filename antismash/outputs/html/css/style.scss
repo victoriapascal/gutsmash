@@ -9,8 +9,10 @@ $gene-type-other: gray;
 $gene-type-biosynthetic: #810e15;
 $gene-type-biosynthetic-additional: #f16d75;
 $gene-type-regulatory: seagreen;
-$gene-type-transport: cornflowerblue;
-$gene-type-resistance: #ed90ed;
+$gene-type-electron_transport: DarkGoldenRod;
+$gene-type-encapsulation: DarkOrange;
+$gene-type-transport: #6E8EFF;
+$gene-type-resistance: #C64A9D;
 $feature-tta-codon: magenta;
 $table-background: #f1f1f1;
 $tool-cassis: wheat;
@@ -543,12 +545,21 @@ table.region-table {
     fill: $gene-type-transport;
     stroke: black;
 }
+.svgene-type-resistance {
+    fill: $gene-type-resistance;
+    stroke: black;
+}
 .svgene-type-regulatory {
     fill: $gene-type-regulatory;
     stroke: black;
 }
-.svgene-type-resistance {
-    fill: $gene-type-resistance;
+.svgene-type-electron_transport {
+    fill: $gene-type-electron_transport;
+    stroke: black;
+}
+
+.svgene-type-encapsulation {
+    fill: $gene-type-encapsulation;
     stroke: black;
 }
 .svgene-tta-codon {
@@ -667,14 +678,18 @@ table.region-table {
 .legend-type-regulatory {
     background-color: $gene-type-regulatory;
 }
+.legend-type-encapsulation {
+    background-color: $gene-type-encapsulation;
+}
 .legend-type-resistance {
     background-color: $gene-type-resistance;
 }
-
+.legend-type-electron_transport {
+    background-color: $gene-type-electron_transport;
+}
 .legend-border-cassis {
     background-color: $tool-cassis;
 }
-
 .legend-border-clusterfinder {
     background-color: $tool-clusterfinder;
 }
