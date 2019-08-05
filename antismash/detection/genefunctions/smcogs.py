@@ -44,9 +44,12 @@ def build_function_mapping() -> Dict[str, GeneFunction]:
              a dictionary mapping smCOG id to its matching gene function
     """
     mapping = {
-        'B': GeneFunction.ADDITIONAL,  # 'biosynthetic-additional',
+        'B': GeneFunction.ENCAPSULATION,  # 'BMC-encapsulation',
         'T': GeneFunction.TRANSPORT,  # 'transport',
-        'R': GeneFunction.REGULATORY,  # 'regulatory',
+        'R': GeneFunction.REGULATORY, # 'regulatory',
+        'A': GeneFunction.ADDITIONAL, # 'cofactors',
+        'E': GeneFunction.ELECTRON_TRANSPORT # electron-transport
+        #'RS': GeneFunction.RESISTANCE # 'resistance'
     }
     annotations = {}
     for line in open(path.get_full_path(__file__, 'data', 'cog_annotations.txt'), 'r'):

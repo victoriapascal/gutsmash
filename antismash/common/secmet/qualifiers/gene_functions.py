@@ -18,10 +18,12 @@ class GeneFunction(Enum):
     """
     OTHER = 0
     CORE = 1
-    ADDITIONAL = 2
+    ENCAPSULATION = 2
     TRANSPORT = 3
     REGULATORY = 4
-    RESISTANCE = 5
+    ADDITIONAL = 5
+    ELECTRON_TRANSPORT = 6
+    RESISTANCE = 7
 
     def __str__(self) -> str:
         # because this information ends up in the record, make these more

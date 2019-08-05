@@ -12,33 +12,33 @@ RULE pdu
     COMMENT propanediol degradation pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(4, [BMC, PduV-EutP, PTAC, Aldedh, Dehydratase_MU, Dehydratase_LU, Dehydratase_SU]) and  Dehydratase_MU and Dehydratase_SU and Dehydratase_LU
+    CONDITIONS minimum(2, [BMC, PduV-EutP, PTAC, Aldedh, PDU_like, EutN_CcmL, Cob_adeno_trans, Fe-ADH, Fe-ADH_2]) and  Dehydratase_MU and Dehydratase_SU and Dehydratase_LU
 
 RULE EUT_pathway
     COMMENT ethanolamine degradation pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [Aldedh, BMC, EutH, EutA]) and EutB and EutC
+    CONDITIONS minimum(3, [EutK_C, BMC, EutA, EutH, Fe-ADH, Fe-ADH_2, MreB_Mbl, Aldedh, Aldedh_7_tma, EutN_CcmL, Cob_adeno_trans, EutQ, PduV-EutP, PTA_PTB, malic, Malic_M]) and EutB and EutC
 
 RULE TMA
     COMMENT trimethylamine synthesis
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(8, [PduV-EutP, RSAM_130_tma, Fer4_14, Fer4_12, PFL-like, Gly_8-9_TMA, BMC, Aldedh_7_tma, Fer4_21, Fer4_7, Fer4_9, Fer4_16])
-               and  PFL-like and Gly_8-9_TMA and Aldedh_7_tma #specific hmms have been built: Radical SAM, Glycine radical and Aldehyde dehydrogenase
+    CONDITIONS minimum(2, [PduV-EutP, RSAM_130_tma, BMC, Aldedh_7_tma])
+               and PFL_9_tma and Gly_8-9_TMA #specific hmms have been built: Radical SAM, Glycine radical and Aldehyde dehydrogenase
 
 RULE p-cresol
     COMMENT p-cresol synthesis or HpdBCA operon
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS  cds(PFL-like and Gly_430_pcre) and (Radical_SAM or RSAM_130_tma)## Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
+    CONDITIONS  PFL_6_pcresol and (Gly_430_pcre or Gly_radical) and (Radical_SAM or RSAM_130_tma)## Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
 
 
 RULE arginine2spermitine_via_agmatine
     COMMENT putative arginine degradation pathway via agmatine (arg-putr-sper)
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, Ala_racemase_N ]) and Arginase and (OKR_DC_1_7_arginine or OKR_DC_1) and AdoMet_dc ##original pathway via agmatinase
+    CONDITIONS minimum(3, [Orn_DAP_Arg_deC, Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Spermine_synt_N, DegT_DnrJ_EryC1, Alk_phosphatase, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, Ala_racemase_N ]) and Arginase and (OKR_DC_1_7_arginine or OKR_DC_1) ##original pathway via agmatinase
 
 RULE arginine2spermitine_N_carbomyl_Putrescine
     COMMENT putative arginine degradation pathway via agmatine (arg-N-carbomyl-putr-sper)
@@ -63,7 +63,7 @@ RULE gallic_acid_met
     COMMENT Gallic acid metabolism
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Flavoprotein, Semialdhyde_dh, gallic_acid]) and gallic_acid #specific UbiD protein domain involved in gallic acid metabolism is required (sometimes is not clustered)
+    CONDITIONS minimum(1, [Flavoprotein, Semialdhyde_dh]) and gallic_acid #specific UbiD protein domain involved in gallic acid metabolism is required (sometimes is not clustered)
 
 RULE bai_operon
     COMMENT From primary to secondary bile acids  via bai operon
@@ -71,18 +71,23 @@ RULE bai_operon
     NEIGHBOURHOOD 10
     CONDITIONS (minimum(3, [AMP-binding, adh_short, adh_short_C2, KR, CoA_transf_3, Pyr_redox, NAD_binding_8, FAD_oxidored, FAD_binding_2]) and baiH and baiCD) or (minimum(3, [Dala_Dala_lig_C, Dala_Dala_lig_N, CPSase_L_D2, ATP-grasp_4, ATP-grasp_3, GARS_A, Acyltransferase, AMP-binding, adh_short, adh_short_C2, KR, CoA_transf_3, Pyr_redox, NAD_binding_8, FAD_oxidored, FAD_binding_2, LysM, GHMP_kinases_C, GHMP_kinases_N]) and baiH and baiCD)
 
+RULE acetate2butyrate
+    COMMENT Acetate to butyrate pathway
+    CUTOFF 20
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(4, [HCDH_N, ECH_2, Thiolase_N, Thiolase_C, ketoacyl-synt, Acyl-CoA_dh_1, Acyl-CoA_dh_2, ETF, ETF_alpha]) and ECH_1 and HCDH
+
 RULE AAA_reductive_branch
     COMMENT Aromatic amino acid reductive branch
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(5, [HCDH, ACP_syn_III, ACP_syn_III_C, Acyl-CoA_dh_1, Acyl-CoA_dh_2, ECH_1, ECH_2, ETF, ETF_alpha, F420_oxidored, NAD_Gly3P_dh_N, SpoVAD, Thiolase_C, Thiolase_N, ketoacyl-synt]) and (HGD-D or Lactoyl-CoA1 or Lactoyl-CoA2)
+    CONDITIONS minimum(4, [HCDH, ACP_syn_III, ACP_syn_III_C, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HCDH_N, Hacid_dh_C, Hacid_dh, AlaDh_PNT_C, IlvN, ECH_1, ECH_2, ETF, ETF_alpha, NAD_Gly3P_dh_N, Thiolase_C, Thiolase_N, ketoacyl-synt]) and minimum(1, [HGD-D, HAAA1, Lactoyl-CoA1, Lactoyl-CoA2]) and not (HleuS1 or HleuS2)
 
 RULE porA
     COMMENT porA metabolism
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [Transketolase_C, TPP_enzyme_C, PGM_PMM_I, PGM_PMM_III]) and POR and POR_N and PFOR_II
-               and not cds(PFOR_II and POR_N and TPP_enzyme_C) #avoid capturing pyruvate (flavoprotein) oxidoreductase only (not sure about it)
+    CONDITIONS minimum(3, [PGM_PMM_I, PGM_PMM_III, TPP_enzyme_C, Transketolase_C]) and POR and POR_N and PFOR_II
 
 RULE Lysine_degradation
     COMMENT Lysine degradation pathway (to butyrate)
@@ -94,14 +99,7 @@ RULE glutamate2butyric
     COMMENT glutamate to butyric acid pathway
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(4, [OAD_gamma, Biotin_lipoyl, Peptidase_M23, OAD_beta, CoA_trans, AcetylCoA_hydro, Carboxyl_trans, FGGY_C,FGGY_N, HGD-D]) and BcrAD_BadFG and HG2B1 and HG2B2
-
-RULE acetate2butyrate
-    COMMENT Acetate to butyrate pathway
-    CUTOFF 20
-    NEIGHBOURHOOD 10
-    CONDITIONS minimum(4, [ECH_2, Thiolase_N, Thiolase_C, ketoacyl-synt, Acyl-CoA_dh_1, Acyl-CoA_dh_2, ETF, ETF_alpha]) and ECH_1 and HCDH
-
+    CONDITIONS minimum(3, [OAD_gamma, Biotin_lipoyl, Peptidase_M23, OAD_beta, CoA_trans, AcetylCoA_hydro, Carboxyl_trans]) and BcrAD_BadFG and HG2B1 and HG2B2
 
 RULE caffeate_respiration
     COMMENT caffeate respiration
