@@ -799,7 +799,6 @@ class DetectionRule:
 # a typedef, even positions will be a Conditions instance, odd will be TokenTypes
 ConditionList = List[Union[Conditions, TokenTypes]]  # pylint: disable=invalid-name
 
-
 class Parser:  # pylint: disable=too-few-public-methods
     """ Responsible for parsing an entire block of text. Rules parsed from the
         text are stored in the .rules member.
@@ -1099,6 +1098,7 @@ class Parser:  # pylint: disable=too-few-public-methods
                 raise ValueError("A rule's superior must already be defined. Unknown rule name: %s" % name)
             # this is more of a semantics error than a syntax error, but still should be checked
             if self.rules_by_name[name].superiors:
+                print(self.rules_by_name[name])
                 raise ValueError("A rule cannot have a superior which has its own superior")
         if len(superiors) != len(set(superiors)):
             raise ValueError("A rule's superiors cannot contain duplicates")

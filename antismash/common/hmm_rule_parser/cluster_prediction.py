@@ -73,7 +73,6 @@ class CDSResults:
 
         cds = record.get_cds_by_name(json["cds_name"])
         definition_domains = {key: set(val) for key, val in json["definition_domains"].items()}
-
         return CDSResults(cds, domains, definition_domains)
 
 
@@ -209,11 +208,9 @@ def find_protoclusters(record: Record, cds_by_cluster_type: Dict[str, Set[str]],
 
 def hsp_overlap_size(first: HSP, second: HSP) -> int:
     """ Find the size of an overlapping region of two HSPs.
-
         Args:
             first: a HSP instance
             second: a HSP instance
-
         Returns:
             The size of the overlap in bases or zero if there is no overlap
     """
@@ -292,12 +289,10 @@ def create_rules(rule_file: str, signature_names: Set[str],
                  existing_rules: List[rule_parser.DetectionRule] = None
                  ) -> List[rule_parser.DetectionRule]:
     """ Creates DetectionRule instances from the default rules file
-
         Args:
             rule_file: A path to a file containing cluster rules to use.
             signature_names: the set of all known profile/signature names
             existing_rules: a list of existing rules, if any
-
         Returns:
             A list of DetectionRules.
     """
@@ -315,15 +310,12 @@ def apply_cluster_rules(record: Record, results_by_id: Dict[str, List[HSP]],
         Run detection rules over each CDS and classify them if relevant.
         A CDS can satisfy multiple rules. If so, all rules satisfied
         will form part of the type string, separated by '-'.
-
         The 'other' type has a lower precedence than other rules and a hit with
         the 'other' rule will be ignored if another rule is also satisfied.
-
         Args:
             record: the record being checked
             results_by_id: A dict of CDS ID to a list of HSP results
             rules: A list of DetectionRule instances
-
         Returns:
             A tuple of
                 a dictionary mapping CDS ID to
@@ -369,7 +361,6 @@ def detect_protoclusters_and_signatures(record: Record, signature_file: str, see
     """ Compares all CDS features in a record with HMM signatures and generates
         Protocluster features based on those hits and the current protocluster detection
         rules.
-
         Arguments:
             record: the record to analyse
             signature_file: a tab separated file; each row being a single HMM reference
@@ -447,7 +438,6 @@ def strip_inferior_domains(cds_domains_by_cluster: Dict[str, Dict[str, Set[str]]
                            rules_by_name: Dict[str, rule_parser.DetectionRule]) -> None:
     """ Remove any domain hits for each inferior rule within a CDS that the CDS also
         satisfies the rule's superior.
-
         Modifies cds_domains_by_cluster in place.
     """
     for domains_by_cluster in cds_domains_by_cluster.values():
@@ -460,10 +450,8 @@ def strip_inferior_domains(cds_domains_by_cluster: Dict[str, Dict[str, Set[str]]
 
 def get_sequence_counts(details_file: str) -> Dict[str, int]:
     """ Gets the number of sequences/seeds used to generate each HMM signature
-
         Arguments:
             detail_file: a file containing all HMMs
-
         Returns:
             a dictionary mapping HMM name to the number of sequences used to
                 generate it

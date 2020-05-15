@@ -37,7 +37,7 @@ from antismash.detection import (cassis,
                                  clusterfinder_probabilistic,
                                  full_hmmer,
                                  genefinding,
-                                 hmm_detection,
+                                 gut_hmm_detection,
                                  nrps_pks_domains,
                                  genefunctions,
                                  )
@@ -80,7 +80,7 @@ def get_detection_modules() -> List[AntismashModule]:
         Returns:
             a list of modules
     """
-    return [genefinding, hmm_detection, nrps_pks_domains, full_hmmer, cassis,  # type: ignore
+    return [genefinding, gut_hmm_detection, nrps_pks_domains, full_hmmer, cassis,  # type: ignore
             clusterfinder_probabilistic, cluster_hmmer,
             genefunctions]
 
@@ -163,7 +163,7 @@ def run_detection(record: Record, options: ConfigType,
 
     # generate cluster predictions
     logging.info("Detecting secondary metabolite clusters")
-    for module in [hmm_detection, cassis, clusterfinder_probabilistic]:
+    for module in [gut_hmm_detection, cassis, clusterfinder_probabilistic]:
         run_module(record, cast(AntismashModule, module), options, module_results, timings)
         results = module_results.get(module.__name__)
         if results:

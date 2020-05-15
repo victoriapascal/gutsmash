@@ -1,5 +1,0 @@
-# Contains rules for poorly defined clusters and/or clusters which are likely to
-# match primary metabolism
-
-# Cutoffs and neighbourhoods are given in kilobases
-

@@ -26,7 +26,7 @@ def classify(record_id: str, cds_features: List[CDSFeature],  # an API, so hide 
                 classifications
     """
 
-    hmm_file = path.get_full_path(__file__, "data", "smcogs.hmm")
+    hmm_file = path.get_full_path(__file__, "gut_data", "smcogs.hmm")
     hits = scan_for_functions(cds_features, hmm_file, hmmscan_opts=["-E", "1E-16"])
     ids_to_function = build_function_mapping()
     cds_name_to_function = {}
@@ -52,7 +52,7 @@ def build_function_mapping() -> Dict[str, GeneFunction]:
         #'RS': GeneFunction.RESISTANCE # 'resistance'
     }
     annotations = {}
-    for line in open(path.get_full_path(__file__, 'data', 'cog_annotations.txt'), 'r'):
+    for line in open(path.get_full_path(__file__, 'gut_data', 'cog_annotations.txt'), 'r'):
         cog, _desc, key = line.strip().split('\t', 3)
         annotations[cog] = mapping.get(key, GeneFunction.OTHER)
 
