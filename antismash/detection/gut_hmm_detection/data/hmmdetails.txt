@@ -1,0 +1,418 @@
+TPL	Beta-eliminating lyase Tyrosine Phenol Lyase clade	20	TPL.hmm
+TnaA	Beta-eliminating lyase Tryptophanase clade	20	TnaA.hmm
+HGD-D	2-hydroxyglutaryl-CoA dehydratase	28	HGD-D.hmm
+Hacid_dh	2-hydroxyacid dehydrogenase, NAD binding domain	24	Hacid_dh.hmm
+Lactoyl-CoA2	2-hydroxyglutaryl-CoA dehydratase Lactoyl-CoA	28	Lactoyl-CoA2.hmm
+Lactoyl-CoA1	2-hydroxyglutaryl-CoA dehydratase Lactoyl-CoA	28	Lactoyl-CoA1.hmm
+HAAA1	2-hydroxyglutaryl-CoA dehydratase AAA degradation	28	HAAA1.hmm
+HleuD1	2-hydroxyglutaryl-CoA dehydratase Luecine degradation C.diffcile	28	HleuD1.hmm
+HleuD2	2-hydroxyglutaryl-CoA dehydratase Luecine degradation C.diffcile2	28	HleuD2.hmm
+HleuS1	2-hydroxyglutaryl-CoA dehydratase Luecine degradation C.sporogenes	28	HleuS1.hmm
+HleuS2	2-hydroxyglutaryl-CoA dehydratase Luecine degradation C.sporogenes2	28	HleuS2.hmm
+NRDD	Anaerobic ribonucleoside-triphosphate reductase	26	NRDD.hmm
+ACD1_car	Acyl-CoA dehydrogenase C-ter carnitine clade	22	ACD1_car.hmm
+Acyl-CoA_dh_1	Acyl-CoA dehydrogenase C-ter	22	Acyl-CoA_dh_1.hmm
+Acyl-CoA_dh_2	Acyl-CoA dehydrogenase C-ter	22	Acyl-CoA_dh_2.hmm
+Acyl-CoA_dh_M	Acyl-CoA dehydrogenase M-ter	33	Acyl-CoA_dh_M.hmm
+Acyl-CoA_dh_N	Acyl-CoA dehydrogenase N-ter	22	Acyl-CoA_dh_N.hmm
+Branch_AA_trans	Branched-chain amino acid transport protein	22	Branch_AA_trans.hmm
+AlaDh_PNT_C	Alanine dehydrogenase/PNT, C-terminal domain	23	AlaDh_PNT_C.hmm
+Aminotran_1_2	Aminotransferase class I and II	19	Aminotran_1_2.hmm
+Dehydratase_LU	Dehydratase large subunit	25	Dehydratase_LU.hmm
+Dehydratase_MU	Dehydratase medium subunit	20	Dehydratase_MU.hmm
+Dehydratase_SU	Dehydratase small subunit	25	Dehydratase_SU.hmm
+PTAC	Phosphate propanoyltransferase	25	PTAC.hmm
+Flavoprotein	Flavoprotein	22	Flavoprotein.hmm
+UbiD	3-octaprenyl-4-hydroxybenzoate carboxy-lyase	19	UbiD.hmm
+ubi_syn	ubiquinone synthase clade of UbiD	19	ubi_syn.hmm
+gallic_acid	gallic acid clade of UbiD clade	19	gallic_acid.hmm
+Phea_decarb	Phenolic acid decarboxylate from UbiD	19	Phea_decarb.hmm
+Semialdhyde_dh	Semialdehyde dehydrogenase, NAD binding domain	21	Semialdhyde_dh.hmm
+EutB	Ethanolamine ammonia lyase large subunit	25	EutB.hmm
+EutC	Ethanolamine ammonia-lyase light chain--EutC	25	EutC.hmm
+EutA	Ethanolamine utilisation protein EutA	20	EutA.hmm
+EutH	Ethanolamine utilisation protein, EutH	25	EutH.hmm
+Aldedh	Aldehyde dehydrogenase family	23	Aldedh.hmm
+BMC	Bacterial Microcompartment (BMC) domain	24	BMC.hmm
+PFOR_II	Pyruvate:ferredoxin oxidoreductase core domain II	27	PFOR_II.hmm
+POR_N	Pyruvate flavodoxin/ferredoxin oxidoreductase, thiamine diP-bdg	21	POR_N.hmm
+POR	Pyruvate ferredoxin/flavodoxin oxidoreductase	27	POR.hmm
+PTA_PTB	Phosphate acetyl/butaryl transferase	20	PTA_PTB.hmm
+Transketolase_C	Transketolase, C-terminal domain	25	Transketolase_C.hmm
+TPP_enzyme_C	Thiamine pyrophosphate enzyme, C-ter	21	TPP_enzyme_C.hmm
+PGM_PMM_IV	Phosphoglucomutase/phosphomannomutase, C-ter	23	PGM_PMM_IV.hmm
+PGM_PMM_I	Phosphoglucomutase/phosphomannomutase, alpha	22	PGM_PMM_I.hmm
+PGM_PMM_III	Phosphoglucomutase/phosphomannomutase, alpha/beta	20	PGM_PMM_III.hmm
+PGM_PMM_II	Phosphoglucomutase/phosphomannomutase, alpha/beta	29	PGM_PMM_II.hmm
+Fer4_10	4Fe-4S dicluster domain	25	Fer4_10.hmm
+Fer4_12	4Fe-4S single cluster domain	22	Fer4_12.hmm
+Fer4_7	4Fe-4S dicluster domain	27	Fer4_7.hmm
+Fer4_9	4Fe-4S dicluster domain	27	Fer4_9.hmm
+Fer4_21	4Fe-4S dicluster domain	35	Fer4_21.hmm
+Fer4_16	4Fe-4S dicluster domain	30	Fer4_16.hmm
+Fer4	4Fe-4S binding domain	21	Fer4.hmm
+Fer4_2	4Fe-4S binding domain	24	Fer4_2.hmm
+Fer4_6	4Fe-4S binding domain	25	Fer4_6.hmm
+Fer4_14	4Fe-4S single cluster domain	21	Fer4_14.hmm
+Radical_SAM	Radical SAM superfamily	20	Radical_SAM.hmm
+LAM_C	Lysine-2,3-aminomutase	26	LAM_C.hmm
+Lys-AminoMut_A	D-Lysine 5,6-aminomutase TIM-barrel domain of alpha subunit	25	Lys-AminoMut_A.hmm
+HBT	Thioesterase superfamily	20	HBT.hmm
+BKACE	beta-keto acid cleavage enzyme	24	BKACE.hmm
+B12-binding	Vitamin B12-binding domain	29	B12-binding.hmm
+OAM_dimer	Dimerisation domain of d-ornithine 4,5-aminomutase	25	OAM_dimer.hmm
+Gly_radical	Glycyl radical	22	Gly_radical.hmm
+Gly_430_pcre	P-cresol Glycine radical clade	22	Gly_430_pcre.hmm
+Gly_8-9_TMA	TMA lyase glycine radical clade	22	Gly_8-9_TMA.hmm
+PFL-like	Pyruvate formate lyase-like	24	PFL-like.hmm
+PFL_9_tma	Pyruvate formate lyase-like TMA clade	24	PFL_9_tma.hmm
+PFL_6_pcresol	Pyruvate formate lyase-like pcresol clade	24	PFL_6_pcresol.hmm
+PduV-EutP	Ethanolamine utilisation - propanediol utilisation	20	PduV-EutP.hmm
+AdoMet_dc	S-adenosylmethionine decarboxylase	25	AdoMet_dc.hmm
+Aminotran_5	Aminotransferase, class V	21	Aminotran_5.hmm
+OKR_DC_1_C	Group III pyridoxal-dependent decarboxylases	21	OKR_DC_1_C.hmm
+Arginase	Ureohydrolase	22	Arginase.hmm
+Sacchrp_dh_C	Saccharopine dehydrogenase	31	Sacchrp_dh_C.hmm
+Sacchrp_dh_NADP	Saccharopine dehydrogenase NADP binding domain	25	Sacchrp_dh_NADP.hmm
+Spermine_synth	Spermine/spermidine synthase domain	21	Spermine_synth.hmm
+Spermine_synt_N	Spermidine synthase tetramerisation domain	22	Spermine_synt_N.hmm
+Cys_Met_Meta_PP	Cys/Met metabolism PLP-dependent enzyme	20	Cys_Met_Meta_PP.hmm
+Pro_racemase	Proline racemase	19	Pro_racemase.hmm
+PLDc_2	PLD-like domain	27	PLDc_2.hmm
+PLDc	Phospholipase D Active site motif	21	PLDc.hmm
+PLDc_PL_1	Phospholipase D bacteria clade (Q9HYC2)	21	PLDc_PL_1.hmm
+PLDc_Clipin_530	Cardiolipin synthase clade 5.30	21	PLDc_Clipin_530.hmm
+PLDc_Clipin_7	Cardiolipin synthase clade 7	21	PLDc_Clipin_7.hmm
+FGGY_C	FGGY carbohydrate kinase family C-ter	20	FGGY_C.hmm
+FGGY_N	FGGY carbohydrate kinase family N-ter	26	FGGY_N.hmm
+BcrAD_BadFG	BadF/BadG/BcrA/BcrD ATPase family	27	BcrAD_BadFG.hmm
+ETF	Electron-transferring flavoprotein	25	ETF.hmm
+CoA_transf_3	CoA-transferase family III	23	CoA_transf_3.hmm
+Hacid_dh_C	2-hydroxyacid dehydrogenase, NAD binding catalytic domain	25	Hacid_dh_C.hmm
+Shikimate_DH	Shikimate/quinate 5-dehydrogenase	24	Shikimate_DH.hmm
+baiH	baiH clade from Oxidored+Pyr_redox superfamily	20	baiH.hmm
+baiCD	baiCD clade from Oxidored+Pyr_redox superfamily	20	baiCD.hmm
+Oxidored_FMN	NADH:flavin oxidoreductase/NADH oxidase family	20	Oxidored_FMN.hmm
+Pyr_redox_2	Pyridine nucleotide-disulphide oxidoreductase	26	Pyr_redox_2.hmm
+NAD_binding_8	NAD(P)-binding Rossmann-like domain	21	NAD_binding_8.hmm
+NAD_binding_2	NAD binding domain of 6-phosphogluconate dehydrogenase	21	NAD_binding_2.hmm
+DAO	FAD dependent oxidoreductase family	27	DAO.hmm
+K_oxygenase	L-lysine 6-monooxygenase	21	K_oxygenase.hmm
+adh_short_C2	Enoyl-(Acyl carrier protein) reductase	27	adh_short_C2.hmm
+HG2B2	2-hydroxyglutaryl-CoA dehydratase glutamate2butyric acid clade 2	28	HG2B2.hmm
+HG2B1	2-hydroxyglutaryl-CoA dehydratase glutamate2butyric acid clade	28	HG2B1.hmm
+Biotin_lipoyl	Biotin-requiring enzyme	22	Biotin_lipoyl.hmm
+OAD_gamma	Oxaloacetate decarboxylase	27	OAD_gamma.hmm
+OAD_beta	Oxaloacetate decarboxylase	31	OAD_beta.hmm
+Peptidase_M23	Peptidase family M23	28	Peptidase_M23.hmm
+CoA_trans_6_Glutaconate	Glutaconate CoA-transferase	23	CoA_trans_6_Glutaconate.hmm
+CoA_trans_230_acto	Coenzyme A transferase butyrade clade	23	CoA_trans_230_acto.hmm
+CoA_trans_2_CAF	Caffeate CoA-transferase clade	23	CoA_trans_2_CAF.hmm
+CoA_trans	Coenzyme A transferase	23	CoA_trans.hmm
+ECH1_Enoyl_CoA_DH1	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH1.hmm
+ECH1_Enoyl_CoA_DH2	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH2.hmm
+ECH1_Enoyl_CoA_DH3	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH3.hmm
+ECH1_Enoyl_CoA_DH4	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH4.hmm
+ECH1_8_CARC	Enoyl-CoA hydratase/isomerase (crotonase) Carnitinyl-CoA clade	27	ECH1_8_CARC.hmm
+ECH_1	Enoyl-CoA hydratase/isomerase (crotonase)	27	ECH_1.hmm
+ECH_2	Enoyl-CoA hydratase/isomerase (crotonase)	27	ECH_2.hmm
+Thiolase_N	Thiolase, N-terminal domain	26	Thiolase_N.hmm
+Thiolase_C	Beta-ketoacyl-ACP synthase	20	Thiolase_C.hmm
+ketoacyl-synt	Beta-ketoacyl synthase, N-terminal domain	20	ketoacyl-synt.hmm
+ETF_alpha	Electron-transferring flavoprotein	21	ETF_alpha.hmm
+HCDH	3-hydroxyacyl-CoA dehydrogenase, C-ter	21	HCDH.hmm
+HCDH_N	3-hydroxyacyl-CoA dehydrogenase, NAD binding domain	22	HCDH_N.hmm
+HpaB_N	4-hydroxyphenylacetate 3-hydroxylase N terminal	34	HpaB_N.hmm
+BCCT	betaine/carnitine/choline family transporter	20	BCCT.hmm
+AMP-binding	AMP-binding enzyme	29	AMP-binding.hmm
+AMP-binding_C	AMP-binding C terminal domain	24	AMP-binding_C.hmm
+Hexapep	Bacterial transferase hexapeptide	21	Hexapep.hmm
+Hexapep_2	Hexapeptide repeat of succinyl-transferase	23	Hexapep_2.hmm
+Beta_elim_lyase	Beta-eliminating lyase	20	Beta_elim_lyase.hmm
+HpaB	4-hydroxyphenylacetate 3-hydroxylase C terminal	25	HpaB.hmm
+ApbA	Ketopantoate reductase PanE/ApbA	22	ApbA.hmm
+ETF_QO	Electron transfer flavoprotein-ubiquinone oxidoreductase, 4Fe-4S	21	ETF_QO.hmm
+FAD_binding_2	FAD binding domain	20	FAD_binding_2.hmm
+FAD_binding_3	FAD binding domain	22	FAD_binding_3.hmm
+FAD_oxidored	FAD dependent oxidoreductase	27	FAD_oxidored.hmm
+GDI	GDP dissociation inhibitor	19	GDI.hmm
+GIDA	Glucose inhibited division protein A	22	GIDA.hmm
+GMC_oxred_N	Glucose-methanol-choline oxidoreductase family	20	GMC_oxred_N.hmm
+HI0933_like	HI0933-like protein	24	HI0933_like.hmm
+Lycopene_cycl	Lycopene cyclase protein	23	Lycopene_cycl.hmm
+NAD_binding_9	FAD/NAD(P)-binding domain	21	NAD_binding_9.hmm
+Pyr_redox	Pyridine nucleotide-disulphide oxidoreductase	22	Pyr_redox.hmm
+Pyr_redox_3	Pyridine nucleotide-disulphide oxidoreductase	30	Pyr_redox_3.hmm
+Thi4	Thi4 family (thiamine)	26	Thi4.hmm
+DUF1062	Protein of unknown function	22	DUF1062.hmm
+Glutaminase	Glutaminase/glutamine aminohydrolase	20	Glutaminase.hmm
+ELFV_dehydrog	Glutamate/Leucine/Phenylalanine/Valine dehydrogenase	23	ELFV_dehydrog.hmm
+ELFV_dehydrog_N	Glutamate/Leucine/Phenylalanine/Valine dehydrogenase N-ter	25	ELFV_dehydrog_N.hmm
+Trp_halogenase	Tryptophan halogenase	19	Trp_halogenase.hmm
+Acetate_kinase	Acetokinase family	22	Acetate_kinase.hmm
+Butyrate_kinase	Butyrate kinase clade of the Acetokinase family	22	Butyrate_kinase.hmm
+ROK	Repressor, ORF, Kinase	21	ROK.hmm
+AcetylCoA_hyd_C	Acetyl-CoA hydrolase/transferase C-terminal domain	23	AcetylCoA_hyd_C.hmm
+AcetylCoA_hydro	Acetyl-CoA hydrolase/transferase N-terminal domain	20	AcetylCoA_hydro.hmm
+ACP_syn_III	3-Oxoacyl-acyl-carrier-protein ACP synthase III	20	ACP_syn_III.hmm
+adh_short	short chain dehydrogenase	25	adh_short.hmm
+HDC	Histidine decarboxylase	25	HDC.hmm
+Pyridoxal_deC	Group II pyridoxal-dependent decarboxylases	19	Pyridoxal_deC.hmm
+Ala_racemase_N	Alanine racemase L to D conf.	24	Ala_racemase_N.hmm
+OKR_DC_1	Orn/Lys/Arg decarboxylase	19	OKR_DC_1.hmm
+OKR_DC_1_N	Orn/Lys/Arg decarboxylase, N-terminal domain	29	OKR_DC_1_N.hmm
+OKR_DC_1_5_lysine	Lysine decarboxylase	19	OKR_DC_1_5_lysine.hmm
+OKR_DC_1_5_ornithine	Ornithine decarboxylase	19	OKR_DC_1_5_ornithine.hmm
+OKR_DC_1_7_arginine	Arginine decarboxylase	19	OKR_DC_1_7_arginine.hmm
+Orn_Arg_deC_N	Pyridoxal-dependent decarboxylase, pyridoxal binding domain	23	Orn_Arg_deC_N.hmm
+Orn_DAP_Arg_deC	Pyridoxal-dependent decarboxylase, C-terminal sheet domain	20	Orn_DAP_Arg_deC.hmm
+Fe-ADH	Iron-containing alcohol dehydrogenase	26	Fe-ADH.hmm
+Fe-ADH_2	Iron-containing alcohol dehydrogenase	28	Fe-ADH_2.hmm
+ATP_bind_1	Conserved hypothetical ATP binding protein	20	ATP_bind_1.hmm
+MeaB	Methylmalonyl Co-A mutase-associated GTPase MeaB	23	MeaB.hmm
+Glyoxalase	Glyoxalase/Bleomycin resistance protein/Dioxygenase superfamily	20	Glyoxalase.hmm
+Glyoxalase_3	Glyoxalase-like domain	25	Glyoxalase_3.hmm
+Carboxyl_trans	Carboxyl transferase domain	22	Carboxyl_trans.hmm
+Glyoxalase_4	Glyoxalase/Bleomycin resistance protein/Dioxygenase superfamily	27	Glyoxalase_4.hmm
+MM_CoA_mutase	Methylmalonyl-CoA mutase	22	MM_CoA_mutase.hmm
+MdcE	Malonate decarboxylase gamma subunit	20	MdcE.hmm
+Mal_decarbox_Al	Malonate decarboxylase, alpha subunit, transporter	25	Mal_decarbox_Al.hmm
+CT_Propionyl_CoA1	Carboxyl transferase domaiain	22	CT_Propionyl_CoA1.hmm
+CT_Propionyl_CoA2	Carboxyl transferase domain	22	CT_Propionyl_CoA2.hmm
+CT_Propionyl_CoA3	Carboxyl transferase domain	22	CT_Propionyl_CoA3.hmm
+SDH_alpha	Serine dehydratase alpha chain	24	SDH_alpha.hmm
+SDH_beta	Serine dehydratase beta chain	21	SDH_beta.hmm
+MmgE_PrpD	MmgE/PrpD family	32	MmgE_PrpD.hmm
+Ribonuc_L-PSP	Endoribonuclease L-PSP	27	Ribonuc_L-PSP.hmm
+Trp_Tyr_perm	Tryptophan/tyrosine permease family	20	Trp_Tyr_perm.hmm
+PALP	Pyridoxal-phosphate dependent enzyme	35	PALP.hmm
+LysR_substrate	LysR substrate binding domain	28	LysR_substrate.hmm
+HTH_1	Bacterial regulatory helix-turn-helix protein, lysR family	26	HTH_1.hmm
+Amidinotransf	Amidinotransferase	23	Amidinotransf.hmm
+AstA	Arginine N-succinyltransferase beta subunit	29	AstA.hmm
+DegT_DnrJ_EryC1	DegT/DnrJ/EryC1/StrS aminotransferase family	19	DegT_DnrJ_EryC1.hmm
+OTCace	Aspartate/ornithine carbamoyltransferase	29	OTCace.hmm
+OTCace_N	Aspartate/ornithine carbamoyltransferase, carbamoyl-P binding domain	29	OTCace_N.hmm
+AA_kinase	Amino acid kinase family	24	AA_kinase.hmm
+ASL_C2	Argininosuccinate lyase C-terminal	27	ASL_C2.hmm
+ATP_bind_3	PP-loop family	20	ATP_bind_3.hmm
+Arginosuc_synth	Arginosuccinate synthase	21	Arginosuc_synth.hmm
+Lyase_1	Fumarate lyase	20	Lyase_1.hmm
+NO_synthase	Nitric oxide synthase	22	NO_synthase.hmm
+PAPS_reduct	Phosphoadenosine phosphosulfate reductase family	22	PAPS_reduct.hmm
+ThiI	Thiamine biosynthesis protein	20	ThiI.hmm
+CBM27	Carbohydrate binding module 27	19	CBM27.hmm
+CBM_11	Carbohydrate binding domain	20	CBM_11.hmm
+DUF1861	Protein of unknown function	28	DUF1861.hmm
+Fn3-like	Fibronectin type III-like domain	25	Fn3-like.hmm
+GlcNAc_2-epim	N-acylglucosamine 2-epimerase	9	GlcNAc_2-epim.hmm
+Glyco_hydro_1	Glycoside hydrolase family 1	20	Glyco_hydro_1.hmm
+Glyco_hydro_130	beta-1,4-mannooligosaccharide phosphorylase	20	Glyco_hydro_130.hmm
+Glyco_hydro_26	Glycoside hydrolase family 26	20	Glyco_hydro_26.hmm
+Glyco_hydro_3	Glycoside hydrolase family 3	20	Glyco_hydro_3.hmm
+Glyco_hydro_36C	Glycosyl hydrolase family 36 C-terminal	27	Glyco_hydro_36C.hmm
+Glyco_hydro_36N	Glycosyl hydrolase family 36 N-terminal	27	Glyco_hydro_36N.hmm
+Glyco_hydro_3_C	Glycoside hydrolase family 3 C-ter	31	Glyco_hydro_3_C.hmm
+LacI	Bacterial regulatory proteins, lacI family	21	LacI.hmm
+Lipase_GDSL_2	GDSL-like Lipase/Acylhydrolase family	32	Lipase_GDSL_2.hmm
+Melibiase	Glycoside hydrolase family 27	19	Melibiase.hmm
+PMI_typeI	Phosphomannose isomerase type I	20	PMI_typeI.hmm
+Peripla_BP_1	Periplasmic binding proteins and sugar binding domain of LacI family	21	Peripla_BP_1.hmm
+Peripla_BP_3	Periplasmic binding protein-like domain	26	Peripla_BP_3.hmm
+SBP_bac_1	Bacterial extracellular solute-binding protein	20	SBP_bac_1.hmm
+fn3	Fibronectin type III domain	25	fn3.hmm
+AMP-binding_C_2	AMP-binding enzyme C-terminal domain	25	AMP-binding_C_2.hmm
+F420_oxidored	NADP oxidoreductase coenzyme F420-dependent	21	F420_oxidored.hmm
+FAD_binding_6	Oxidoreductase FAD-binding domain	21	FAD_binding_6.hmm
+FeS_assembly_P	Iron-sulfur cluster assembly protein	22	FeS_assembly_P.hmm
+Fer2	Ferredoxin	15	Fer2.hmm
+HBT_3	Thioesterase-like superfamily	27	HBT_3.hmm
+MaoC_dehydratas	MaoC like domain	20	MaoC_dehydratas.hmm
+NAD_Gly3P_dh_N	Glycerol-3-phosphate dehydrogenase	23	NAD_Gly3P_dh_N.hmm
+NAD_binding_1	Oxidoreductase NAD-binding domain	21	NAD_binding_1.hmm
+PaaX	PaaX-like protein	24	PaaX.hmm
+PaaA_PaaC	Phenylacetic acid catabolic protein	28	PaaA_PaaC.hmm
+PaaB	Phenylacetic acid degradation B	20	PaaB.hmm
+UDPG_MGDP_dh_N	UDP-glucose/GDP-mannose dehydrogenase family, NAD binding domain	20	UDPG_MGDP_dh_N.hmm
+CN_hydrolase	Carbon-nitrogen hydrolase	23	CN_hydrolase.hmm
+PAD_porph	Porphyromonas-type peptidyl-arginine deiminase	25	PAD_porph.hmm
+BPD_transp_1	Binding-protein-dependent transport system inner membrane component	25	BPD_transp_1.hmm
+GRDB	Glycine/sarcosine/betaine reductase selenoprotein B	19	GRDB.hmm
+GRDA	Glycine reductase complex selenoprotein A	21	GRDA.hmm
+ACP_syn_III	3-Oxoacyl-[acyl-carrier-protein (ACP)] synthase III	20	ACP_syn_III.hmm
+ACP_syn_III_C	3-Oxoacyl-[acyl-carrier-protein (ACP)] synthase III C terminal	26	ACP_syn_III_C.hmm
+FA_synthesis	Fatty acid synthesis protein	29	FA_synthesis.hmm
+GCV_T	Aminomethyltransferase folate-binding domain	25	GCV_T.hmm
+GCV_T_C	Glycine cleavage system	25	GCV_T_C.hmm
+SoxG	Sarcosine oxidase, gamma subunit family	20	SoxG.hmm
+GCV_H	Glycine cleavage system	22	GCV_H.hmm
+GDC-P	Group I pyridoxal-dependent decarboxylases	20	GDC-P.hmm
+Aminotran_3	Aminotransferase class-III	28	Aminotran_3.hmm
+AstB	Succinylarginine dihydrolase	20	AstB.hmm
+AstE_AspA	Succinylglutamate desuccinylase Aspartoacylase family	21	AstE_AspA.hmm
+ICL	Isocitrate lyase	19	ICL.hmm
+Malate_synthase	Malate synthase	20	Malate_synthase.hmm
+Met_asp_mut_E	Methylaspartate mutase E chain	26	Met_asp_mut_E.hmm
+PEP_mutase	Phosphoenolpyruvate mutase	31	PEP_mutase.hmm
+Amidohydro_1	Amidohydrolase family	21	Amidohydro_1.hmm
+Amidohydro_3	Amidohydrolase family	29	Amidohydro_3.hmm
+FGase	N-formylglutamate amidohydrolase	28	FGase.hmm
+Lyase_aromatic	Aromatic amino acid lyase	27	Lyase_aromatic.hmm
+Urocanase	Urocanase	23	Urocanase.hmm
+Urocanase_C	Urocanase C-terminal domain	23	Urocanase_C.hmm
+Urocanase_N	Urocanase N-terminal domain	23	Urocanase_N.hmm
+MAAL_C	Methylaspartate ammonia-lyase C-terminus	20	MAAL_C.hmm
+MAAL_N	Methylaspartate ammonia-lyase N-terminus	21	MAAL_N.hmm
+MR_MLE_C	Enolase C-terminal domain-like	29	MR_MLE_C.hmm
+GD_AH_C	D-galactarate dehydratase / Altronate hydrolase, C terminus	19	GD_AH_C.hmm
+Mannitol_dh	Mannitol dehydrogenase Rossmann domain	21	Mannitol_dh.hmm
+Mannitol_dh_C	Mannitol dehydrogenase C-terminal domain	30	Mannitol_dh_C.hmm
+SAF	SAF domain	21	SAF.hmm
+UxaC	Glucuronate isomerase	25	UxaC.hmm
+Aminotran_4	Amino-transferase class IV	28	Aminotran_4.hmm
+HMGL-like	Pyruvate carboxylase	29	HMGL-like.hmm
+Dak1	Dak1 domain	29	Dak1.hmm
+Dak2	DAK2 domain	23	Dak2.hmm
+Biotin_lipoyl_2	Biotin attachment domain	23	Biotin_lipoyl_2.hmm
+CitF	Citrate lyase, alpha subunit	19	CitF.hmm
+Fer2_3	Succinate dehydrogenase-2Fe-2S iron-sulfur cluster binding domain	27	Fer2_3.hmm
+Fer4_17	4Fe-4S dicluster domain	22	Fer4_17.hmm
+Fer4_8	4Fe-4S dicluster domain	27	Fer4_8.hmm
+FumaraseC_C	Fumarase C C-terminus	32	FumaraseC_C.hmm
+Fumarate_red_C	Fumarate reductase	24	Fumarate_red_C.hmm
+Fumarate_red_D	Fumarate reductase subunit D	25	Fumarate_red_D.hmm
+Ldh_1_C	lactate/malate dehydrogenase, alpha/beta C-terminal domain	22	Ldh_1_C.hmm
+Ldh_1_N	lactate/malate dehydrogenase, NAD binding domain	20	Ldh_1_N.hmm
+PYC_OADA	Conserved carboxylase domain	21	PYC_OADA.hmm
+Succ_DH_flav_C	Fumarate reductase flavoprotein C-term	20	Succ_DH_flav_C.hmm
+Gly_reductase	Glycine/sarcosine/betaine reductase component B subunits	22	Gly_reductase.hmm
+Glycine_reductase	Glycine reductase - Gly_reductase pHMM	22	Glycine_reductase.hmm
+Proline_reductase	Proline_reductase - Gly_reductase pHMM	22	Proline_reductase.hmm
+Anth_synt_I_N	Anthranilate synthase component I	21	Anth_synt_I_N.hmm
+Chorismate_bind	chorismate binding enzyme	21	Chorismate_bind.hmm
+GATase	Glutamine amidotransferase	22	GATase.hmm
+Glycos_trans_3N	Glycosyl transferase family, helical bundle domain	21	Glycos_trans_3N.hmm
+Glycos_transf_3	Glycosyl transferase family, a/b domain	21	Glycos_transf_3.hmm
+IGPS	Indole-3-glycerol-phosphate synthase	20	IGPS.hmm
+PRAI	Phosphoribosylanthranilate isomerase	22	PRAI.hmm
+Peptidase_C26	Peptidase C26	20	Peptidase_C26.hmm
+Trp_syntA	Tryptophan synthase alpha chain	19	Trp_syntA.hmm
+Gln-synt_C	Glutamine synthetase	23	Gln-synt_C.hmm
+CTP_transf_like	Cytidylyltransferase-like	21	CTP_transf_like.hmm
+NAD_synthase	NAD synthase	20	NAD_synthase.hmm
+NadA	Quinolinate synthetase A protein	19	NadA.hmm
+QRPTase_C	Quinolinate phosphoribosyl transferase, C-ter	23	QRPTase_C.hmm
+QRPTase_N	Quinolinate phosphoribosyl transferase, N-ter	20	QRPTase_N.hmm
+AA_permease	Amino acid permease	22	AA_permease.hmm
+AA_permease_2	Amino acid permease	27	AA_permease_2.hmm
+ADC	Acetoacetate decarboxylase	29	ADC.hmm
+AICARFT_IMPCHas	AICARFT/IMPCHase bienzyme	25	AICARFT_IMPCHas.hmm
+Abhydrolase_1	Alpha/beta hydrolase fold	25	Abhydrolase_1.hmm
+Acyl-CoA_dh_C	Acetyl-CoA dehydrogenase C-terminal like	30	Acyl-CoA_dh_C.hmm
+Alpha-amylase	Alpha-Amylase	20	Alpha-amylase.hmm
+Fer4_20	Dihydroprymidine dehydrogenase domain II, 4Fe-4S cluster	25	Fer4_20.hmm
+GalP_UDP_transf	Galactose-1-phosphate uridylyltransferase	22	GalP_UDP_transf.hmm
+Glyco_hydro_25	Glycoside hydrolase family 25	27	Glyco_hydro_25.hmm
+Glyco_hydro_36	Glycosyl hydrolase 36 superfamily, catalytic domain	30	Glyco_hydro_36.hmm
+Hydrolase_4	Serine aminopeptidase, S33	27	Hydrolase_4.hmm
+IMP_cyclohyd	IMP cyclohydrolase	28	IMP_cyclohyd.hmm
+IspD	2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase	20	IspD.hmm
+MBOAT	membrane-bound O-acyltransferase family	21	MBOAT.hmm
+MFS_2	MFS sugar transport protein	27	MFS_2.hmm
+OPT	OPT oligopeptide transporter protein	25	OPT.hmm
+PTS_EIIC	Phosphotransferase system, EIIC	30	PTS_EIIC.hmm
+Peptidase_M20	Peptidase family M20/M25/M40	24	Peptidase_M20.hmm
+Peptidase_M24	Peptidase_M24	24	Peptidase_M24.hmm
+Peptidase_M3	Peptidase family M3	19	Peptidase_M3.hmm
+Peptidase_S11	D-alanyl-D-alanine carboxypeptidase	27	Peptidase_S11.hmm
+Peptidase_U32	Peptidase family U32	22	Peptidase_U32.hmm
+Polysacc_deac_1	Polysaccharide deacetylase	23	Polysacc_deac_1.hmm
+Peptidase_M24	Metallopeptidase family M24	23	Peptidase_M24.hmm
+SbcCD_C	Putative exonuclease SbcCD, C subunit	27	SbcCD_C.hmm
+Trypsin_2	Trypsin-like peptidase domain	27	Trypsin_2.hmm
+TsaE	Threonylcarbamoyl adenosine biosynthesis protein TsaE	26	TsaE.hmm
+KR	KR domain	22	KR.hmm
+MFS_1	Major facilitator family	33	MFS_1.hmm
+SnoaL_4	SnoaL-like domain	21	SnoaL_4.hmm
+Sugar_tr	sugar and other transporter	22	Sugar_tr.hmm
+LysM	LysM domain	11	LysM.hmm
+GHMP_kinases_C	GHMP kinase family	20	GHMP_kinases_C.hmm
+GHMP_kinases_N	GHMP kinase family	22	GHMP_kinases_N.hmm
+Dala_Dala_lig_C	D-alanine-D-alanine ligase	21	Dala_Dala_lig_C.hmm
+Dala_Dala_lig_N	D-alanine-D-alanine ligase	34	Dala_Dala_lig_N.hmm
+CPSase_L_D2	Carbamoyl-phosphate synthase L chain	19	CPSase_L_D2.hmm
+ATP-grasp_4	ATP-grasp domain	27	ATP-grasp_4.hmm
+ATP-grasp_3	ATP-grasp domain	23	ATP-grasp_3.hmm
+GARS_A	Phosphoribosylamine-glycine ligase	20	GARS_A.hmm
+NAPRTase	Nicotinate phosphoribosyltransferase (NAPRTase) family	20	NAPRTase.hmm
+YcxB	YcxB-like protein	23	YcxB.hmm
+Acyltransferase	Phospholipid acyltransferase	21	Acyltransferase.hmm
+AdoHcyase_NAD	S-adenosyl-L-homocysteine hydrolase	21	AdoHcyase_NAD.hmm
+MreB_Mbl	MreB/Mbl protein	20	MreB_Mbl.hmm
+Peptidase_M22	Glycoprotease family	24	Peptidase_M22.hmm
+SpoVAD	Stage V sporulation protein AD (SpoVAD)	22	SpoVAD.hmm
+ADH_N	Alcohol dehydrogenase GroES-like domain	21	ADH_N.hmm
+ADH_zinc_N	Zinc-binding dehydrogenase	31	ADH_zinc_N.hmm
+ALS_ss_C	Small subunit of acetolactate synthase	23	ALS_ss_C.hmm
+Acetyltransf_1	Acetyltransferase	20	Acetyltransf_1.hmm
+Acetyltransf_10	Acetyltransferase	23	Acetyltransf_10.hmm
+Acetyltransf_7	Acetyltransferase	27	Acetyltransf_7.hmm
+Aldolase_II	Class II Aldolase and Adducin N-terminal domain	22	Aldolase_II.hmm
+Beta_HSD	3-beta hydroxysteroid dehydrogenase/isomerase family	22	Beta_HSD.hmm
+CDP-OH_P_transf	CDP-alcohol phosphatidyltransferase	25	CDP-OH_P_transf.hmm
+DAPDH_C	Diaminopimelate dehydrogenase	30	DAPDH_C.hmm
+E1_dh	Dehydrogenase E1 component	22	E1_dh.hmm
+GATase_2	Glutamine amidotransferases class-II	19	GATase_2.hmm
+Glu_syn_central	Glutamate synthase central domain	22	Glu_syn_central.hmm
+Glu_synthase	Conserved region in glutamate synthase	20	Glu_synthase.hmm
+HBT_2	Thioesterase-like superfamily	25	HBT_2.hmm
+ILVD_EDD	Dehydratase family	19	ILVD_EDD.hmm
+IlvN	Acetohydroxy acid isomeroreductase	20	IlvN.hmm
+MoCF_biosynth	Probable molybdopterin binding domain	26	MoCF_biosynth.hmm
+MoeA_C	MoeA C-terminal region (domain IV)	22	MoeA_C.hmm
+MoeA_N	MoeA N-terminal region (domain I and II)	30	MoeA_N.hmm
+Molybdop_Fe4S4	Molybdopterin oxidoreductase Fe4S4 domain	22	Molybdop_Fe4S4.hmm
+Molybdopterin	NADH dehydrogenase (ubiquinone)	21	Molybdopterin.hmm
+Molydop_binding	Molydopterin dinucleotide binding domain	26	Molydop_binding.hmm
+PEP-utilizers_C	PEP-utilising enzyme, TIM barrel domain	22	PEP-utilizers_C.hmm
+PPDK_N	Pyruvate phosphate dikinase	20	PPDK_N.hmm
+Thr_dehydrat_C	C-terminal regulatory domain of Threonine dehydratase	20	Thr_dehydrat_C.hmm
+Transket_pyr	Transketolase, pyrimidine binding domain	20	Transket_pyr.hmm
+oxoacid_dh	2-oxoacid dehydrogenases acyltransferase (catalytic domain)	23	oxoacid_dh.hmm
+OxoDH_E1alpha_N	2-oxoisovalerate dehydrogenase	25	OxoDH_E1alpha_N.hmm
+EutN_CcmL	Ethanolamine utilisation protein EutN/carboxysome	25	EutN_CcmL.hmm
+EutQ	Ethanolamine utilisation protein EutQ	20	EutQ.hmm
+HAD	haloacid dehalogenase-like hydrolase	27	HAD.hmm
+HAD_2	Haloacid dehalogenase-like hydrolase	23	HAD_2.hmm
+Homoserine_dh	Homoserine dehydrogenase	22	Homoserine_dh.hmm
+IDH	Isocitrate dehydrogenase	25	IDH.hmm
+Succ_CoA_lig	Succinyl-CoA ligase like flavodoxin domain	26	Succ_CoA_lig.hmm
+Chal_sti_synt_C	Chalcone and stilbene synthases	20	Chal_sti_synt_C.hmm
+Epimerase	NADH dehydrogenase	20	Epimerase.hmm
+GDP_Man_Dehyd	GDP-mannose 4,6 dehydratase	27	GDP_Man_Dehyd.hmm
+GFO_IDH_MocA	Oxidoreductase family	24	GFO_IDH_MocA.hmm
+GFO_IDH_MocA_C	Oxidoreductase family, C-terminal	22	GFO_IDH_MocA_C.hmm
+Glyco_tranf_2_2	Glycosyltransferase like family 2	27	Glyco_tranf_2_2.hmm
+Glyco_tranf_2_3	Glycosyltransferase like family 2	27	Glyco_tranf_2_3.hmm
+Glycos_transf_2	Glycosyl transferase family 2	23	Glycos_transf_2.hmm
+IlvC	Acetohydroxy acid isomeroreductase	29	IlvC.hmm
+ketoacyl-synt	Beta-ketoacyl synthase	20	ketoacyl-synt.hmm
+Ketoacyl-synt_C	Beta-ketoacyl-ACP synthase	27	Ketoacyl-synt_C.hmm
+Ligase_CoA	CoA-ligase	24	Ligase_CoA.hmm
+Polysacc_synt_2	Polysaccharide biosynthesis protein	20	Polysacc_synt_2.hmm
+RmlD_sub_bind	RmlD substrate binding domain	21	RmlD_sub_bind.hmm
+Transketolase_N	Transketolase, thiamine diphosphate binding domain	19	Transketolase_N.hmm
+UDPG_MGDP_dh	UDP-glucose/GDP-mannose dehydrogenase family	25	UDPG_MGDP_dh.hmm
+AFOR_C	Aldehyde ferredoxin oxidoreductase	19	AFOR_C.hmm
+AFOR_N	Aldehyde ferredoxin oxidoreductase	29	AFOR_N.hmm
+CoA_binding	CoA binding domain	22	CoA_binding.hmm
+CoA_binding_2	CoA binding domain	22	CoA_binding_2.hmm
+Isochorismatase	Isochorismatase family	21	Isochorismatase.hmm
+SIS	SIS domain	25	SIS.hmm
+Semialdhyde_dhC	Aspartate-semialdehyde dehydrogenase	20	Semialdhyde_dhC.hmm
+Cob_adeno_trans	Cobalamin adenosyltransferase	24	Cob_adeno_trans.hmm
+EutK_C	Ethanolamine utilization protein EutK C-terminus	27	EutK_C.hmm
+Malic_M	Malic enzyme, NAD binding domain	23	Malic_M.hmm
+malic	Malic enzyme, N-terminal domain	23	malic.hmm
+Alk_phosphatase	Alkaline phosphatase	24	Alk_phosphatase.hmm
+PDU_like	Putative propanediol utilisation	27	PDU_like.hmm
