@@ -118,7 +118,6 @@ ECH_1	Enoyl-CoA hydratase/isomerase (crotonase)	27	ECH_1.hmm
 ECH_2	Enoyl-CoA hydratase/isomerase (crotonase)	27	ECH_2.hmm
 Thiolase_N	Thiolase, N-terminal domain	26	Thiolase_N.hmm
 Thiolase_C	Beta-ketoacyl-ACP synthase	20	Thiolase_C.hmm
-ketoacyl-synt	Beta-ketoacyl synthase, N-terminal domain	20	ketoacyl-synt.hmm
 ETF_alpha	Electron-transferring flavoprotein	21	ETF_alpha.hmm
 HCDH	3-hydroxyacyl-CoA dehydrogenase, C-ter	21	HCDH.hmm
 HCDH_N	3-hydroxyacyl-CoA dehydrogenase, NAD binding domain	22	HCDH_N.hmm
@@ -154,7 +153,6 @@ Butyrate_kinase	Butyrate kinase clade of the Acetokinase family	22	Butyrate_kina
 ROK	Repressor, ORF, Kinase	21	ROK.hmm
 AcetylCoA_hyd_C	Acetyl-CoA hydrolase/transferase C-terminal domain	23	AcetylCoA_hyd_C.hmm
 AcetylCoA_hydro	Acetyl-CoA hydrolase/transferase N-terminal domain	20	AcetylCoA_hydro.hmm
-ACP_syn_III	3-Oxoacyl-acyl-carrier-protein ACP synthase III	20	ACP_syn_III.hmm
 adh_short	short chain dehydrogenase	25	adh_short.hmm
 HDC	Histidine decarboxylase	25	HDC.hmm
 Pyridoxal_deC	Group II pyridoxal-dependent decarboxylases	19	Pyridoxal_deC.hmm
@@ -322,7 +320,6 @@ MFS_2	MFS sugar transport protein	27	MFS_2.hmm
 OPT	OPT oligopeptide transporter protein	25	OPT.hmm
 PTS_EIIC	Phosphotransferase system, EIIC	30	PTS_EIIC.hmm
 Peptidase_M20	Peptidase family M20/M25/M40	24	Peptidase_M20.hmm
-Peptidase_M24	Peptidase_M24	24	Peptidase_M24.hmm
 Peptidase_M3	Peptidase family M3	19	Peptidase_M3.hmm
 Peptidase_S11	D-alanyl-D-alanine carboxypeptidase	27	Peptidase_S11.hmm
 Peptidase_U32	Peptidase family U32	22	Peptidase_U32.hmm
