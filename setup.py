@@ -93,7 +93,7 @@ class PyTest(TestCommand):
 
 
 setup(
-    name="antismash",
+    name="gutsmash",
     python_requires='>=3.5',
     version=read_version(),
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
@@ -101,8 +101,8 @@ setup(
         'antismash': find_data_files(),
     },
     author='antiSMASH development team',
-    author_email='antismash@secondarymetabolites.org',
-    description='The antibiotics and Secondary Metabolites Analysis Shell.',
+    author_email='gutsmash.contact@gmail.com',
+    description='gutSMASH a tool to systematically analyze the metabolic potential of gut bacteria',
     long_description=long_description,
     long_description_content_type='text/markdown',
     install_requires=install_requires,
@@ -114,7 +114,7 @@ setup(
         ],
     },
     cmdclass={'test': PyTest},
-    url='https://github.com/antismash/antismash',
+    url='https://github.com/victoriapascal/antismash/tree/gutsmash',
     license='GNU Affero General Public License v3 or later (AGPLv3+)',
     classifiers=[
         'Programming Language :: Python',

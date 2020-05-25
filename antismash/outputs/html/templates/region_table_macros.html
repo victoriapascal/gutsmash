@@ -23,7 +23,7 @@
      <td>
        {% set join = joiner(",") %}
        {% for subtype in region.products -%}
-         {{join()}}<a class="external-link" href="{{options.urls.docs_baseurl}}glossary/#{{subtype.lower()}}" target="_blank">{{subtype}}</a>
+         {{join()}}<a class="external-link" href="https://gutsmash-documentation.readthedocs.io/en/latest/Glossary.html" target="_blank">{{subtype}}</a>
        {%- endfor %}
      </td>
      <td class="digits">{{"{:,d}".format(region.location.start + 1)}}</td>

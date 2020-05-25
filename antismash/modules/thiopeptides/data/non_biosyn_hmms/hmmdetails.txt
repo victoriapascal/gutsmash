@@ -1,3 +1,0 @@
-PF12698	ABC transporter	20	PF12698.hmm
-PF01061	ABC transporter	20	PF01061.hmm
-PF00005	ABC transporter	20	PF00005.hmm

@@ -7,6 +7,6 @@
 from .asf import ActiveSiteFinderQualifier
 from .gene_functions import GeneFunction, GeneFunctionAnnotations
 from .go import GOQualifier
-from .nrps_pks import NRPSPKSQualifier
 from .secmet import SecMetQualifier
+from .nrps_pks import NRPSPKSQualifier
 from .t2pks import T2PKSQualifier

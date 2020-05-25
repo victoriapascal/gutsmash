@@ -38,25 +38,18 @@ from antismash.detection import (cassis,
                                  full_hmmer,
                                  genefinding,
                                  gut_hmm_detection,
-                                 nrps_pks_domains,
                                  genefunctions,
                                  )
 from antismash.modules import (active_site_finder,
                                clusterblast,
-                               lanthipeptides,
-                               lassopeptides,
-                               nrps_pks,
                                pfam2go,
-                               sactipeptides,
                                smcog_trees,
-                               t2pks,
-                               thiopeptides,
                                tta,
                                )
 from antismash.outputs import html, svg
 from antismash.custom_typing import AntismashModule
 
-__version__ = "5.0.0"
+__version__ = "1.0.0"
 
 
 def get_all_modules() -> List[AntismashModule]:
@@ -80,7 +73,7 @@ def get_detection_modules() -> List[AntismashModule]:
         Returns:
             a list of modules
     """
-    return [genefinding, gut_hmm_detection, nrps_pks_domains, full_hmmer, cassis,  # type: ignore
+    return [genefinding, gut_hmm_detection, full_hmmer, cassis,  # type: ignore
             clusterfinder_probabilistic, cluster_hmmer,
             genefunctions]
 
@@ -94,8 +87,8 @@ def get_analysis_modules() -> List[AntismashModule]:
         Returns:
             a list of modules
     """
-    return [smcog_trees, tta, lanthipeptides, thiopeptides, nrps_pks, clusterblast,  # type: ignore
-            sactipeptides, lassopeptides, active_site_finder, pfam2go, t2pks]
+    return [smcog_trees, tta, clusterblast,  # type: ignore
+             active_site_finder, pfam2go]
 
 
 def get_output_modules() -> List[AntismashModule]:
@@ -187,7 +180,7 @@ def run_detection(record: Record, options: ConfigType,
     logging.info("%d region(s) detected in record", len(record.get_regions()))
 
     # finally, run any detection limited to genes in clusters
-    for module in [nrps_pks_domains, cluster_hmmer, genefunctions]:
+    for module in [cluster_hmmer, genefunctions]:
         run_module(record, cast(AntismashModule, module), options, module_results, timings)
         results = module_results.get(module.__name__)
         if results:

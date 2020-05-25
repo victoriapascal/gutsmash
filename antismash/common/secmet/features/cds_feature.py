@@ -14,8 +14,8 @@ from Bio.SeqFeature import SeqFeature
 from antismash.common.secmet import features  # comment hints  # pylint:disable=unused-import
 from antismash.common.secmet.qualifiers import (
     GeneFunction,
-    GeneFunctionAnnotations,
     NRPSPKSQualifier,
+    GeneFunctionAnnotations,
     SecMetQualifier,
 )
 
@@ -150,7 +150,6 @@ class CDSFeature(Feature):
         self.transl_table = int(translation_table)
         self._sec_met = SecMetQualifier()
         self._nrps_pks = NRPSPKSQualifier(self.location.strand)
-
         self.motifs = []  # type: List[features.CDSMotif]
 
         # runtime-only data
