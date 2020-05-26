@@ -18,6 +18,28 @@ Development & Funding
 The development of gutSMASH is collaboration between the Bioinformatics Department at 
 Wageningen University and Research and the Department of Bioengineering at Stanford University. This work has also been possible thanks to the technical support the Novo Nordisk Foundation Center for Biosustainability provided.
 
+How to install gutSMASH
+-----------------------
+
+To be able to run, there are different binaries that have to be installed, by either using apt-get install
+
+#+BEGIN_EXAMPLE
+sudo apt-get install hmmer2 hmmer diamond-aligner fasttree prodigal ncbi-blast+ muscle glimmerhmm
+#+END_EXAMPLE
+
+or Homebrew for macOS systems
+
+#+BEGIN_EXAMPLE
+brew install hmmer2 hmmer diamond fasttree prodigal blast muscle brewsci/science/glimmerhmm
+#+END_EXAMPLE
+
+Moreover, there are different python packages that gutSMASH requires. These can be installed by using pip3 as follows:
+
+#+BEGIN_EXAMPLE
+pip3 install biopython helperlibs bcbio-gff pysvg-py3 scikit-learn matplotlib pyScss Jinja2
+#+END_EXAMPLE
+
+
 Publications
 ------------
 
