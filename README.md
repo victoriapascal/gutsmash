@@ -1,7 +1,13 @@
-antiSMASH - the antibiotics and Secondary Metabolite Analysis SHell
-===================================================================
+gutSMASH - A new approach to functionally profile the human microbiome for specialized primary metabolic gene clusters
+======================================================================================================================
 
-This repository is used to port antiSMASH to be compatible with Python 3, along
+Anaerobic bacteria in the gut and they are responsible for the synthesis and transformation of diverse molecules involved in host-microbe and microbe-microbe interactions, that ultimately derive host phenotypes. The pathways encoding the production of these molecules belong to a specialized primary metabolism and are often physically clustered in the genome, in regions also known as metabolic gene clusters (MGCs).
+
+gutSMASH is a tool that has been developed to fulfil the need of systematically evaluating the metabolic potential of these bacteria by predicting both known and novel anaerobic MGCs from the gut microbiome. The gutSMASH detection rules have been validated using a training set presented in our main publication.
+
+Altogether, this new software provides a comprehensive toolkit to functionally characterize anaerobic bacterial genomes by not only predicting MGCs of known functions but also novel MGCs that may represent good candidates for further experimental characterization.
+
+This repository is used to port gutSMASH to be compatible with Python 3, along
 with mayor restructuring and code cleanup efforts. It is not feature-compatible
 with previous antiSMASH versions for now, and certainly is not
 production-quality code.
@@ -9,27 +15,14 @@ production-quality code.
 Development & Funding
 ---------------------
 
-The development of antiSMASH was started as a collaboration of the Department of
-Microbial Physiology and Groningen Bioinformatics Centre of the University of
-Groningen, the Department of Microbiology of the University of Tübingen, and the
-Department of Bioengineering and Therapeutic Sciences at the University of
-California, San Francisco.  With the move of the PIs and developers, development
-continues now at the Manchester Institute of Biotechnology, the Bioinformatics
-Group at Wageningen University and The Novo Nordisk Foundation Center for
-Biosustainability in Lyngby.
-
-antiSMASH development was/is supported by the GenBiotics program of the Dutch
-Technology Foundation (STW), which is the applied-science division of The
-Netherlands Organisation for Scientific Research (NWO) and the Technology
-Programme of the Ministry of Economic Affairs (grant STW 10463), GenBioCom
-program of the German Ministry of Education and Research (BMBF) grant 0315585A,
-the German Center for Infection Research (DZIF) and the Novo Nordisk Foundation.
+The development of gutSMASH is collaboration between the Bioinformatics Department at 
+Wageningen University and Research and the Department of Bioengineering at Stanford University. This work has also been possible thanks to the technical support the Novo Nordisk Foundation Center for Biosustainability provided.
 
 Publications
 ------------
 
 See http://antismash.secondarymetabolites.org/#!/about for information on citing
-antiSMASH.
+gutSMASH.
 
 
 Installation
