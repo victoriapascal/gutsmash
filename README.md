@@ -21,40 +21,57 @@ Wageningen University and Research and the Department of Bioengineering at Stanf
 How to install gutSMASH
 -----------------------
 
-To be able to run, there are different binaries that have to be installed, by either using apt-get install
+To be able to run gutSMASH, different binaries have to be installed, by either using apt-get install:
 
 
-`
+```
 sudo apt-get install hmmer2 hmmer diamond-aligner fasttree prodigal ncbi-blast+ muscle glimmerhmm
-`
+```
 
-or Homebrew for macOS systems
+or Homebrew for macOS systems:
 
-`
+```
 brew install hmmer2 hmmer diamond fasttree prodigal blast muscle brewsci/science/glimmerhmm
-`
+```
 
-Moreover, there are different python packages that gutSMASH requires. These can be installed by using pip3 as follows:
+Assuming python3 is installed, the python3 dependencies can be installed using pip3 with the following command:
 
-`
+```
 pip3 install biopython helperlibs bcbio-gff pysvg-py3 scikit-learn matplotlib pyScss Jinja2
-`
+```
 
+How to run gutSMASH from the command line
+-----------------------------------------
+
+After downloading this gutSMASH git repository the user can run the tool from the command line. The ideal input for gutSMASH is an annotated nucleotide file in Genbank format or EMBL format. Then, the `--minimal` flag has to be included:
+
+```
+python3 gutsmash/run_gutsmash.py --minimal gbk_input_file
+```
+
+We highly encourge to compare the predicted gene clusters to a database of known and characterized gene clusters using the `--cb-knownclusters`. Also, gene cluster genes can be annotated into different functional categories by using the `-enable-genefunctions` option as follows:
+
+```
+python3 gutsmash/run_gutsmash.py --minimal --cb-knownclusters --enable-genefunctions gbk_input_file
+```
+
+Alternatively, gutSMASH can also use a fasta file as input. Then, the user has to indicate which gene prediction tool wants to use to annotate the genome using the `--genefinding-tool` option and for instance `prodigal` tool
+
+```
+python3 gutsmash/run_gutsmash.py --genefinding-tool prodigal --cb-knownclusters --enable-genefunctions fasta_input_file
+```
+
+See other option available by typing:
+
+```
+python3 gutsmash/run_gutsmash.py --help
+```
 
 Publications
 ------------
 
 See http://antismash.secondarymetabolites.org/#!/about for information on citing
 gutSMASH.
-
-
-Installation
-------------
-
-There are multiple options on how to get your own copy of antiSMASH up and running.
-See [our install documentation](https://docs.antismash.secondarymetabolites.org/install/)
-for detailed information.
-
 
 License
 -------
