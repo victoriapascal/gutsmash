@@ -1,7 +1,7 @@
 gutSMASH - A new approach to functionally profile the human microbiome for specialized primary metabolic gene clusters
 ======================================================================================================================
 
-Anaerobic bacteria in the gut and they are responsible for the synthesis and transformation of diverse molecules involved in host-microbe and microbe-microbe interactions, that ultimately derive host phenotypes. The pathways encoding the production of these molecules belong to a specialized primary metabolism and are often physically clustered in the genome, in regions also known as metabolic gene clusters (MGCs).
+Anaerobic bacteria in the gut are responsible for the synthesis and transformation of diverse molecules involved in host-microbe and microbe-microbe interactions, that ultimately derive host phenotypes. The pathways encoding the production of these molecules belong to a specialized primary metabolism and are often physically clustered in the genome, in regions also known as metabolic gene clusters (MGCs).
 
 gutSMASH is a tool that has been developed to fulfil the need of systematically evaluating the metabolic potential of these bacteria by predicting both known and novel anaerobic MGCs from the gut microbiome. The gutSMASH detection rules have been validated using a training set presented in our main publication.
 
@@ -15,14 +15,13 @@ production-quality code.
 Development & Funding
 ---------------------
 
-The development of gutSMASH is collaboration between the Bioinformatics Department at 
+The development of gutSMASH is a collaboration between the Bioinformatics Department at 
 Wageningen University and Research and the Department of Bioengineering at Stanford University. This work has also been possible thanks to the technical support the Novo Nordisk Foundation Center for Biosustainability provided.
 
 How to install gutSMASH
 -----------------------
 
 To be able to run gutSMASH, different binaries have to be installed, by either using apt-get install:
-
 
 ```
 sudo apt-get install hmmer2 hmmer diamond-aligner fasttree prodigal ncbi-blast+ muscle glimmerhmm
@@ -34,7 +33,7 @@ or Homebrew for macOS systems:
 brew install hmmer2 hmmer diamond fasttree prodigal blast muscle brewsci/science/glimmerhmm
 ```
 
-Assuming python3 is installed, the python3 dependencies can be installed using pip3 with the following command:
+Assuming python3 is installation, the python3 dependencies can be installed using pip3 with the following command:
 
 ```
 pip3 install biopython helperlibs bcbio-gff pysvg-py3 scikit-learn matplotlib pyScss Jinja2
@@ -55,7 +54,7 @@ We highly encourge to compare the predicted gene clusters to a database of known
 python3 gutsmash/run_gutsmash.py --minimal --cb-knownclusters --enable-genefunctions gbk_input_file
 ```
 
-Alternatively, gutSMASH can also use a fasta file as input. Then, the user has to indicate which gene prediction tool wants to use to annotate the genome using the `--genefinding-tool` option and for instance `prodigal` tool
+Alternatively, gutSMASH can also use a fasta file as input. Then, the user has to indicate which gene prediction tool wants to use to annotate the genome using the `--genefinding-tool` option and for instance the `prodigal` tool
 
 ```
 python3 gutsmash/run_gutsmash.py --genefinding-tool prodigal --cb-knownclusters --enable-genefunctions fasta_input_file
