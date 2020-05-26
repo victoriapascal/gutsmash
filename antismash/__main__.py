@@ -82,7 +82,7 @@ def main(args: List[str]) -> int:
 
     # if -V, show version text and exit
     if options.version:
-        print("antiSMASH %s" % get_version())
+        print("gutSMASH %s" % get_version())
         return 0
 
     if len(options.sequences) > 1:
