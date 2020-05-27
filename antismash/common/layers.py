@@ -15,6 +15,7 @@ from antismash.common.html_renderer import Markup
 from antismash.common.module_results import ModuleResults
 from antismash.common.secmet import Record, Region
 from antismash.custom_typing import AntismashModule
+from antismash.common.cluster_class import cluster_class_dict
 
 
 class OptionsLayer:
@@ -94,7 +95,7 @@ class RegionLayer:
         self.anchor_id = self.build_anchor_id(region_feature)
         self.handlers = []  # type: List[AntismashModule]
         self.region_feature = region_feature  # type: Region
-
+        #self.cluster_class = cluster_class
         self.cluster_blast = []  # type: List[Tuple[str, str]]
         self.knowncluster_blast = []  # type: List[Tuple[str, str]]
         self.subcluster_blast = []  # type: List[Tuple[str, str]]
@@ -158,6 +159,11 @@ class RegionLayer:
         """ The details of rules that caused the Region to be defined """
         return ["%s: %s" % (product, rules) for product, rules in
                 zip(self.region_feature.products, self.region_feature.detection_rules)]
+
+    @property
+    def get_cluster_class(self) -> str:
+        return cluster_class_dict[self.region_feature.detection_rules[0]]
+
 
     def description_text(self) -> str:
         """ returns the Region description """

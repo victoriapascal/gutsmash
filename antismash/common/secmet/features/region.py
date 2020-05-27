@@ -19,6 +19,7 @@ from .feature import Feature, FeatureLocation
 from .subregion import SubRegion
 from .candidate_cluster import CandidateCluster
 from ..locations import combine_locations
+from ...cluster_class import cluster_class_dict
 
 
 class TemporaryRegion:
@@ -35,6 +36,7 @@ class TemporaryRegion:
         self.type = "region"
         self.location = location
         self.candidate_clusters = candidate_cluster_numbers
+        self.cluster_class = cluster_class
         self.subregions = subregion_numbers
         self.detection_rules = rules
         self.products = products
@@ -115,11 +117,20 @@ class Region(CDSCollection):
                 products[product] = None
         return list(products) or ["unknown"]
 
+    @property
+    def cluster_class(self) -> str:
+        chosen = ''
+        for cluster in self._candidate_clusters:
+            for product in cluster.products:
+                chosen = product
+        return cluster_class_dict[chosen]
+
+
     def get_product_string(self) -> str:
         """ Returns a string of all unique products collected from all
             contained CandidateClusters
         """
-        return ",".join(sorted(self.products))
+        return ",".join(sorted(self.products)) 
 
     @property
     def detection_rules(self) -> List[str]:
