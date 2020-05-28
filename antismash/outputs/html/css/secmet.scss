@@ -20,265 +20,225 @@
 }
 
 .hybrid {
-    @include secmet(midnightblue, lightsteelblue, midnightblue);
+    @include secmet(black, #efef56, black);
 }
 
-@mixin Leucine_reduction {
-    @include secmet(purple, sandybrown, purple);
+@mixin GR {
+    @include secmet(white, #893f75);
 }
 
-@mixin pigment {
-    @include secmet(white, peru);
+.TMA {
+    @include GR;
 }
 
-@mixin hydrocarbon {
-    @include secmet(white, purple);
+.proline2aminovalerate {
+    @include GR;
 }
 
-@mixin RiPP {
-    @include secmet(white, royalblue);
+.EUT_pathway {
+    @include GR;
 }
 
-@mixin osmolyte {
-    @include secmet(firebrick, yellowgreen, firebrick);
+.pdu {
+    @include GR;
 }
 
-.T1PKS {
-    @include PKS;
+.p-cresol {
+    @include GR;
 }
 
-.transAT-PKS {
-    @include PKS;
+.Threonine2propionate {
+    @include GR;
 }
 
-.transAT-PKS-like {
-    @extend .transAT-PKS;
+.GR_AA_metabolism {
+    @include GR;
 }
 
-.T2PKS {
-    @include PKS;
+.GR_eut-pdu-related {
+    @include GR;
 }
 
-.T3PKS {
-    @include PKS;
+.GR_fatty_acids {
+    @include GR;
 }
 
-.hglE-KS {
-    @include PKS;
+@mixin DR {
+    @include secmet(white, #b44e57);
 }
 
-.PpyS-KS {
-    @include PKS;
+.Leucine_reduction {
+    @include DR;
 }
 
-.PKS-like {
-    @include PKS;
+.AAA_reductive_branch {
+    @include DR;
 }
 
-.arylpolyene {
-    @include pigment;
+.glutamate2butyric {
+    @include DR;
 }
 
-.resorcinol {
-    @include hydrocarbon;
+@mixin OD {
+    @include secmet(midnight, #6eabf4);
 }
 
-.ladderane {
-    @include hydrocarbon;
+.porA {
+    @include OD;
 }
 
-.PUFA {
-    @include hydrocarbon;
+.OD_lactate_related {
+    @include OD;
 }
 
-.NRPS {
-    @include secmet(white, seagreen);
+.OD_eut_pdu_related {
+    @include OD;
 }
 
-.NRPS-like {
-    @extend .NRPS;
+.OD_AA_metabolism {
+    @include OD;
 }
 
-.CDPS {
-    @extend .NRPS;
+.OD_fatty_acids {
+    @include OD;
 }
 
-.thioamide-NRP {
-    @extend .NRPS;
+.OD_aldehydes_related {
+    @include OD;
 }
 
-.terpene {
-    @include hydrocarbon;
+@mixin OD-GR {
+    @include secmet(midnight, #2d7aea);
 }
 
-@mixin lantibiotic {
-    @include secmet(blue, #ffff77, blue);
+.OD_GR_eut_related {
+    @include OD-GR;
 }
 
-.lanthipeptide {
-    @include lantibiotic;
+.OD_GR_unassigned {
+    @include OD-GR;
 }
 
-.bacteriocin {
-    @include RiPP;
+@mixin FE {
+    @include secmet(black, #d19d9d);
 }
 
-.RaS-RiPP {
-    @include RiPP;
+.bai_operon {
+    @include FE;
 }
 
-.fungal-RiPP {
-    @include RiPP;
+.Flavoenzyme_AA_peptides_catabolism {
+    @include FE;
 }
 
-.thiopeptide {
-    @include secmet(black, gold, black);
+.Flavoenzyme_sugar_catabolism {
+    @include FE;
 }
 
-.linaridin {
-    @include RiPP;
+.Flavoenzyme_lipids_catabolism {
+    @include FE;
 }
 
-.cyanobactin {
-    @include RiPP;
+@mixin Other {
+    @include secmet(white, #68273c);
 }
 
-.glycocin {
-    @include RiPP;
+.hydroxybenzoate2phenol {
+    @include Other;
 }
 
-.LAP {
-    @include RiPP;
+.arginine2spermitine_N_carbomyl_Putrescine {
+    @include Other;
 }
 
-.lassopeptide {
-    @include RiPP;
+.arginine2spermitine_via_agmatine {
+    @include Other;
 }
 
-.sactipeptide {
-    @include RiPP;
+.Arginine2_Hcarbonate {
+    @include Other;
 }
 
-.bottromycin {
-    @include RiPP;
+.gallic_acid_met {
+    @include Other;
 }
 
-.head_to_tail {
-    @include RiPP;
+.acetate2butyrate {
+    @include Other;
 }
 
-.microviridin {
-    @include RiPP;
+.Lysine_degradation {
+    @include Other;
 }
 
-.proteusin {
-    @include RiPP;
+.caffeate_respiration {
+    @include Other;
 }
 
-.lipolanthine {
-    @include RiPP;
+.carnitine_degradaion_caiTABCDE {
+    @include Other;
 }
 
-.blactam {
-    @include secmet(black, aliceblue, black);
+.aminobutyrate2Butyrate {
+    @include Other;
 }
 
-.amglyccycl {
-    @include secmet(black, yellowgreen, black);
+.succinate2propionate {
+    @include Other;
 }
 
-.aminocoumarin {
-    @include secmet(black, yellowgreen, black);
+.acrylate2propionate {
+    @include Other;
 }
 
-.siderophore {
-    @include secmet(white, crimson, blue);
+.succinate2propionate {
+    @include Other;
 }
 
-.ectoine {
-    @include osmolyte;
+.Glycine_reductase {
+    @include Other;
 }
 
-.NAGGN {
-    @include osmolyte;
+.Glycine_cleavage {
+    @include Other;
 }
 
-.butyrolactone {
-    @include secmet(white, mediumpurple);
+.arginine_degradation_astABCDE_operon {
+    @include Other;
 }
 
-.indole {
-    @include secmet(black, peachpuff, black);
+.histidine2glutamate_hutHGIU_operon {
+    @include Other;
 }
 
-.nucleoside {
-    @include secmet(black, antiquewhite, black);
+.Leucine2acetoacetate {
+    @include Other;
 }
 
-.phosphoglycolipid {
-    @include secmet(black, yellowgreen, black);
+.Glycerol2glyceroneP {
+    @include Other;
 }
 
-.melanin {
-    @include pigment;
+.Pyruvate2succinyl {
+    @include Other;
 }
 
-.oligosaccharide {
-    @include secmet(black, burlywood, black);
+.TPP_fatty_acids {
+    @include Other;
 }
 
-.furan {
-    @include hydrocarbon;
+.TPP_AA_metabolism {
+    @include Other;
 }
 
-.hserlactone {
-    @include secmet(black, tan, black);
+.Others_HGD_unassigned {
+    @include Other;
 }
 
-.acyl_amino_acids {
-    @include secmet(black, tan, black);
+.fatty_acids-unassigned {
+    @include Other;
 }
 
-.tropodithietic-acid {
-    @include secmet(black, tan, black);
-}
-
-.phenazine {
-    @include secmet(black, plum, black);
-}
-
-.phosphonate {
-    @include secmet(black, mediumaquamarine, black);
-}
-
-.fused {
-    @include RiPP;
-}
-
-.PBDE {
-    @include hydrocarbon;
-}
-
-.other {
-    @include secmet(lightsteelblue, midnightblue);
-}
-
-.betalactone {
-    @include hydrocarbon;
-}
-
-@mixin unknown {
-    @include secmet(black, #f2f2f2, black);
-}
-
-.saccharide {
-    @include unknown;
-}
-
-.fatty_acid {
-    @include unknown;
-}
-
-.halogenated {
-    @include unknown;
+.OD_unknown {
+    @include Other;
 }
