@@ -24,10 +24,10 @@
      <td>
        {% set join = joiner(",") %}
        {% for subtype in region.products -%}
-         {{join()}}<a class="external-link" href="https://gutsmash-documentation.readthedocs.io/en/latest/Glossary.html" target="_blank">{{subtype}}</a>
+         {{join()}}<a class="external-link" href="https://gutsmash-documentation.readthedocs.io/en/latest/Glossary.html#cluster-types" target="_blank">{{subtype}}</a>
        {%- endfor %}
      </td>
-     <td class="digits">{{region.cluster_class}}</td>
+      <td><a class="external-link" href="https://gutsmash-documentation.readthedocs.io/en/latest/Glossary.html#cluster-classes" target="_blank">{{region.cluster_class}}</a></td>
      <td class="digits">{{"{:,d}".format(region.location.start + 1)}}</td>
      <td class="digits table-split-left">{{"{:,d}".format(region.location.end)}}</td>
      {% if region.bgc_id != "" -%}
@@ -39,7 +39,7 @@
       {% else %}
         {% set colour = "rgba(205, 92, 92, 0.3)" %}
       {% endif %}
-      <td><a class="external-link" href="https://mibig.secondarymetabolites.org/go/{{region.bgc_id}}/{{region.bgc_cluster_number}}" target="_blank">{{region.best_knowncluster_name}}</a></td>
+      <td>{{region.best_knowncluster_name}}</td>   
       <td>{{region.best_knowncluster_type}}</td>
       <td class="digits similarity-text" style="background-image: linear-gradient(to left, {{colour}}, {{colour}} {{similarity}}%, #ffffff00 {{similarity}}%)">{{similarity}}%</td>
      {% else %}
