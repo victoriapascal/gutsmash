@@ -42,10 +42,6 @@ def generate_html(region_layer: RegionLayer, _results: ClusterBlastResults,
         tooltip += "<br>Click on an accession to open that entry in the MiBIG database."
         div = generate_div(region_layer, record_layer, options_layer, "knownclusterblast", tooltip)
         html.add_detail_section("KnownClusterBlast", div, "knownclusterblast")
-    if options_layer.cb_subclusters or region.subclusterblast is not None:
-        tooltip = base_tooltip % "sub-cluster units"
-        div = generate_div(region_layer, record_layer, options_layer, "subclusterblast", tooltip)
-        html.add_detail_section("SubClusterBlast", div, "subclusterblast")
 
     return html
 
