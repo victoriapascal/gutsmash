@@ -89,7 +89,7 @@ RULE GR_eut-pdu-related
     SUPERIORS TMA, EUT_pathway, pdu
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, PFL-like, PFL_6_pcresol]) and minimum(2, [Aldedh, PTAC, EutQ, BMC, PduV-EutP, EutN_CcmL]) and not (PFL_9_tma or Gly_8-9_TMA or NRDD) and not EutB and not EutC and not (POR or POR_N or PFOR_II)
+    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, PFL-like, PFL_6_pcresol]) and minimum(2, [Aldedh, PTAC, EutQ, PduV-EutP, EutN_CcmL]) and not (PFL_9_tma or Gly_8-9_TMA or NRDD) and not EutB and not EutC and not (POR or POR_N or PFOR_II)
 
 RULE GR_fatty_acids
     COMMENT fatty acids metabolsim
