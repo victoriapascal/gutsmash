@@ -35,6 +35,7 @@ EutH	Ethanolamine utilisation protein, EutH	25	EutH.hmm
 Aldedh	Aldehyde dehydrogenase family	23	Aldedh.hmm
 BMC	Bacterial Microcompartment (BMC) domain	24	BMC.hmm
 PFOR_II	Pyruvate:ferredoxin oxidoreductase core domain II	27	PFOR_II.hmm
+PFOR_phenylacetate	Pyruvate:ferredoxin oxidoreductase core domain II	27	PFOR_phenylacetate.hmm
 POR_N	Pyruvate flavodoxin/ferredoxin oxidoreductase, thiamine diP-bdg	21	POR_N.hmm
 POR	Pyruvate ferredoxin/flavodoxin oxidoreductase	27	POR.hmm
 PTA_PTB	Phosphate acetyl/butaryl transferase	20	PTA_PTB.hmm
@@ -64,9 +65,14 @@ OAM_dimer	Dimerisation domain of d-ornithine 4,5-aminomutase	25	OAM_dimer.hmm
 Gly_radical	Glycyl radical	22	Gly_radical.hmm
 Gly_430_pcre	P-cresol Glycine radical clade	22	Gly_430_pcre.hmm
 Gly_8-9_TMA	TMA lyase glycine radical clade	22	Gly_8-9_TMA.hmm
+Gly_radical_scatole	Glycyl radical scatole clade	22	Gly_radical_scatole.hmm
 PFL-like	Pyruvate formate lyase-like	24	PFL-like.hmm
 PFL_9_tma	Pyruvate formate lyase-like TMA clade	24	PFL_9_tma.hmm
 PFL_6_pcresol	Pyruvate formate lyase-like pcresol clade	24	PFL_6_pcresol.hmm
+PFL_toluene	Pyruvate formate lyase-like toluene clade	24	PFL_toluene.hmm
+PFL_proline	Pyruvate formate lyase-like proline clade	24	PFL_proline.hmm
+PFL_acetate1	Pyruvate formate lyase-like acetate clade	24	PFL_acetate1.hmm
+PFL_acetate2	Pyruvate formate lyase-like acetate clade	24	PFL_acetate2.hmm
 PduV-EutP	Ethanolamine utilisation - propanediol utilisation	20	PduV-EutP.hmm
 AdoMet_dc	S-adenosylmethionine decarboxylase	25	AdoMet_dc.hmm
 Aminotran_5	Aminotransferase, class V	21	Aminotran_5.hmm
@@ -413,3 +419,55 @@ Malic_M	Malic enzyme, NAD binding domain	23	Malic_M.hmm
 malic	Malic enzyme, N-terminal domain	23	malic.hmm
 Alk_phosphatase	Alkaline phosphatase	24	Alk_phosphatase.hmm
 PDU_like	Putative propanediol utilisation	27	PDU_like.hmm
+Prismane	Prismane-CO dehydrogenase family	21	Prismane.hmm
+CbiA	CobQ/CobB/MinD/ParA nucleotide binding domain	25	CbiA.hmm
+FTHFS	Formate--tetrahydrofolate ligase	21	FTHFS.hmm
+FTCD_C	Cyclodeaminase domain	24	FTCD_C.hmm
+THF_DHG_CYH	Tetrahydrofolate dehydrogenase/cyclohydrolase, catalytic domain	32	THF_DHG_CYH.hmm
+THF_DHG_CYH_C	Tetrahydrofolate dehydrogenase/cyclohydrolase, NAD(P)-binding domain	20	THF_DHG_CYH_C.hmm
+MTHFR_C	Methylene-tetrahydrofolate reductase C terminal	20	MTHFR_C.hmm
+MTHFR	Methylenetetrahydrofolate reductase	20	MTHFR.hmm
+Pyr_redox_dim	Pyridine nucleotide-disulphide oxidoreductase, dimerisation domain	25	Pyr_redox_dim.hmm
+FeS	Putative Fe-S cluster	21	FeS.hmm
+CdhD	CO dehydrogenase/acetyl-CoA synthase delta subunit	24	CdhD.hmm
+Pterin_bind	Dihydropteroate synthase	25	Pterin_bind.hmm
+CdhC	CO dehydrogenase/acetyl-CoA synthase complex beta subunit	21	CdhC.hmm
+RACo_C_ter	C-terminal domain of RACo the ASKHA domain	27	RACo_C_ter.hmm
+SucD_FumR	succinate dehydrogenase/fumarate reductase cytochrome b subunit	20	SucD_FumR.hmm
+TPR_12	Tetratricopeptide repeat	30	TPR_12.hmm
+P5CR_dimer	Pyrroline-5-carboxylate reductase dimerisation	25	P5CR_dimer.hmm
+DsrD	Dissimilatory sulfite reductase D	24	DsrD.hmm
+NIR_SIR_ferr	Nitrite/Sulfite reductase ferredoxin-like half domain	20	NIR_SIR_ferr.hmm
+NIR_SIR	Nitrite and sulphite reductase 4Fe-4S domain	6	NIR_SIR.hmm
+SLBB	SLBB domain	15	SLBB.hmm
+NQR2_RnfD_RnfE	NQR2, RnfD, RnfE family	27	NQR2_RnfD_RnfE.hmm
+FMN_bind	FMN-binding domain	20	FMN_bind.hmm
+Rnf-Nqr	Rnf-Nqr subunit, membrane protein	23	Rnf-Nqr.hmm
+Complex1_51K	Respiratory-chain NADH dehydrogenase 51 Kd subunit	31	Complex1_51K.hmm
+RnfC_N	RnfC Barrel sandwich hybrid domain	25	RnfC_N.hmm
+NrfD	Polysulphide reductase, NrfD	25	NrfD.hmm
+Fer4_11	4Fe-4S dicluster domain	26	Fer4_11.hmm
+DmsC	DMSO reductase anchor subunit	22	DmsC.hmm
+Fer4_4	4Fe-4S binding domain	10	Fer4_4.hmm
+Nitr_red_alph_N	espiratory nitrate reductase alpha N-terminal	24	Nitr_red_alph_N.hmm
+Nitr_red_bet_C	Respiratory nitrate reductase beta C-terminal	27	Nitr_red_bet_C.hmm
+Nitrate_red_del	Nitrate reductase delta subunit	22	Nitrate_red_del.hmm
+Nitrate_red_gam	Nitrate reductase gamma subunit	22	Nitrate_red_gam.hmm
+Proton_antipo_N	NADH dehydrogenase (ubiquinone)	24	Proton_antipo_N.hmm
+Proton_antipo_M	Membrane transport protein	21	Proton_antipo_M.hmm
+NADHdh	NADH dehydrogenase (ubiquinone)	15	NADHdh.hmm
+Oxidored_q6	NADH ubiquinone oxidoreductase, 20 Kd subunit	21	Oxidored_q6.hmm
+Complex1_30kDa	Respiratory-chain NADH dehydrogenase, 30 Kd subunit	21	Complex1_30kDa.hmm
+NiFeSe_Hases	Nickel-dependent hydrogenase	25	NiFeSe_Hases.hmm
+Complex1_49kDa	Respiratory-chain NADH dehydrogenase, 49 Kd subunit	24	Complex1_49kDa.hmm
+Form-deh_trans	Formate dehydrogenase	22	Form-deh_trans.hmm
+Ni_hydr_CYTB	Prokaryotic cytochrome b561	30	Ni_hydr_CYTB.hmm
+Fer2_BFD	BFD-like [2Fe-2S] binding domain	23	Fer2_BFD.hmm
+Fe-2S_thioredx	Thioredoxin-like [2Fe-2S] ferredoxin	24	Fe-2S_thioredx.hmm
+Fer2_4	2Fe-2S iron-sulfur cluster binding domain	22	Fer2_4.hmm
+NADH-G_4Fe-4S_3	NADH-ubiquinone oxidoreductase-G iron-sulfur binding region	21	NADH-G_4Fe-4S_3.hmm
+NADH_4Fe-4S	NADH-ubiquinone oxidoreductase-F iron-sulfur binding region	23	NADH_4Fe-4S.hmm
+Oxidored_q2	NADH-ubiquinone/plastoquinone oxidoreductase chain 4L	24	Oxidored_q2.hmm
+Oxidored_q3	NADH-ubiquinone/plastoquinone oxidoreductase chain 6	33	Oxidored_q3.hmm
+Oxidored_q4	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3	23	Oxidored_q4.hmm
+hpdC	4-hydroxyphenylacetate decarboxylase small gamma subunit	15	hpdC.hmm

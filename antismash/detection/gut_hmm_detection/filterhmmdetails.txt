@@ -1,4 +1,4 @@
-PFL_6_pcresol,PFL_9_tma,PFL-like,Gly_8-9_TMA,Gly_radical,Gly_430_pcre,NRDD
+PFL_6_pcresol,PFL_9_tma,PFL-like,Gly_8-9_TMA,Gly_radical_scatole,Gly_radical,Gly_430_pcre,NRDD,PFL_toluene,PFL_proline,PFL_acetate1,PFL_acetate2
 Acetate_kinase,Butyrate_kinase
 Proline_reductase,Glycine_reductase,Gly_reductase
 OKR_DC_1_C,OKR_DC_1_7_arginine,OKR_DC_1_5_ornithine,OKR_DC_1_5_lysine

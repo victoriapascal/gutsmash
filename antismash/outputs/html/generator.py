@@ -38,7 +38,6 @@ def build_json_data(records: List[Record], results: List[Dict[str, module_result
     js_records = js.convert_records(records, results, options)
 
     js_domains = []
-
     for i, record in enumerate(records):
         json_record = js_records[i]
         json_record['seq_id'] = "".join(char for char in json_record['seq_id'] if char in string.printable)
@@ -128,7 +127,6 @@ def generate_webpage(records: List[Record], results: List[Dict[str, module_resul
             else:
                 record_layers_without_regions.append(RecordLayer(record, None, options_layer))
             results_by_record_id[record.id] = record_results
-
         regions_written = sum(len(record.get_regions()) for record in records)
         job_id = os.path.basename(options.output_dir)
         page_title = ""

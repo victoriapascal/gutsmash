@@ -29,27 +29,27 @@ RULE TMA
 
 RULE p-cresol
     COMMENT p-cresol synthesis or HpdBCA operon
-    CUTOFF 20
+    CUTOFF 8
     NEIGHBOURHOOD 10
-    CONDITIONS  PFL_6_pcresol and (Gly_430_pcre or Gly_radical) and Radical_SAM and not NRDD #Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
+    CONDITIONS  PFL_6_pcresol and (Gly_430_pcre or Gly_radical) and hpdC and Radical_SAM and not NRDD #Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
 
-RULE arginine2spermitine_N_carbomyl_Putrescine
+RULE arginine2spermidine_N_carbomyl_Putrescine
     COMMENT putative arginine degradation pathway via agmatine (arg-N-carbomyl-putr-sper)
     #SUPERIORS Arginine2_Hcarbonate
     CUTOFF 20
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Cys_Met_Meta_PP, AdoMet_dc, Beta_elim_lyase, PAD_porph, OTCace, CN_hydrolase, Ala_racemase_N]) and (OKR_DC_1_7_arginine or OKR_DC_1) and Amidinotransf and Arginase #arginine degradation via N-carbomyl-Putrescine
 
-RULE arginine2spermitine_via_agmatine
+RULE arginine2spermidine_via_agmatine
     COMMENT putative arginine degradation pathway via agmatine (arg-putr-sper)
-    SUPERIORS arginine2spermitine_N_carbomyl_Putrescine
+    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
     CUTOFF 20
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [Orn_DAP_Arg_deC, Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Spermine_synt_N, DegT_DnrJ_EryC1, Alk_phosphatase, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, Ala_racemase_N]) and Arginase and (OKR_DC_1_7_arginine or OKR_DC_1) ##original pathway via agmatinase
 
 RULE Arginine2_Hcarbonate
     COMMENT Arginine to hydrogene carbonate pathway
-    SUPERIORS arginine2spermitine_N_carbomyl_Putrescine
+    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
     CUTOFF 20
     NEIGHBOURHOOD 10
     CONDITIONS Amidinotransf and OTCace and OTCace_N and AA_kinase ##Arginine to hydrogene carbonate pathway
@@ -92,10 +92,10 @@ RULE AAA_reductive_branch
     CONDITIONS minimum(4, [BcrAD_BadFG, HCDH, ACP_syn_III, ACP_syn_III_C, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HCDH_N, Hacid_dh_C, Hacid_dh, AlaDh_PNT_C, IlvN, ECH_1, ECH_2, ETF, ETF_alpha, NAD_Gly3P_dh_N, Thiolase_C, Thiolase_N, ketoacyl-synt]) and HAAA1 and not HleuS1
 
 RULE porA
-    COMMENT porA metabolism
+    COMMENT porA metabolism: Val,Ile,Leu,Tyr, Phe to phenylacetate 
     CUTOFF 5
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(2, [PGM_PMM_I, PGM_PMM_III, TPP_enzyme_C, Transketolase_C]) and POR and POR_N and PFOR_II
+    CONDITIONS Fer4_7 and TPP_enzyme_C and POR and POR_N and PFOR_II
 
 RULE Lysine_degradation
     COMMENT Lysine degradation pathway (to butyrate)
@@ -201,10 +201,92 @@ RULE Pyruvate2succinyl
     NEIGHBOURHOOD 10
     CONDITIONS minimum(5, [PYC_OADA, HMGL-like, Carboxyl_trans, MdcE, Ldh_1_C, Ldh_1_N, Lyase_1, FumaraseC_C, FAD_binding_2, Succ_DH_flav_C, Fumarate_red_D, Fumarate_red_C, AcetylCoA_hydro, AcetylCoA_hyd_C])
 
+RULE Acetyl-CoA_pathway
+    COMMENT Acetate formation from CO2 and H2
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS CdhC and CdhD and minimum(8, [Prismane, FTHFS, FTCD_C, THF_DHG_CYH, THF_DHG_CYH_C, MTHFR_C, MTHFR, Pyr_redox_2, Pyr_redox_dim, CbiA, FeS, Pterin_bind, GCV_H, Fer2, RACo_C_ter])
 
-#RULE GABA_synthesis
-#    COMMENT from glutamate or putrescine to GABA
-#    CUTOFF 20
-#    NEIGHBOURHOOD 10
-#    CONDITIONS minimum(4, [Gln-synt_C, Peptidase_C26, GATase, Aldedh, DAO, NAD_binding_8, FAD_binding_3])
+RULE Pyruvate2succinate
+    COMMENT pyruvate to succinate
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS Succ_DH_flav_C and FAD_binding_2 and (Fer2_3 or Fer4_7 or SucD_FumR)
 
+RULE Indoleacetate2scatole
+    COMMENT Scatole formation from indoleacetate
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS PFL-like and Gly_radical_scatole and minimum(1, [MFS_1, Radical_SAM, TPR_12])
+        
+RULE Phenylacetate2toluene
+    COMMENT toluene formation from phenylacetate
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS PFL_toluene and minimum(1, [Gly_430_pcre, Gly_radical, Radical_SAM])
+
+RULE Hydroxy-L-proline2proline
+    COMMENT proline formation from hydroxy-L-proline
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS (PFL_proline or cds(PFL-like and Gly_radical)) and Radical_SAM and P5CR_dimer and F420_oxidored
+
+RULE Sulfate2sulfide
+    COMMENT sulfate to sulfide reaction
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS DsrD and (NIR_SIR_ferr or NIR_SIR)
+
+RULE Pyruvate2acetate-formate
+    COMMENT pryuvate to acetate and formate
+    CUTOFF 6
+    NEIGHBOURHOOD 10
+    CONDITIONS (PFL_acetate1 or PFL_acetate2) and Radical_SAM
+
+RULE Rnf_complex
+    COMMENT Fdred and NAD converstion to Fdox and NADH
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS Complex1_51K and minimum(5, [RnfC_N, SLBB, Fer4_9, NQR2_RnfD_RnfE, FMN_bind, Rnf-Nqr, FeS, Fer4])
+
+RULE Tetrathionate2thiosulfate
+    COMMENT Tetrathionite reductase
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS NrfD and Molybdopterin and minimum(2, [Molybdop_Fe4S4, Fer4_11, Molydop_binding]) and not (Nitr_red_bet_C or Nitrate_red_del)
+
+RULE DMSO-TMAO_reducatse
+    COMMENT from DMSO to dimethylsulfide or TMAO to TMA
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS DmsC and Molybdopterin and minimum(2, [Molybdop_Fe4S4, Fer4_11, Fer4_4, Molydop_binding])
+
+RULE Nitrate_reductase
+    COMMENT Nitrate to nitrite
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS Nitr_red_bet_C and Nitrate_red_del and Nitrate_red_gam and Molybdopterin and minimum(2, [Nitr_red_alph_N, Molybdopterin, Molydop_binding, Fer4_11])
+
+RULE Ech_complex
+    COMMENT Fdred to Fdox 
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and not (Oxidored_q4 or Oxidored_q3) and minimum(1, [Proton_antipo_N, Proton_antipo_M, NiFeSe_Hases, Complex1_49kDa, Fer4_9]) and not (Molybdopterin or Molydop_binding)
+
+RULE Formate_dehydrogenase
+    COMMENT formate to CO2 and H
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS Molybdopterin and Form-deh_trans and not (Nitr_red_bet_C or Nitr_red_alph_N) and minimum(3, [Ni_hydr_CYTB, Fer4_11, Fer4_4, Molydop_binding, Molybdop_Fe4S4])
+
+RULE GlycerolP2glyceroneP
+    COMMENT Glycerol-3-P dehydrogenase
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS DAO and Fer2_BFD and FAD_binding_2 and Fer4_8
+
+RULE NADH_dehydrogenase_I
+    COMMENT NADH and ubiquinone to NAD and ubiquinol
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS Oxidored_q4 and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and Molybdopterin and NADHdh and Oxidored_q3 and Oxidored_q2 and minimum(4, [Fe-2S_thioredx, SLBB, NADH_4Fe-4S, Fer2_4, NADH-G_4Fe-4S_3, Molybdop_Fe4S4, Molydop_binding, Fer4_7, Proton_antipo_N, Proton_antipo_M])

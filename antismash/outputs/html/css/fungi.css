@@ -1,915 +1,974 @@
 .hybrid {
-  background-color: lightsteelblue;
+  background-color: #f4bf6c;
 }
 .hybrid a, .hybrid a:link, .hybrid a:visited {
-  color: midnightblue;
+  color: black;
 }
 rect.hybrid {
-  fill: lightsteelblue;
-  stroke: midnightblue;
+  fill: #f4bf6c;
+  stroke: black;
 }
 .hybrid.active {
-  border-color: midnightblue;
+  border-color: black;
   border-width: 2px;
   border-style: solid;
 }
 .hybrid:hover {
-  background-color: #d0dcec;
+  background-color: #f7d297;
 }
 
-.arylpolyene {
-  background-color: peru;
+.TMA {
+  background-color: #893f75;
 }
-.arylpolyene a, .arylpolyene a:link, .arylpolyene a:visited {
+.TMA a, .TMA a:link, .TMA a:visited {
   color: white;
 }
-rect.arylpolyene {
-  fill: peru;
+rect.TMA {
+  fill: #893f75;
   stroke: orangered;
 }
-.arylpolyene.active {
+.TMA.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.arylpolyene:hover {
-  background-color: #d69c63;
+.TMA:hover {
+  background-color: #a84d90;
 }
 
-.resorcinol {
-  background-color: purple;
+.proline2aminovalerate {
+  background-color: #893f75;
 }
-.resorcinol a, .resorcinol a:link, .resorcinol a:visited {
+.proline2aminovalerate a, .proline2aminovalerate a:link,
+.proline2aminovalerate a:visited {
   color: white;
 }
-rect.resorcinol {
-  fill: purple;
+rect.proline2aminovalerate {
+  fill: #893f75;
   stroke: orangered;
 }
-.resorcinol.active {
+.proline2aminovalerate.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.resorcinol:hover {
-  background-color: #ae00ae;
+.proline2aminovalerate:hover {
+  background-color: #a84d90;
 }
 
-.ladderane {
-  background-color: purple;
+.EUT_pathway {
+  background-color: #893f75;
 }
-.ladderane a, .ladderane a:link, .ladderane a:visited {
+.EUT_pathway a, .EUT_pathway a:link, .EUT_pathway a:visited {
   color: white;
 }
-rect.ladderane {
-  fill: purple;
+rect.EUT_pathway {
+  fill: #893f75;
   stroke: orangered;
 }
-.ladderane.active {
+.EUT_pathway.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.ladderane:hover {
-  background-color: #ae00ae;
+.EUT_pathway:hover {
+  background-color: #a84d90;
 }
 
-.PUFA {
-  background-color: purple;
+.pdu {
+  background-color: #893f75;
 }
-.PUFA a, .PUFA a:link, .PUFA a:visited {
+.pdu a, .pdu a:link, .pdu a:visited {
   color: white;
 }
-rect.PUFA {
-  fill: purple;
+rect.pdu {
+  fill: #893f75;
   stroke: orangered;
 }
-.PUFA.active {
+.pdu.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.PUFA:hover {
-  background-color: #ae00ae;
+.pdu:hover {
+  background-color: #a84d90;
 }
 
-.NRPS, .NRPS-like, .CDPS, .thioamide-NRP {
-  background-color: seagreen;
+.p-cresol {
+  background-color: #893f75;
 }
-.NRPS a, .NRPS a:link, .NRPS a:visited, .NRPS-like a, .NRPS-like a:link,
-.NRPS-like a:visited, .CDPS a, .CDPS a:link, .CDPS a:visited, .thioamide-NRP a,
-.thioamide-NRP a:link, .thioamide-NRP a:visited {
+.p-cresol a, .p-cresol a:link, .p-cresol a:visited {
   color: white;
 }
-rect.NRPS, rect.NRPS-like, rect.CDPS, rect.thioamide-NRP {
-  fill: seagreen;
+rect.p-cresol {
+  fill: #893f75;
   stroke: orangered;
 }
-.NRPS.active, .active.NRPS-like, .active.CDPS, .active.thioamide-NRP {
+.p-cresol.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.NRPS:hover, :hover.NRPS-like, :hover.CDPS, :hover.thioamide-NRP {
-  background-color: #39ad6d;
+.p-cresol:hover {
+  background-color: #a84d90;
 }
 
-.terpene {
-  background-color: purple;
+.Threonine2propionate {
+  background-color: #893f75;
 }
-.terpene a, .terpene a:link, .terpene a:visited {
+.Threonine2propionate a, .Threonine2propionate a:link,
+.Threonine2propionate a:visited {
   color: white;
 }
-rect.terpene {
-  fill: purple;
+rect.Threonine2propionate {
+  fill: #893f75;
   stroke: orangered;
 }
-.terpene.active {
+.Threonine2propionate.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.terpene:hover {
-  background-color: #ae00ae;
+.Threonine2propionate:hover {
+  background-color: #a84d90;
 }
 
-.lanthipeptide {
-  background-color: #ffff77;
+.GR_AA_metabolism {
+  background-color: #893f75;
 }
-.lanthipeptide a, .lanthipeptide a:link, .lanthipeptide a:visited {
-  color: blue;
-}
-rect.lanthipeptide {
-  fill: #ffff77;
-  stroke: blue;
-}
-.lanthipeptide.active {
-  border-color: blue;
-  border-width: 2px;
-  border-style: solid;
-}
-.lanthipeptide:hover {
-  background-color: #ffffa5;
-}
-
-.bacteriocin {
-  background-color: royalblue;
-}
-.bacteriocin a, .bacteriocin a:link, .bacteriocin a:visited {
+.GR_AA_metabolism a, .GR_AA_metabolism a:link, .GR_AA_metabolism a:visited {
   color: white;
 }
-rect.bacteriocin {
-  fill: royalblue;
+rect.GR_AA_metabolism {
+  fill: #893f75;
   stroke: orangered;
 }
-.bacteriocin.active {
+.GR_AA_metabolism.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.bacteriocin:hover {
-  background-color: #6988e7;
+.GR_AA_metabolism:hover {
+  background-color: #a84d90;
 }
 
-.RaS-RiPP {
-  background-color: royalblue;
+.GR_eut-pdu-related {
+  background-color: #893f75;
 }
-.RaS-RiPP a, .RaS-RiPP a:link, .RaS-RiPP a:visited {
+.GR_eut-pdu-related a, .GR_eut-pdu-related a:link, .GR_eut-pdu-related a:visited {
   color: white;
 }
-rect.RaS-RiPP {
-  fill: royalblue;
+rect.GR_eut-pdu-related {
+  fill: #893f75;
   stroke: orangered;
 }
-.RaS-RiPP.active {
+.GR_eut-pdu-related.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.RaS-RiPP:hover {
-  background-color: #6988e7;
+.GR_eut-pdu-related:hover {
+  background-color: #a84d90;
 }
 
-.fungal-RiPP {
-  background-color: royalblue;
+.GR_fatty_acids {
+  background-color: #893f75;
 }
-.fungal-RiPP a, .fungal-RiPP a:link, .fungal-RiPP a:visited {
+.GR_fatty_acids a, .GR_fatty_acids a:link, .GR_fatty_acids a:visited {
   color: white;
 }
-rect.fungal-RiPP {
-  fill: royalblue;
+rect.GR_fatty_acids {
+  fill: #893f75;
   stroke: orangered;
 }
-.fungal-RiPP.active {
+.GR_fatty_acids.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.fungal-RiPP:hover {
-  background-color: #6988e7;
+.GR_fatty_acids:hover {
+  background-color: #a84d90;
 }
 
-.thiopeptide {
-  background-color: gold;
+.Leucine_reduction {
+  background-color: #b44e57;
 }
-.thiopeptide a, .thiopeptide a:link, .thiopeptide a:visited {
+.Leucine_reduction a, .Leucine_reduction a:link, .Leucine_reduction a:visited {
+  color: white;
+}
+rect.Leucine_reduction {
+  fill: #b44e57;
+  stroke: orangered;
+}
+.Leucine_reduction.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Leucine_reduction:hover {
+  background-color: #c26e76;
+}
+
+.AAA_reductive_branch {
+  background-color: #b44e57;
+}
+.AAA_reductive_branch a, .AAA_reductive_branch a:link,
+.AAA_reductive_branch a:visited {
+  color: white;
+}
+rect.AAA_reductive_branch {
+  fill: #b44e57;
+  stroke: orangered;
+}
+.AAA_reductive_branch.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.AAA_reductive_branch:hover {
+  background-color: #c26e76;
+}
+
+.glutamate2butyric {
+  background-color: #b44e57;
+}
+.glutamate2butyric a, .glutamate2butyric a:link, .glutamate2butyric a:visited {
+  color: white;
+}
+rect.glutamate2butyric {
+  fill: #b44e57;
+  stroke: orangered;
+}
+.glutamate2butyric.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.glutamate2butyric:hover {
+  background-color: #c26e76;
+}
+
+.porA {
+  background-color: #6eabf4;
+}
+.porA a, .porA a:link, .porA a:visited {
+  color: midnight;
+}
+rect.porA {
+  fill: #6eabf4;
+  stroke: orangered;
+}
+.porA.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.porA:hover {
+  background-color: #99c4f7;
+}
+
+.OD_lactate_related {
+  background-color: #6eabf4;
+}
+.OD_lactate_related a, .OD_lactate_related a:link, .OD_lactate_related a:visited {
+  color: midnight;
+}
+rect.OD_lactate_related {
+  fill: #6eabf4;
+  stroke: orangered;
+}
+.OD_lactate_related.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_lactate_related:hover {
+  background-color: #99c4f7;
+}
+
+.OD_eut_pdu_related {
+  background-color: #6eabf4;
+}
+.OD_eut_pdu_related a, .OD_eut_pdu_related a:link, .OD_eut_pdu_related a:visited {
+  color: midnight;
+}
+rect.OD_eut_pdu_related {
+  fill: #6eabf4;
+  stroke: orangered;
+}
+.OD_eut_pdu_related.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_eut_pdu_related:hover {
+  background-color: #99c4f7;
+}
+
+.OD_AA_metabolism {
+  background-color: #6eabf4;
+}
+.OD_AA_metabolism a, .OD_AA_metabolism a:link, .OD_AA_metabolism a:visited {
+  color: midnight;
+}
+rect.OD_AA_metabolism {
+  fill: #6eabf4;
+  stroke: orangered;
+}
+.OD_AA_metabolism.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_AA_metabolism:hover {
+  background-color: #99c4f7;
+}
+
+.OD_fatty_acids {
+  background-color: #6eabf4;
+}
+.OD_fatty_acids a, .OD_fatty_acids a:link, .OD_fatty_acids a:visited {
+  color: midnight;
+}
+rect.OD_fatty_acids {
+  fill: #6eabf4;
+  stroke: orangered;
+}
+.OD_fatty_acids.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_fatty_acids:hover {
+  background-color: #99c4f7;
+}
+
+.OD_aldehydes_related {
+  background-color: #6eabf4;
+}
+.OD_aldehydes_related a, .OD_aldehydes_related a:link,
+.OD_aldehydes_related a:visited {
+  color: midnight;
+}
+rect.OD_aldehydes_related {
+  fill: #6eabf4;
+  stroke: orangered;
+}
+.OD_aldehydes_related.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_aldehydes_related:hover {
+  background-color: #99c4f7;
+}
+
+.OD_GR_eut_related {
+  background-color: #2d7aea;
+}
+.OD_GR_eut_related a, .OD_GR_eut_related a:link, .OD_GR_eut_related a:visited {
+  color: midnight;
+}
+rect.OD_GR_eut_related {
+  fill: #2d7aea;
+  stroke: orangered;
+}
+.OD_GR_eut_related.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_GR_eut_related:hover {
+  background-color: #5794ee;
+}
+
+.OD_GR_unassigned {
+  background-color: #2d7aea;
+}
+.OD_GR_unassigned a, .OD_GR_unassigned a:link, .OD_GR_unassigned a:visited {
+  color: midnight;
+}
+rect.OD_GR_unassigned {
+  fill: #2d7aea;
+  stroke: orangered;
+}
+.OD_GR_unassigned.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_GR_unassigned:hover {
+  background-color: #5794ee;
+}
+
+.bai_operon {
+  background-color: #d19d9d;
+}
+.bai_operon a, .bai_operon a:link, .bai_operon a:visited {
   color: black;
 }
-rect.thiopeptide {
-  fill: gold;
-  stroke: black;
-}
-.thiopeptide.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.thiopeptide:hover {
-  background-color: #ffde2e;
-}
-
-.linaridin {
-  background-color: royalblue;
-}
-.linaridin a, .linaridin a:link, .linaridin a:visited {
-  color: white;
-}
-rect.linaridin {
-  fill: royalblue;
+rect.bai_operon {
+  fill: #d19d9d;
   stroke: orangered;
 }
-.linaridin.active {
+.bai_operon.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.linaridin:hover {
-  background-color: #6988e7;
+.bai_operon:hover {
+  background-color: #e0bcbc;
 }
 
-.cyanobactin {
-  background-color: royalblue;
+.Flavoenzyme_AA_peptides_catabolism {
+  background-color: #d19d9d;
 }
-.cyanobactin a, .cyanobactin a:link, .cyanobactin a:visited {
-  color: white;
-}
-rect.cyanobactin {
-  fill: royalblue;
-  stroke: orangered;
-}
-.cyanobactin.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.cyanobactin:hover {
-  background-color: #6988e7;
-}
-
-.glycocin {
-  background-color: royalblue;
-}
-.glycocin a, .glycocin a:link, .glycocin a:visited {
-  color: white;
-}
-rect.glycocin {
-  fill: royalblue;
-  stroke: orangered;
-}
-.glycocin.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.glycocin:hover {
-  background-color: #6988e7;
-}
-
-.LAP {
-  background-color: royalblue;
-}
-.LAP a, .LAP a:link, .LAP a:visited {
-  color: white;
-}
-rect.LAP {
-  fill: royalblue;
-  stroke: orangered;
-}
-.LAP.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.LAP:hover {
-  background-color: #6988e7;
-}
-
-.lassopeptide {
-  background-color: royalblue;
-}
-.lassopeptide a, .lassopeptide a:link, .lassopeptide a:visited {
-  color: white;
-}
-rect.lassopeptide {
-  fill: royalblue;
-  stroke: orangered;
-}
-.lassopeptide.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.lassopeptide:hover {
-  background-color: #6988e7;
-}
-
-.sactipeptide {
-  background-color: royalblue;
-}
-.sactipeptide a, .sactipeptide a:link, .sactipeptide a:visited {
-  color: white;
-}
-rect.sactipeptide {
-  fill: royalblue;
-  stroke: orangered;
-}
-.sactipeptide.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.sactipeptide:hover {
-  background-color: #6988e7;
-}
-
-.bottromycin {
-  background-color: royalblue;
-}
-.bottromycin a, .bottromycin a:link, .bottromycin a:visited {
-  color: white;
-}
-rect.bottromycin {
-  fill: royalblue;
-  stroke: orangered;
-}
-.bottromycin.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.bottromycin:hover {
-  background-color: #6988e7;
-}
-
-.head_to_tail {
-  background-color: royalblue;
-}
-.head_to_tail a, .head_to_tail a:link, .head_to_tail a:visited {
-  color: white;
-}
-rect.head_to_tail {
-  fill: royalblue;
-  stroke: orangered;
-}
-.head_to_tail.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.head_to_tail:hover {
-  background-color: #6988e7;
-}
-
-.microviridin {
-  background-color: royalblue;
-}
-.microviridin a, .microviridin a:link, .microviridin a:visited {
-  color: white;
-}
-rect.microviridin {
-  fill: royalblue;
-  stroke: orangered;
-}
-.microviridin.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.microviridin:hover {
-  background-color: #6988e7;
-}
-
-.proteusin {
-  background-color: royalblue;
-}
-.proteusin a, .proteusin a:link, .proteusin a:visited {
-  color: white;
-}
-rect.proteusin {
-  fill: royalblue;
-  stroke: orangered;
-}
-.proteusin.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.proteusin:hover {
-  background-color: #6988e7;
-}
-
-.lipolanthine {
-  background-color: royalblue;
-}
-.lipolanthine a, .lipolanthine a:link, .lipolanthine a:visited {
-  color: white;
-}
-rect.lipolanthine {
-  fill: royalblue;
-  stroke: orangered;
-}
-.lipolanthine.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.lipolanthine:hover {
-  background-color: #6988e7;
-}
-
-.blactam {
-  background-color: aliceblue;
-}
-.blactam a, .blactam a:link, .blactam a:visited {
+.Flavoenzyme_AA_peptides_catabolism a, .Flavoenzyme_AA_peptides_catabolism a:link,
+.Flavoenzyme_AA_peptides_catabolism a:visited {
   color: black;
 }
-rect.blactam {
-  fill: aliceblue;
-  stroke: black;
-}
-.blactam.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.blactam:hover {
-  background-color: white;
-}
-
-.amglyccycl {
-  background-color: yellowgreen;
-}
-.amglyccycl a, .amglyccycl a:link, .amglyccycl a:visited {
-  color: black;
-}
-rect.amglyccycl {
-  fill: yellowgreen;
-  stroke: black;
-}
-.amglyccycl.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.amglyccycl:hover {
-  background-color: #acd657;
-}
-
-.aminocoumarin {
-  background-color: yellowgreen;
-}
-.aminocoumarin a, .aminocoumarin a:link, .aminocoumarin a:visited {
-  color: black;
-}
-rect.aminocoumarin {
-  fill: yellowgreen;
-  stroke: black;
-}
-.aminocoumarin.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.aminocoumarin:hover {
-  background-color: #acd657;
-}
-
-.siderophore {
-  background-color: crimson;
-}
-.siderophore a, .siderophore a:link, .siderophore a:visited {
-  color: white;
-}
-rect.siderophore {
-  fill: crimson;
-  stroke: blue;
-}
-.siderophore.active {
-  border-color: blue;
-  border-width: 2px;
-  border-style: solid;
-}
-.siderophore:hover {
-  background-color: #ec3257;
-}
-
-.ectoine {
-  background-color: yellowgreen;
-}
-.ectoine a, .ectoine a:link, .ectoine a:visited {
-  color: firebrick;
-}
-rect.ectoine {
-  fill: yellowgreen;
-  stroke: firebrick;
-}
-.ectoine.active {
-  border-color: firebrick;
-  border-width: 2px;
-  border-style: solid;
-}
-.ectoine:hover {
-  background-color: #acd657;
-}
-
-.NAGGN {
-  background-color: yellowgreen;
-}
-.NAGGN a, .NAGGN a:link, .NAGGN a:visited {
-  color: firebrick;
-}
-rect.NAGGN {
-  fill: yellowgreen;
-  stroke: firebrick;
-}
-.NAGGN.active {
-  border-color: firebrick;
-  border-width: 2px;
-  border-style: solid;
-}
-.NAGGN:hover {
-  background-color: #acd657;
-}
-
-.butyrolactone {
-  background-color: mediumpurple;
-}
-.butyrolactone a, .butyrolactone a:link, .butyrolactone a:visited {
-  color: white;
-}
-rect.butyrolactone {
-  fill: mediumpurple;
+rect.Flavoenzyme_AA_peptides_catabolism {
+  fill: #d19d9d;
   stroke: orangered;
 }
-.butyrolactone.active {
+.Flavoenzyme_AA_peptides_catabolism.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.butyrolactone:hover {
-  background-color: #af95e4;
+.Flavoenzyme_AA_peptides_catabolism:hover {
+  background-color: #e0bcbc;
 }
 
-.indole {
-  background-color: peachpuff;
+.Flavoenzyme_sugar_catabolism {
+  background-color: #d19d9d;
 }
-.indole a, .indole a:link, .indole a:visited {
+.Flavoenzyme_sugar_catabolism a, .Flavoenzyme_sugar_catabolism a:link,
+.Flavoenzyme_sugar_catabolism a:visited {
   color: black;
 }
-rect.indole {
-  fill: peachpuff;
-  stroke: black;
+rect.Flavoenzyme_sugar_catabolism {
+  fill: #d19d9d;
+  stroke: orangered;
 }
-.indole.active {
-  border-color: black;
+.Flavoenzyme_sugar_catabolism.active {
+  border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.indole:hover {
-  background-color: #fff2e7;
+.Flavoenzyme_sugar_catabolism:hover {
+  background-color: #e0bcbc;
 }
 
-.nucleoside {
-  background-color: antiquewhite;
+.Flavoenzyme_lipids_catabolism {
+  background-color: #d19d9d;
 }
-.nucleoside a, .nucleoside a:link, .nucleoside a:visited {
+.Flavoenzyme_lipids_catabolism a, .Flavoenzyme_lipids_catabolism a:link,
+.Flavoenzyme_lipids_catabolism a:visited {
   color: black;
 }
-rect.nucleoside {
-  fill: antiquewhite;
-  stroke: black;
+rect.Flavoenzyme_lipids_catabolism {
+  fill: #d19d9d;
+  stroke: orangered;
 }
-.nucleoside.active {
-  border-color: black;
+.Flavoenzyme_lipids_catabolism.active {
+  border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.nucleoside:hover {
-  background-color: white;
+.Flavoenzyme_lipids_catabolism:hover {
+  background-color: #e0bcbc;
 }
 
-.phosphoglycolipid {
-  background-color: yellowgreen;
+.hydroxybenzoate2phenol {
+  background-color: #68273c;
 }
-.phosphoglycolipid a, .phosphoglycolipid a:link, .phosphoglycolipid a:visited {
-  color: black;
-}
-rect.phosphoglycolipid {
-  fill: yellowgreen;
-  stroke: black;
-}
-.phosphoglycolipid.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.phosphoglycolipid:hover {
-  background-color: #acd657;
-}
-
-.melanin {
-  background-color: peru;
-}
-.melanin a, .melanin a:link, .melanin a:visited {
+.hydroxybenzoate2phenol a, .hydroxybenzoate2phenol a:link,
+.hydroxybenzoate2phenol a:visited {
   color: white;
 }
-rect.melanin {
-  fill: peru;
+rect.hydroxybenzoate2phenol {
+  fill: #68273c;
   stroke: orangered;
 }
-.melanin.active {
+.hydroxybenzoate2phenol.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.melanin:hover {
-  background-color: #d69c63;
+.hydroxybenzoate2phenol:hover {
+  background-color: #89344f;
 }
 
-.oligosaccharide {
-  background-color: burlywood;
+.arginine2spermitine_N_carbomyl_Putrescine {
+  background-color: #68273c;
 }
-.oligosaccharide a, .oligosaccharide a:link, .oligosaccharide a:visited {
-  color: black;
-}
-rect.oligosaccharide {
-  fill: burlywood;
-  stroke: black;
-}
-.oligosaccharide.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.oligosaccharide:hover {
-  background-color: #e8cdab;
-}
-
-.furan {
-  background-color: purple;
-}
-.furan a, .furan a:link, .furan a:visited {
+.arginine2spermitine_N_carbomyl_Putrescine a,
+.arginine2spermitine_N_carbomyl_Putrescine a:link,
+.arginine2spermitine_N_carbomyl_Putrescine a:visited {
   color: white;
 }
-rect.furan {
-  fill: purple;
+rect.arginine2spermitine_N_carbomyl_Putrescine {
+  fill: #68273c;
   stroke: orangered;
 }
-.furan.active {
+.arginine2spermitine_N_carbomyl_Putrescine.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.furan:hover {
-  background-color: #ae00ae;
+.arginine2spermitine_N_carbomyl_Putrescine:hover {
+  background-color: #89344f;
 }
 
-.hserlactone {
-  background-color: tan;
+.arginine2spermitine_via_agmatine {
+  background-color: #68273c;
 }
-.hserlactone a, .hserlactone a:link, .hserlactone a:visited {
-  color: black;
-}
-rect.hserlactone {
-  fill: tan;
-  stroke: black;
-}
-.hserlactone.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.hserlactone:hover {
-  background-color: #dfcaad;
-}
-
-.acyl_amino_acids {
-  background-color: tan;
-}
-.acyl_amino_acids a, .acyl_amino_acids a:link, .acyl_amino_acids a:visited {
-  color: black;
-}
-rect.acyl_amino_acids {
-  fill: tan;
-  stroke: black;
-}
-.acyl_amino_acids.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.acyl_amino_acids:hover {
-  background-color: #dfcaad;
-}
-
-.tropodithietic-acid {
-  background-color: tan;
-}
-.tropodithietic-acid a, .tropodithietic-acid a:link, .tropodithietic-acid a:visited {
-  color: black;
-}
-rect.tropodithietic-acid {
-  fill: tan;
-  stroke: black;
-}
-.tropodithietic-acid.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.tropodithietic-acid:hover {
-  background-color: #dfcaad;
-}
-
-.phenazine {
-  background-color: plum;
-}
-.phenazine a, .phenazine a:link, .phenazine a:visited {
-  color: black;
-}
-rect.phenazine {
-  fill: plum;
-  stroke: black;
-}
-.phenazine.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.phenazine:hover {
-  background-color: #e9c2e9;
-}
-
-.phosphonate {
-  background-color: mediumaquamarine;
-}
-.phosphonate a, .phosphonate a:link, .phosphonate a:visited {
-  color: black;
-}
-rect.phosphonate {
-  fill: mediumaquamarine;
-  stroke: black;
-}
-.phosphonate.active {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-.phosphonate:hover {
-  background-color: #89d8bd;
-}
-
-.fused {
-  background-color: royalblue;
-}
-.fused a, .fused a:link, .fused a:visited {
+.arginine2spermitine_via_agmatine a, .arginine2spermitine_via_agmatine a:link,
+.arginine2spermitine_via_agmatine a:visited {
   color: white;
 }
-rect.fused {
-  fill: royalblue;
+rect.arginine2spermitine_via_agmatine {
+  fill: #68273c;
   stroke: orangered;
 }
-.fused.active {
+.arginine2spermitine_via_agmatine.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.fused:hover {
-  background-color: #6988e7;
+.arginine2spermitine_via_agmatine:hover {
+  background-color: #89344f;
 }
 
-.PBDE {
-  background-color: purple;
+.Arginine2_Hcarbonate {
+  background-color: #68273c;
 }
-.PBDE a, .PBDE a:link, .PBDE a:visited {
+.Arginine2_Hcarbonate a, .Arginine2_Hcarbonate a:link,
+.Arginine2_Hcarbonate a:visited {
   color: white;
 }
-rect.PBDE {
-  fill: purple;
+rect.Arginine2_Hcarbonate {
+  fill: #68273c;
   stroke: orangered;
 }
-.PBDE.active {
+.Arginine2_Hcarbonate.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.PBDE:hover {
-  background-color: #ae00ae;
+.Arginine2_Hcarbonate:hover {
+  background-color: #89344f;
 }
 
-.other {
-  background-color: midnightblue;
+.gallic_acid_met {
+  background-color: #68273c;
 }
-.other a, .other a:link, .other a:visited {
-  color: lightsteelblue;
-}
-rect.other {
-  fill: midnightblue;
-  stroke: orangered;
-}
-.other.active {
-  border-color: orangered;
-  border-width: 2px;
-  border-style: solid;
-}
-.other:hover {
-  background-color: #212196;
-}
-
-.betalactone {
-  background-color: purple;
-}
-.betalactone a, .betalactone a:link, .betalactone a:visited {
+.gallic_acid_met a, .gallic_acid_met a:link, .gallic_acid_met a:visited {
   color: white;
 }
-rect.betalactone {
-  fill: purple;
+rect.gallic_acid_met {
+  fill: #68273c;
   stroke: orangered;
 }
-.betalactone.active {
+.gallic_acid_met.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.betalactone:hover {
-  background-color: #ae00ae;
+.gallic_acid_met:hover {
+  background-color: #89344f;
 }
 
-.saccharide {
-  background-color: #f2f2f2;
+.acetate2butyrate {
+  background-color: #68273c;
 }
-.saccharide a, .saccharide a:link, .saccharide a:visited {
-  color: black;
+.acetate2butyrate a, .acetate2butyrate a:link, .acetate2butyrate a:visited {
+  color: white;
 }
-rect.saccharide {
-  fill: #f2f2f2;
-  stroke: black;
+rect.acetate2butyrate {
+  fill: #68273c;
+  stroke: orangered;
 }
-.saccharide.active {
-  border-color: black;
+.acetate2butyrate.active {
+  border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.saccharide:hover {
-  background-color: white;
+.acetate2butyrate:hover {
+  background-color: #89344f;
 }
 
-.fatty_acid {
-  background-color: #f2f2f2;
+.Lysine_degradation {
+  background-color: #68273c;
 }
-.fatty_acid a, .fatty_acid a:link, .fatty_acid a:visited {
-  color: black;
+.Lysine_degradation a, .Lysine_degradation a:link, .Lysine_degradation a:visited {
+  color: white;
 }
-rect.fatty_acid {
-  fill: #f2f2f2;
-  stroke: black;
+rect.Lysine_degradation {
+  fill: #68273c;
+  stroke: orangered;
 }
-.fatty_acid.active {
-  border-color: black;
+.Lysine_degradation.active {
+  border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.fatty_acid:hover {
-  background-color: white;
+.Lysine_degradation:hover {
+  background-color: #89344f;
 }
 
-.halogenated {
-  background-color: #f2f2f2;
+.caffeate_respiration {
+  background-color: #68273c;
 }
-.halogenated a, .halogenated a:link, .halogenated a:visited {
-  color: black;
+.caffeate_respiration a, .caffeate_respiration a:link,
+.caffeate_respiration a:visited {
+  color: white;
 }
-rect.halogenated {
-  fill: #f2f2f2;
-  stroke: black;
+rect.caffeate_respiration {
+  fill: #68273c;
+  stroke: orangered;
 }
-.halogenated.active {
-  border-color: black;
+.caffeate_respiration.active {
+  border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.halogenated:hover {
-  background-color: white;
+.caffeate_respiration:hover {
+  background-color: #89344f;
+}
+
+.carnitine_degradaion_caiTABCDE {
+  background-color: #68273c;
+}
+.carnitine_degradaion_caiTABCDE a, .carnitine_degradaion_caiTABCDE a:link,
+.carnitine_degradaion_caiTABCDE a:visited {
+  color: white;
+}
+rect.carnitine_degradaion_caiTABCDE {
+  fill: #68273c;
+  stroke: orangered;
+}
+.carnitine_degradaion_caiTABCDE.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.carnitine_degradaion_caiTABCDE:hover {
+  background-color: #89344f;
+}
+
+.aminobutyrate2Butyrate {
+  background-color: #68273c;
+}
+.aminobutyrate2Butyrate a, .aminobutyrate2Butyrate a:link,
+.aminobutyrate2Butyrate a:visited {
+  color: white;
+}
+rect.aminobutyrate2Butyrate {
+  fill: #68273c;
+  stroke: orangered;
+}
+.aminobutyrate2Butyrate.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.aminobutyrate2Butyrate:hover {
+  background-color: #89344f;
+}
+
+.succinate2propionate {
+  background-color: #68273c;
+}
+.succinate2propionate a, .succinate2propionate a:link,
+.succinate2propionate a:visited {
+  color: white;
+}
+rect.succinate2propionate {
+  fill: #68273c;
+  stroke: orangered;
+}
+.succinate2propionate.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.succinate2propionate:hover {
+  background-color: #89344f;
+}
+
+.acrylate2propionate {
+  background-color: #68273c;
+}
+.acrylate2propionate a, .acrylate2propionate a:link, .acrylate2propionate a:visited {
+  color: white;
+}
+rect.acrylate2propionate {
+  fill: #68273c;
+  stroke: orangered;
+}
+.acrylate2propionate.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.acrylate2propionate:hover {
+  background-color: #89344f;
+}
+
+.succinate2propionate {
+  background-color: #68273c;
+}
+.succinate2propionate a, .succinate2propionate a:link,
+.succinate2propionate a:visited {
+  color: white;
+}
+rect.succinate2propionate {
+  fill: #68273c;
+  stroke: orangered;
+}
+.succinate2propionate.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.succinate2propionate:hover {
+  background-color: #89344f;
+}
+
+.Glycine_reductase {
+  background-color: #68273c;
+}
+.Glycine_reductase a, .Glycine_reductase a:link, .Glycine_reductase a:visited {
+  color: white;
+}
+rect.Glycine_reductase {
+  fill: #68273c;
+  stroke: orangered;
+}
+.Glycine_reductase.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Glycine_reductase:hover {
+  background-color: #89344f;
+}
+
+.Glycine_cleavage {
+  background-color: #68273c;
+}
+.Glycine_cleavage a, .Glycine_cleavage a:link, .Glycine_cleavage a:visited {
+  color: white;
+}
+rect.Glycine_cleavage {
+  fill: #68273c;
+  stroke: orangered;
+}
+.Glycine_cleavage.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Glycine_cleavage:hover {
+  background-color: #89344f;
+}
+
+.arginine_degradation_astABCDE_operon {
+  background-color: #68273c;
+}
+.arginine_degradation_astABCDE_operon a,
+.arginine_degradation_astABCDE_operon a:link,
+.arginine_degradation_astABCDE_operon a:visited {
+  color: white;
+}
+rect.arginine_degradation_astABCDE_operon {
+  fill: #68273c;
+  stroke: orangered;
+}
+.arginine_degradation_astABCDE_operon.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.arginine_degradation_astABCDE_operon:hover {
+  background-color: #89344f;
+}
+
+.histidine2glutamate_hutHGIU_operon {
+  background-color: #68273c;
+}
+.histidine2glutamate_hutHGIU_operon a, .histidine2glutamate_hutHGIU_operon a:link,
+.histidine2glutamate_hutHGIU_operon a:visited {
+  color: white;
+}
+rect.histidine2glutamate_hutHGIU_operon {
+  fill: #68273c;
+  stroke: orangered;
+}
+.histidine2glutamate_hutHGIU_operon.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.histidine2glutamate_hutHGIU_operon:hover {
+  background-color: #89344f;
+}
+
+.Leucine2acetoacetate {
+  background-color: #68273c;
+}
+.Leucine2acetoacetate a, .Leucine2acetoacetate a:link,
+.Leucine2acetoacetate a:visited {
+  color: white;
+}
+rect.Leucine2acetoacetate {
+  fill: #68273c;
+  stroke: orangered;
+}
+.Leucine2acetoacetate.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Leucine2acetoacetate:hover {
+  background-color: #89344f;
+}
+
+.Glycerol2glyceroneP {
+  background-color: #68273c;
+}
+.Glycerol2glyceroneP a, .Glycerol2glyceroneP a:link, .Glycerol2glyceroneP a:visited {
+  color: white;
+}
+rect.Glycerol2glyceroneP {
+  fill: #68273c;
+  stroke: orangered;
+}
+.Glycerol2glyceroneP.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Glycerol2glyceroneP:hover {
+  background-color: #89344f;
+}
+
+.Pyruvate2succinyl {
+  background-color: #68273c;
+}
+.Pyruvate2succinyl a, .Pyruvate2succinyl a:link, .Pyruvate2succinyl a:visited {
+  color: white;
+}
+rect.Pyruvate2succinyl {
+  fill: #68273c;
+  stroke: orangered;
+}
+.Pyruvate2succinyl.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Pyruvate2succinyl:hover {
+  background-color: #89344f;
+}
+
+.TPP_fatty_acids {
+  background-color: #68273c;
+}
+.TPP_fatty_acids a, .TPP_fatty_acids a:link, .TPP_fatty_acids a:visited {
+  color: white;
+}
+rect.TPP_fatty_acids {
+  fill: #68273c;
+  stroke: orangered;
+}
+.TPP_fatty_acids.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.TPP_fatty_acids:hover {
+  background-color: #89344f;
+}
+
+.TPP_AA_metabolism {
+  background-color: #68273c;
+}
+.TPP_AA_metabolism a, .TPP_AA_metabolism a:link, .TPP_AA_metabolism a:visited {
+  color: white;
+}
+rect.TPP_AA_metabolism {
+  fill: #68273c;
+  stroke: orangered;
+}
+.TPP_AA_metabolism.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.TPP_AA_metabolism:hover {
+  background-color: #89344f;
+}
+
+.Others_HGD_unassigned {
+  background-color: #68273c;
+}
+.Others_HGD_unassigned a, .Others_HGD_unassigned a:link,
+.Others_HGD_unassigned a:visited {
+  color: white;
+}
+rect.Others_HGD_unassigned {
+  fill: #68273c;
+  stroke: orangered;
+}
+.Others_HGD_unassigned.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.Others_HGD_unassigned:hover {
+  background-color: #89344f;
+}
+
+.fatty_acids-unassigned {
+  background-color: #68273c;
+}
+.fatty_acids-unassigned a, .fatty_acids-unassigned a:link,
+.fatty_acids-unassigned a:visited {
+  color: white;
+}
+rect.fatty_acids-unassigned {
+  fill: #68273c;
+  stroke: orangered;
+}
+.fatty_acids-unassigned.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.fatty_acids-unassigned:hover {
+  background-color: #89344f;
+}
+
+.OD_unknown {
+  background-color: #68273c;
+}
+.OD_unknown a, .OD_unknown a:link, .OD_unknown a:visited {
+  color: white;
+}
+rect.OD_unknown {
+  fill: #68273c;
+  stroke: orangered;
+}
+.OD_unknown.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.OD_unknown:hover {
+  background-color: #89344f;
 }
 
 body {

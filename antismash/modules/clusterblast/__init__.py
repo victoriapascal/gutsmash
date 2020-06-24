@@ -20,7 +20,6 @@ from .clusterblast import perform_clusterblast
 from .html_output import generate_html, will_handle
 from .known import run_knownclusterblast_on_record, check_known_prereqs, prepare_known_data
 from .results import ClusterBlastResults, get_result_limit
-from .sub import run_subclusterblast_on_record, check_sub_prereqs
 
 NAME = "clusterblast"
 SHORT_DESCRIPTION = "comparative gene cluster analysis"
@@ -35,13 +34,6 @@ def get_arguments() -> ModuleArgs:
                              default=False,
                              help="Compare identified clusters against a "
                                   "database of antiSMASH-predicted clusters.")
-    args.add_analysis_toggle('subclusters',
-                             dest='subclusters',
-                             action='store_true',
-                             default=False,
-                             help="Compare identified clusters against known "
-                                  "subclusters responsible for synthesising "
-                                  "precursors.")
     args.add_analysis_toggle('knownclusters',
                              dest='knownclusters',
                              action='store_true',
@@ -70,7 +62,7 @@ def get_arguments() -> ModuleArgs:
 def is_enabled(options: ConfigType) -> bool:
     """  Uses the supplied options to determine if the module should be run
     """
-    return options.cb_general or options.cb_knownclusters or options.cb_subclusters
+    return options.cb_general or options.cb_knownclusters
 
 
 def check_options(options: ConfigType) -> List[str]:
@@ -106,7 +98,6 @@ def check_prereqs(options: ConfigType) -> List[str]:
     failure_messages.extend(prepare_data(logging_only=True))
 
     failure_messages.extend(check_known_prereqs(options))
-    failure_messages.extend(check_sub_prereqs(options))
 
     return failure_messages
 
@@ -140,8 +131,6 @@ def run_on_record(record: Record, results: Optional[ClusterBlastResults],
         logging.info('Running ClusterBlast')
         clusters, proteins = load_clusterblast_database()
         results.general = perform_clusterblast(options, record, clusters, proteins)
-    if options.cb_subclusters and not results.subcluster:
-        results.subcluster = run_subclusterblast_on_record(record, options)
     if options.cb_knownclusters and not results.knowncluster:
         results.knowncluster = run_knownclusterblast_on_record(record, options)
     return results
