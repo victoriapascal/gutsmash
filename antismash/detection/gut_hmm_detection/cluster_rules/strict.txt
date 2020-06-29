@@ -95,7 +95,14 @@ RULE porA
     COMMENT porA metabolism: Val,Ile,Leu,Tyr, Phe to phenylacetate 
     CUTOFF 5
     NEIGHBOURHOOD 10
-    CONDITIONS Fer4_7 and TPP_enzyme_C and POR and POR_N and PFOR_II
+    CONDITIONS Fer4_7 and TPP_enzyme_C and POR and POR_N and PFOR_II and not (EKR or Fer4_16)
+
+RULE PFOR_II_pathway
+    COMMENT pyruvate to acetate 
+    SUPERIORS porA
+    CUTOFF 5
+    NEIGHBOURHOOD 10
+    CONDITIONS cds(POR and POR_N and PFOR_II and EKR and Fer4_16 and TPP_enzyme_C)
 
 RULE Lysine_degradation
     COMMENT Lysine degradation pathway (to butyrate)

@@ -35,7 +35,6 @@ EutH	Ethanolamine utilisation protein, EutH	25	EutH.hmm
 Aldedh	Aldehyde dehydrogenase family	23	Aldedh.hmm
 BMC	Bacterial Microcompartment (BMC) domain	24	BMC.hmm
 PFOR_II	Pyruvate:ferredoxin oxidoreductase core domain II	27	PFOR_II.hmm
-PFOR_phenylacetate	Pyruvate:ferredoxin oxidoreductase core domain II	27	PFOR_phenylacetate.hmm
 POR_N	Pyruvate flavodoxin/ferredoxin oxidoreductase, thiamine diP-bdg	21	POR_N.hmm
 POR	Pyruvate ferredoxin/flavodoxin oxidoreductase	27	POR.hmm
 PTA_PTB	Phosphate acetyl/butaryl transferase	20	PTA_PTB.hmm
@@ -471,3 +470,4 @@ Oxidored_q2	NADH-ubiquinone/plastoquinone oxidoreductase chain 4L	24	Oxidored_q2
 Oxidored_q3	NADH-ubiquinone/plastoquinone oxidoreductase chain 6	33	Oxidored_q3.hmm
 Oxidored_q4	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3	23	Oxidored_q4.hmm
 hpdC	4-hydroxyphenylacetate decarboxylase small gamma subunit	15	hpdC.hmm
+EKR	Domain of unknown function	19	EKR.hmm
