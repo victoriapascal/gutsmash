@@ -29,40 +29,40 @@ RULE TMA
 
 RULE p-cresol
     COMMENT p-cresol synthesis or HpdBCA operon
-    CUTOFF 8
+    CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS  PFL_6_pcresol and (Gly_430_pcre or Gly_radical) and hpdC and Radical_SAM and not NRDD #Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
 
 RULE arginine2spermidine_N_carbomyl_Putrescine
     COMMENT putative arginine degradation pathway via agmatine (arg-N-carbomyl-putr-sper)
     #SUPERIORS Arginine2_Hcarbonate
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Cys_Met_Meta_PP, AdoMet_dc, Beta_elim_lyase, PAD_porph, OTCace, CN_hydrolase, Ala_racemase_N]) and (OKR_DC_1_7_arginine or OKR_DC_1) and Amidinotransf and Arginase #arginine degradation via N-carbomyl-Putrescine
 
 RULE arginine2spermidine_via_agmatine
     COMMENT putative arginine degradation pathway via agmatine (arg-putr-sper)
     SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [Orn_DAP_Arg_deC, Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Spermine_synt_N, DegT_DnrJ_EryC1, Alk_phosphatase, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, Ala_racemase_N]) and Arginase and (OKR_DC_1_7_arginine or OKR_DC_1) ##original pathway via agmatinase
 
 RULE Arginine2_Hcarbonate
     COMMENT Arginine to hydrogene carbonate pathway
     SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS Amidinotransf and OTCace and OTCace_N and AA_kinase ##Arginine to hydrogene carbonate pathway
 
 RULE proline2aminovalerate
     COMMENT proline to aminovalerate pathway
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS Proline_reductase and (Pro_racemase or GRDB) and not ACP_syn_III_C ##ACP_syn_III_C belongs to the gly reductase pathway
     
 RULE Leucine_reduction
     COMMENT Leucine reductive branch
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [Lactoyl-CoA1, Lactoyl-CoA2, Hacid_dh_C, HCDH, Acyl-CoA_dh_1, Acyl-CoA_dh_2, AdoHcyase_NAD, AlaDh_PNT_C, BcrAD_BadFG, CoA_transf_3, ETF, ETF_alpha, FGGY_C, MreB_Mbl, NAD_binding_2, Peptidase_M22, UDPG_MGDP_dh_N])
                and  minimum(1, [HleuD1, HleuD2, HleuS1, HleuS2]) # 2 specific pHMMS that define 2-hydroxyglutaryl-CoA dehydratase are required (from C. sporogenes or difficile)
@@ -75,7 +75,7 @@ RULE gallic_acid_met
 
 RULE bai_operon
     COMMENT From primary to secondary bile acids  via bai operon
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS (minimum(2, [AMP-binding, adh_short, adh_short_C2, KR, CoA_transf_3, Pyr_redox, NAD_binding_8, FAD_oxidored, FAD_binding_2]) and baiH and baiCD) or (minimum(3, [Dala_Dala_lig_C, Dala_Dala_lig_N, CPSase_L_D2, ATP-grasp_4, ATP-grasp_3, GARS_A, Acyltransferase, AMP-binding, adh_short, adh_short_C2, KR, CoA_transf_3, Pyr_redox, NAD_binding_8, FAD_oxidored, FAD_binding_2, LysM, GHMP_kinases_C, GHMP_kinases_N]) and baiH and baiCD)
 
@@ -87,7 +87,7 @@ RULE acetate2butyrate
 
 RULE AAA_reductive_branch
     COMMENT Aromatic amino acid reductive branch
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(4, [BcrAD_BadFG, HCDH, ACP_syn_III, ACP_syn_III_C, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HCDH_N, Hacid_dh_C, Hacid_dh, AlaDh_PNT_C, IlvN, ECH_1, ECH_2, ETF, ETF_alpha, NAD_Gly3P_dh_N, Thiolase_C, Thiolase_N, ketoacyl-synt]) and HAAA1 and not HleuS1
 
@@ -106,15 +106,15 @@ RULE PFOR_II_pathway
 
 RULE Lysine_degradation
     COMMENT Lysine degradation pathway (to butyrate)
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(1, [HBT, AcetylCoA_hydro, Lys-AminoMut_A, CoA_trans]) and BKACE and LAM_C and Radical_SAM and B12-binding and OAM_dimer
 
 RULE glutamate2butyric
     COMMENT glutamate to butyric acid pathway
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [OAD_gamma, Biotin_lipoyl, Peptidase_M23, OAD_beta, CoA_trans, AcetylCoA_hydro, Carboxyl_trans]) and BcrAD_BadFG and HG2B1 and HG2B2
+    CONDITIONS minimum(3, [OAD_gamma, Biotin_lipoyl, Peptidase_M23, OAD_beta, CoA_trans, CoA_trans_6_Glutaconate, AcetylCoA_hydro, Carboxyl_trans]) and BcrAD_BadFG and HG2B1 and HG2B2
 
 RULE caffeate_respiration
     COMMENT caffeate respiration
@@ -136,11 +136,10 @@ RULE aminobutyrate2Butyrate
     CONDITIONS minimum(2, [Mal_decarbox_Al, AcetylCoA_hyd_C, AcetylCoA_hydro, Fe-ADH, Fe-ADH_2, HBT]) and cds(HpaB_N and HpaB) and not (LAM_C or BKACE) #either from 4-hydroxybutyrate or via crotonoyl-CoA, LAM_C to differentiate from aminobutyrate2Butyrate
 
 RULE succinate2propionate
-    COMMENT succinate to propionate pathway
+    COMMENT succinate to propionate pathway from B.theta
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [ATP_bind_1, AcetylCoA_hyd_C, AcetylCoA_hydro, B12-binding, Glyoxalase, Glyoxalase_3, Glyoxalase_4, MM_CoA_mutase, MdcE, MeaB]) and (CT_Propionyl_CoA1 or CT_Propionyl_CoA2 or CT_Propionyl_CoA3)
-               #or (CT_Propionyl_CoA1 or CT_Propionyl_CoA2 or CT_Propionyl_CoA3) #succinate2propionate complete pathway or priopionyl-CoA (transferase) marker
+    CONDITIONS  minimum(5, [OAD_beta, Biotin_lipoyl, OAD_gamma, Glyoxalase_4, MeaB, B12-binding, MM_CoA_mutase, AcetylCoA_hydro, AcetylCoA_hyd_C, HMGL-like, PYC_OADA]) and minimum(1, [CT_Vparvula, CT_Btheta, CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3])
 
 RULE acrylate2propionate
     COMMENT acrylate to propionate pathway
@@ -151,24 +150,24 @@ RULE acrylate2propionate
 
 RULE Threonine2propionate
     COMMENT Threonine to propionate pathway via tdcABCDEFG operon
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(2, [SDH_alpha, SDH_beta, MmgE_PrpD, Acetate_kinase, Butyrate_kinase, Trp_Tyr_perm, PALP]) and PFL-like and Gly_radical and not NRDD
 
 RULE Glycine_reductase
     COMMENT Glycine reductase, from glycine to acetyl-P
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [ACP_syn_III_C, GRDB, GRDA, ACP_syn_III, FA_synthesis]) and Glycine_reductase and not Pro_racemase #Pro_racemase belongs to the proline2aminovalerate cluster
 
 RULE Glycine_cleavage
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(2, [GCV_T, SoxG, GCV_H, GDC-P, Aminotran_5]) and GCV_H and GCV_T_C
 
 RULE arginine_degradation_astABCDE_operon
     COMMENT Arginine degradation to pytruvate via astABCDE operon
-    CUTOFF 20
+    CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [Met_asp_mut_E, Aldedh, AstE_AspA]) and AstA and AstB
 
@@ -190,23 +189,11 @@ RULE histidine2glutamate_hutHGIU_operon
 #    NEIGHBOURHOOD 10
 #    CONDITIONS minimum(2, [UxaC, Mannitol_dh_C, Mannitol_dh]) and GD_AH_C
 
-RULE Leucine2acetoacetate
-    COMMENT Leucine degradation to acetoacetate
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS minimum(4, [Carboxyl_trans, ECH_1, ECH_2, oxoacid_dh, Transket_pyr, Transketolase_C, OxoDH_E1alpha_N, CPSase_L_D2]) and minimum(1, [Acyl-CoA_dh_1, Acyl-CoA_dh_2]) and HMGL-like
-
-RULE Glycerol2glyceroneP
+RULE Oxidative_glycerol
     COMMENT Glycerol degradation to glycerone phosphate
     CUTOFF 20
     NEIGHBOURHOOD 10
-    CONDITIONS Fe-ADH and Fe-ADH_2 and Dak1 and Dak2
-
-RULE Pyruvate2succinyl
-    COMMENT Pyruvate fermentation to succinyl_CoA
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS minimum(5, [PYC_OADA, HMGL-like, Carboxyl_trans, MdcE, Ldh_1_C, Ldh_1_N, Lyase_1, FumaraseC_C, FAD_binding_2, Succ_DH_flav_C, Fumarate_red_D, Fumarate_red_C, AcetylCoA_hydro, AcetylCoA_hyd_C])
+    CONDITIONS (Fe-ADH or Fe-ADH_2) and Dak1 and Dak2
 
 RULE Acetyl-CoA_pathway
     COMMENT Acetate formation from CO2 and H2
@@ -214,27 +201,27 @@ RULE Acetyl-CoA_pathway
     NEIGHBOURHOOD 10
     CONDITIONS CdhC and CdhD and minimum(8, [Prismane, FTHFS, FTCD_C, THF_DHG_CYH, THF_DHG_CYH_C, MTHFR_C, MTHFR, Pyr_redox_2, Pyr_redox_dim, CbiA, FeS, Pterin_bind, GCV_H, Fer2, RACo_C_ter])
 
-RULE Pyruvate2succinate
-    COMMENT pyruvate to succinate
+RULE Fumarate2succinate
+    COMMENT fumarate to succinate
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS Succ_DH_flav_C and FAD_binding_2 and (Fer2_3 or Fer4_7 or SucD_FumR)
 
 RULE Indoleacetate2scatole
     COMMENT Scatole formation from indoleacetate
-    CUTOFF 10
+    CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS PFL-like and Gly_radical_scatole and minimum(1, [MFS_1, Radical_SAM, TPR_12])
         
 RULE Phenylacetate2toluene
     COMMENT toluene formation from phenylacetate
-    CUTOFF 10
+    CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS PFL_toluene and minimum(1, [Gly_430_pcre, Gly_radical, Radical_SAM])
 
 RULE Hydroxy-L-proline2proline
     COMMENT proline formation from hydroxy-L-proline
-    CUTOFF 10
+    CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS (PFL_proline or cds(PFL-like and Gly_radical)) and Radical_SAM and P5CR_dimer and F420_oxidored
 
@@ -246,27 +233,21 @@ RULE Sulfate2sulfide
 
 RULE Pyruvate2acetate-formate
     COMMENT pryuvate to acetate and formate
-    CUTOFF 6
+    CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS (PFL_acetate1 or PFL_acetate2) and Radical_SAM
 
 RULE Rnf_complex
     COMMENT Fdred and NAD converstion to Fdox and NADH
-    CUTOFF 10
+    CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS Complex1_51K and minimum(5, [RnfC_N, SLBB, Fer4_9, NQR2_RnfD_RnfE, FMN_bind, Rnf-Nqr, FeS, Fer4])
 
-RULE Tetrathionate2thiosulfate
-    COMMENT Tetrathionite reductase
+RULE Molybdopterin_dependent_oxidoreductase
+    COMMENT from DMSO to dimethylsulfide or TMAO to TMA or Tetrathionite reductase
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS NrfD and Molybdopterin and minimum(2, [Molybdop_Fe4S4, Fer4_11, Molydop_binding]) and not (Nitr_red_bet_C or Nitrate_red_del)
-
-RULE DMSO-TMAO_reducatse
-    COMMENT from DMSO to dimethylsulfide or TMAO to TMA
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS DmsC and Molybdopterin and minimum(2, [Molybdop_Fe4S4, Fer4_11, Fer4_4, Molydop_binding])
+    CONDITIONS (DmsC and Molybdopterin and minimum(2, [Molybdop_Fe4S4, Fer4_11, Fer4_4, Molydop_binding])) or (NrfD and Molybdopterin and minimum(2, [Molybdop_Fe4S4, Fer4_11, Molydop_binding]) and not (Nitr_red_bet_C or Nitrate_red_del))
 
 RULE Nitrate_reductase
     COMMENT Nitrate to nitrite
@@ -286,7 +267,7 @@ RULE Formate_dehydrogenase
     NEIGHBOURHOOD 10
     CONDITIONS Molybdopterin and Form-deh_trans and not (Nitr_red_bet_C or Nitr_red_alph_N) and minimum(3, [Ni_hydr_CYTB, Fer4_11, Fer4_4, Molydop_binding, Molybdop_Fe4S4])
 
-RULE GlycerolP2glyceroneP
+RULE Respiratory_glycerol
     COMMENT Glycerol-3-P dehydrogenase
     CUTOFF 10
     NEIGHBOURHOOD 10

@@ -183,6 +183,8 @@ Mal_decarbox_Al	Malonate decarboxylase, alpha subunit, transporter	25	Mal_decarb
 CT_Propionyl_CoA1	Carboxyl transferase domaiain	22	CT_Propionyl_CoA1.hmm
 CT_Propionyl_CoA2	Carboxyl transferase domain	22	CT_Propionyl_CoA2.hmm
 CT_Propionyl_CoA3	Carboxyl transferase domain	22	CT_Propionyl_CoA3.hmm
+CT_Btheta	Carboxyl transferase domain B.theta	22	CT_Btheta.hmm
+CT_Vparvula	Carboxyl transferase domain V. parvula	22	CT_Vparvula.hmm
 SDH_alpha	Serine dehydratase alpha chain	24	SDH_alpha.hmm
 SDH_beta	Serine dehydratase beta chain	21	SDH_beta.hmm
 MmgE_PrpD	MmgE/PrpD family	32	MmgE_PrpD.hmm

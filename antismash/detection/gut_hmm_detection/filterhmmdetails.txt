@@ -2,7 +2,7 @@ PFL_6_pcresol,PFL_9_tma,PFL-like,Gly_8-9_TMA,Gly_radical_scatole,Gly_radical,Gly
 Acetate_kinase,Butyrate_kinase
 Proline_reductase,Glycine_reductase,Gly_reductase
 OKR_DC_1_C,OKR_DC_1_7_arginine,OKR_DC_1_5_ornithine,OKR_DC_1_5_lysine
-CT_Propionyl_CoA1,CT_Propionyl_CoA2,CT_Propionyl_CoA3,Carboxyl_trans
+CT_Propionyl_CoA1,CT_Propionyl_CoA2,CT_Propionyl_CoA3,Carboxyl_trans,CT_Btheta,CT_Vparvula
 PLDc,PLDc_PL_1,PLDc_Clipin_530,PLDc_Clipin_7
 UbiD,ubi_syn,gallic_acid
 baiH,baiCD,Oxidored_FMN,Pyr_redox_2
