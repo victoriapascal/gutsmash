@@ -7,7 +7,7 @@ PLDc,PLDc_PL_1,PLDc_Clipin_530,PLDc_Clipin_7
 UbiD,ubi_syn,gallic_acid
 baiH,baiCD,Oxidored_FMN,Pyr_redox_2
 HGD-D,HG2B2,HG2B1,HAAA1,HleuD1,HleuD2,HleuS1,HleuS2,Lactoyl-CoA2,Lactoyl-CoA1
-ECH1_8_CARC,ECH_1,ECH1_Enoyl_CoA_DH1,ECH1_Enoyl_CoA_DH2,ECH1_Enoyl_CoA_DH3,ECH1_Enoyl_CoA_DH4
+EC1_2-faecali,ECH1_8_CARC,ECH_1,ECH1_Enoyl_CoA_DH1,ECH1_Enoyl_CoA_DH2,ECH1_Enoyl_CoA_DH3,ECH1_Enoyl_CoA_DH4,ECH_2
 TnaA,TPL,Beta_elim_lyase
 CoA_trans_6_Glutaconate,CoA_trans_2_CAF,CoA_trans,CoA_trans_230_acto
 HpaB_N,Acyl-CoA_dh_M
@@ -23,7 +23,6 @@ Spermine_synth,ADH_zinc_N
 LacI,HTH_1
 TsaE,PduV-EutP,SbcCD_C
 Cys_Met_Meta_PP,Aminotran_5,Beta_elim_lyase,DegT_DnrJ_EryC1,Pyridoxal_deC,OKR_DC_1,OKR_DC_1_7_arginine,OKR_DC_1_5_ornithine,OKR_DC_1_5_lysine
-ECH_1,ECH_2
 Fer4_21,Fer4,Fer4_6,Fer4_2
 Epimerase,RmlD_sub_bind,Polysacc_synt_2,GDP_Man_Dehyd,adh_short,KR,adh_short_C2,Semialdhyde_dh
 PFOR_II,Transketolase_C

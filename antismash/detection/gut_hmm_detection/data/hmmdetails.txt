@@ -114,6 +114,7 @@ CoA_trans_6_Glutaconate	Glutaconate CoA-transferase	23	CoA_trans_6_Glutaconate.h
 CoA_trans_230_acto	Coenzyme A transferase butyrade clade	23	CoA_trans_230_acto.hmm
 CoA_trans_2_CAF	Caffeate CoA-transferase clade	23	CoA_trans_2_CAF.hmm
 CoA_trans	Coenzyme A transferase	23	CoA_trans.hmm
+EC1_2-faecali	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate for faecali clade	27	EC1_2-faecali.hmm
 ECH1_Enoyl_CoA_DH1	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH1.hmm
 ECH1_Enoyl_CoA_DH2	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH2.hmm
 ECH1_Enoyl_CoA_DH3	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH3.hmm

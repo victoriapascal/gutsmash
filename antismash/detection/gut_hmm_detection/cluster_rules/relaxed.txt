@@ -120,4 +120,4 @@ RULE fatty_acids-unassigned
     SUPERIORS acetate2butyrate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS not (baiH or baiCD or ECH1_Enoyl_CoA_DH1 or ECH1_Enoyl_CoA_DH2 or ECH1_Enoyl_CoA_DH3 or ECH1_Enoyl_CoA_DH4 or POR or POR_N or PFOR_II) and minimum(4, [HBT, Acyl-CoA_dh_1, HCDH, ECH_1, ECH1_8_CARC, AcetylCoA_hyd_C, Acyl-CoA_dh_2, ECH_2, HCDH_N, Thiolase_C, Thiolase_N, ketoacyl-synt])
+    CONDITIONS not (EC1_2-faecali or baiH or baiCD or ECH1_Enoyl_CoA_DH1 or ECH1_Enoyl_CoA_DH2 or ECH1_Enoyl_CoA_DH3 or ECH1_Enoyl_CoA_DH4 or POR or POR_N or PFOR_II) and minimum(4, [HBT, Acyl-CoA_dh_1, HCDH, ECH_1, ECH1_8_CARC, AcetylCoA_hyd_C, Acyl-CoA_dh_2, ECH_2, HCDH_N, Thiolase_C, Thiolase_N, ketoacyl-synt])
