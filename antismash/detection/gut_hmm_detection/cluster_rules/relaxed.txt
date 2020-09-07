@@ -121,3 +121,11 @@ RULE fatty_acids-unassigned
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS not (EC1_2-faecali or baiH or baiCD or ECH1_Enoyl_CoA_DH1 or ECH1_Enoyl_CoA_DH2 or ECH1_Enoyl_CoA_DH3 or ECH1_Enoyl_CoA_DH4 or POR or POR_N or PFOR_II) and minimum(4, [HBT, Acyl-CoA_dh_1, HCDH, ECH_1, ECH1_8_CARC, AcetylCoA_hyd_C, Acyl-CoA_dh_2, ECH_2, HCDH_N, Thiolase_C, Thiolase_N, ketoacyl-synt])
+
+RULE HGD_related
+    COMMENT fatty acids related unassigned
+    SUPERIORS AAA_reductive_branch, Leucine_reduction, glutamate2butyric
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(1, [HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1]) and minimum(1, [AcetylCoA_hyd_C, AcetylCoA_hydro, ACP_syn_III, ACP_syn_III_C, Acyl-CoA_dh_1, Acyl-CoA_dh_2, AdoHcyase_NAD, AlaDh_PNT_C, BcrAD_BadFG, Biotin_lipoyl, Carboxyl_trans, CoA_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, CoA_transf_3, ECH_1, ECH_2, ETF, ETF_alpha, FGGY_C, Hacid_dh, Hacid_dh_C, HCDH, HCDH_N, ketoacyl-synt, Mal_decarbox_Al, Peptidase_M22, Peptidase_M23, Thiolase_C, Thiolase_N]) and not (minimum(2, [CoA_trans, CoA_trans_230_acto, Mal_decarbox_Al, BcrAD_BadFG, AcetylCoA_hyd_C]) and Lactoyl-CoA2 and Lactoyl-CoA1)
+

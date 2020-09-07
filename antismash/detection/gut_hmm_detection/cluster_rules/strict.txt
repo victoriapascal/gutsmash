@@ -38,21 +38,27 @@ RULE arginine2spermidine_N_carbomyl_Putrescine
     #SUPERIORS Arginine2_Hcarbonate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Cys_Met_Meta_PP, AdoMet_dc, Beta_elim_lyase, PAD_porph, OTCace, CN_hydrolase, Ala_racemase_N]) and (OKR_DC_1_7_arginine or OKR_DC_1) and Amidinotransf and Arginase #arginine degradation via N-carbomyl-Putrescine
-
-RULE arginine2spermidine_via_agmatine
-    COMMENT putative arginine degradation pathway via agmatine (arg-putr-sper)
-    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [Orn_DAP_Arg_deC, Sacchrp_dh_C, Sacchrp_dh_NADP, Spermine_synth, Spermine_synt_N, DegT_DnrJ_EryC1, Alk_phosphatase, Cys_Met_Meta_PP, Aminotran_5, Aminotran_1_2, AdoMet_dc, Beta_elim_lyase, Ala_racemase_N]) and Arginase and (OKR_DC_1_7_arginine or OKR_DC_1) ##original pathway via agmatinase
+    CONDITIONS PAD_porph or OTCace or OKR_DC_1 or OKR_DC_1_7_arginine or OKR_DC_1_5_ornithine
 
 RULE Arginine2_Hcarbonate
     COMMENT Arginine to hydrogene carbonate pathway
-    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS Amidinotransf and OTCace and OTCace_N and AA_kinase ##Arginine to hydrogene carbonate pathway
+
+RULE Arginine2putrescine
+    COMMENT putative arginine degradation pathway arginine to putrescine
+    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine, Arginine2_Hcarbonate
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS (minimum(2, [Arginase, Amidinotransf, OKR_DC_1_7_arginine, OKR_DC_1, OTCace, AdoMet_dc])) or ((OKR_DC_1_5_ornithine or OKR_DC_1 or Orn_Arg_deC_N) and minimum(1, [PAD_porph, OTCace, OTCace_N, Arginase]))
+
+RULE Putrescine2spermidine
+    COMMENT putrescine to spermidine subpathways
+    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
+    CUTOFF 10
+    NEIGHBOURHOOD 10
+    CONDITIONS minimum(2, [Spermine_synth, Spermine_synt_N, AdoMet_dc]) or (Orn_DAP_Arg_deC  and Sacchrp_dh_C)
 
 RULE proline2aminovalerate
     COMMENT proline to aminovalerate pathway
@@ -155,39 +161,22 @@ RULE Threonine2propionate
     CONDITIONS minimum(2, [SDH_alpha, SDH_beta, MmgE_PrpD, Acetate_kinase, Butyrate_kinase, Trp_Tyr_perm, PALP]) and (PFL-like or PFL_acetate2 or PFL_acetate1) and Gly_radical and not NRDD
 
 RULE Glycine_reductase
-    COMMENT Glycine reductase, from glycine to acetyl-P
+    COMMENT Glycine reductase, from glycine to ammonia and acetyl-P
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(3, [ACP_syn_III_C, GRDB, GRDA, ACP_syn_III, FA_synthesis]) and Glycine_reductase and not Pro_racemase #Pro_racemase belongs to the proline2aminovalerate cluster
 
 RULE Glycine_cleavage
+	COMMENT glycine cleavage into ammonia and methylene-folate
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(2, [GCV_T, SoxG, GCV_H, GDC-P, Aminotran_5]) and GCV_H and GCV_T_C
-
-RULE arginine_degradation_astABCDE_operon
-    COMMENT Arginine degradation to pytruvate via astABCDE operon
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS minimum(3, [Met_asp_mut_E, Aldedh, AstE_AspA]) and AstA and AstB
 
 RULE histidine2glutamate_hutHGIU_operon
     COMMENT Histidine to glutamate via hutHGIU operon
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(2, [Lyase_aromatic, Urocanase, Amidohydro_3, Amidohydro_1, FGase]) and Arginase and Urocanase_C
-
-#RULE Glutamate2pyruvate
-#    COMMENT Glutamate degradation to pyruvate (to CHECK)
-#    CUTOFF 20
-#    NEIGHBOURHOOD 10
-#    CONDITIONS minimum(2, [MR_MLE_C, Met_asp_mut_E, B12-binding]) and MAAL_C or MAAL_N
-
-#RULE Galacturonate_degradation
-#    COMMENT Galacturonate degradation to dehydro3deoxyDgluconate via uxaABC operon
-#    CUTOFF 20
-#    NEIGHBOURHOOD 10
-#    CONDITIONS minimum(2, [UxaC, Mannitol_dh_C, Mannitol_dh]) and GD_AH_C
+    CONDITIONS minimum(2, [Arginase, Urocanase, Amidohydro_3, Amidohydro_1, FGase]) and Lyase_aromatic and Urocanase_C
 
 RULE Oxidative_glycerol
     COMMENT Glycerol degradation to glycerone phosphate
@@ -259,7 +248,7 @@ RULE Ech_complex
     COMMENT Fdred to Fdox 
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and not (Oxidored_q4 or Oxidored_q3) and minimum(1, [Proton_antipo_N, Proton_antipo_M, NiFeSe_Hases, Complex1_49kDa, Fer4_9]) and not (Molybdopterin or Molydop_binding)
+    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and  Proton_antipo_M, Proton_antipo_N and not (Oxidored_q4 or Oxidored_q3 or Molybdopterin or Molydop_binding)
 
 RULE Formate_dehydrogenase
     COMMENT formate to CO2 and H

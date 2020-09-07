@@ -95,8 +95,8 @@ ETF	Electron-transferring flavoprotein	25	ETF.hmm
 CoA_transf_3	CoA-transferase family III	23	CoA_transf_3.hmm
 Hacid_dh_C	2-hydroxyacid dehydrogenase, NAD binding catalytic domain	25	Hacid_dh_C.hmm
 Shikimate_DH	Shikimate/quinate 5-dehydrogenase	24	Shikimate_DH.hmm
-baiH	baiH clade from Oxidored+Pyr_redox superfamily	20	baiH.hmm
-baiCD	baiCD clade from Oxidored+Pyr_redox superfamily	20	baiCD.hmm
+baiH	baiH clade from Oxidored+Pyr_redox superfamily	150	baiH.hmm
+baiCD	baiCD clade from Oxidored+Pyr_redox superfamily	150	baiCD.hmm
 Oxidored_FMN	NADH:flavin oxidoreductase/NADH oxidase family	20	Oxidored_FMN.hmm
 Pyr_redox_2	Pyridine nucleotide-disulphide oxidoreductase	26	Pyr_redox_2.hmm
 NAD_binding_8	NAD(P)-binding Rossmann-like domain	21	NAD_binding_8.hmm
@@ -112,7 +112,7 @@ OAD_beta	Oxaloacetate decarboxylase	31	OAD_beta.hmm
 Peptidase_M23	Peptidase family M23	28	Peptidase_M23.hmm
 CoA_trans_6_Glutaconate	Glutaconate CoA-transferase	23	CoA_trans_6_Glutaconate.hmm
 CoA_trans_230_acto	Coenzyme A transferase butyrade clade	23	CoA_trans_230_acto.hmm
-CoA_trans_2_CAF	Caffeate CoA-transferase clade	23	CoA_trans_2_CAF.hmm
+CoA_trans_2_CAF	Caffeate CoA-transferase clade	250	CoA_trans_2_CAF.hmm
 CoA_trans	Coenzyme A transferase	23	CoA_trans.hmm
 EC1_2-faecali	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate for faecali clade	27	EC1_2-faecali.hmm
 ECH1_Enoyl_CoA_DH1	Enoyl-CoA hydratase/isomerase (crotonase) acetate-butyrate clade	27	ECH1_Enoyl_CoA_DH1.hmm
