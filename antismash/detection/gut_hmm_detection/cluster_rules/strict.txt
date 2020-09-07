@@ -240,7 +240,7 @@ RULE Ech_complex
     COMMENT Fdred to Fdox 
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and  Proton_antipo_M, Proton_antipo_N and not (Oxidored_q4 or Oxidored_q3 or Molybdopterin or Molydop_binding)
+    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and  Proton_antipo_M and Proton_antipo_N and not (Oxidored_q4 or Oxidored_q3 or Molybdopterin or Molydop_binding)
 
 RULE Formate_dehydrogenase
     COMMENT formate to CO2 and H
