@@ -33,13 +33,6 @@ RULE p-cresol
     NEIGHBOURHOOD 10
     CONDITIONS  PFL_6_pcresol and (Gly_430_pcre or Gly_radical) and hpdC and Radical_SAM and not NRDD #Gly_430_pcre is a pHMM specifically built to cature glycine radical involved in this pathway
 
-RULE arginine2spermidine_N_carbomyl_Putrescine
-    COMMENT putative arginine degradation pathway via agmatine (arg-N-carbomyl-putr-sper)
-    #SUPERIORS Arginine2_Hcarbonate
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS PAD_porph or OTCace or OKR_DC_1 or OKR_DC_1_7_arginine or OKR_DC_1_5_ornithine
-
 RULE Arginine2_Hcarbonate
     COMMENT Arginine to hydrogene carbonate pathway
     CUTOFF 10
@@ -48,14 +41,13 @@ RULE Arginine2_Hcarbonate
 
 RULE Arginine2putrescine
     COMMENT putative arginine degradation pathway arginine to putrescine
-    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine, Arginine2_Hcarbonate
+    SUPERIORS Arginine2_Hcarbonate
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS (minimum(2, [Arginase, Amidinotransf, OKR_DC_1_7_arginine, OKR_DC_1, OTCace, AdoMet_dc])) or ((OKR_DC_1_5_ornithine or OKR_DC_1 or Orn_Arg_deC_N) and minimum(1, [PAD_porph, OTCace, OTCace_N, Arginase]))
 
 RULE Putrescine2spermidine
     COMMENT putrescine to spermidine subpathways
-    SUPERIORS arginine2spermidine_N_carbomyl_Putrescine
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS minimum(2, [Spermine_synth, Spermine_synt_N, AdoMet_dc]) or (Orn_DAP_Arg_deC  and Sacchrp_dh_C)
