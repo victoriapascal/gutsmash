@@ -152,6 +152,13 @@ RULE Threonine2propionate
     NEIGHBOURHOOD 10
     CONDITIONS minimum(2, [SDH_alpha, SDH_beta, MmgE_PrpD, Acetate_kinase, Butyrate_kinase, Trp_Tyr_perm, PALP]) and (PFL-like or PFL_acetate2 or PFL_acetate1) and Gly_radical and not NRDD
 
+RULE Pyruvate2acetate-formate
+    COMMENT pryuvate to acetate and formate
+#    SUPERIORS Threonine2propionate
+    CUTOFF 2
+    NEIGHBOURHOOD 10
+    CONDITIONS (PFL_acetate1 or PFL_acetate2) and Radical_SAM
+
 RULE Glycine_reductase
     COMMENT Glycine reductase, from glycine to ammonia and acetyl-P
     CUTOFF 10
@@ -211,12 +218,6 @@ RULE Sulfate2sulfide
     CUTOFF 10
     NEIGHBOURHOOD 10
     CONDITIONS DsrD and (NIR_SIR_ferr or NIR_SIR)
-
-RULE Pyruvate2acetate-formate
-    COMMENT pryuvate to acetate and formate
-    CUTOFF 2
-    NEIGHBOURHOOD 10
-    CONDITIONS (PFL_acetate1 or PFL_acetate2) and Radical_SAM
 
 RULE Rnf_complex
     COMMENT Fdred and NAD converstion to Fdox and NADH

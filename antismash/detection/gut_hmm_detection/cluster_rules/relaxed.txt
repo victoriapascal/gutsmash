@@ -109,12 +109,6 @@ RULE OD_GR_unassigned
     NEIGHBOURHOOD 10
     CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma]) and not NRDD and minimum(1, [POR, POR_N, PFOR_II]) and minimum(2, [adh_short, HpaB, Hacid_dh_C, ELFV_dehydrog, Cys_Met_Meta_PP, Transketolase_C, adh_short_C2, Hacid_dh])
 
-RULE Others_HGD_unassigned
-    COMMENT dehydratase-reductase
-    CUTOFF 10
-    NEIGHBOURHOOD 10
-    CONDITIONS HGD-D and minimum(2, [adh_short_C2, ECH_1, HBT, AcetylCoA_hyd_C, BcrAD_BadFG, Thiolase_C, CoA_trans, CoA_trans_230_acto, Mal_decarbox_Al]) and not (POR or POR_N or PFOR_II)
-
 RULE fatty_acids-unassigned
     COMMENT fatty acids related unassigned
     SUPERIORS acetate2butyrate
@@ -122,7 +116,7 @@ RULE fatty_acids-unassigned
     NEIGHBOURHOOD 10
     CONDITIONS not (EC1_2-faecali or baiH or baiCD or ECH1_Enoyl_CoA_DH1 or ECH1_Enoyl_CoA_DH2 or ECH1_Enoyl_CoA_DH3 or ECH1_Enoyl_CoA_DH4 or POR or POR_N or PFOR_II) and minimum(4, [HBT, Acyl-CoA_dh_1, HCDH, ECH_1, ECH1_8_CARC, AcetylCoA_hyd_C, Acyl-CoA_dh_2, ECH_2, HCDH_N, Thiolase_C, Thiolase_N, ketoacyl-synt])
 
-RULE HGD_related
+RULE Others_HGD_unassigned
     COMMENT fatty acids related unassigned
     SUPERIORS AAA_reductive_branch, Leucine_reduction, glutamate2butyric
     CUTOFF 10
