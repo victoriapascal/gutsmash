@@ -44,7 +44,7 @@ RULE Arginine2putrescine
     SUPERIORS Arginine2_Hcarbonate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS (minimum(2, [Arginase, Amidinotransf, OKR_DC_1_7_arginine, OKR_DC_1, OTCace, AdoMet_dc])) or ((OKR_DC_1_5_ornithine or OKR_DC_1 or Orn_Arg_deC_N) and minimum(1, [PAD_porph, OTCace, OTCace_N, Arginase]))
+    CONDITIONS (minimum(3, [Arginase, Amidinotransf, OKR_DC_1_7_arginine, OKR_DC_1, OTCace, AdoMet_dc])) or ((OKR_DC_1_5_ornithine or OKR_DC_1 or Orn_Arg_deC_N) and minimum(1, [PAD_porph, OTCace, OTCace_N, Arginase]))
 
 RULE Putrescine2spermidine
     COMMENT putrescine to spermidine subpathways
@@ -137,7 +137,7 @@ RULE succinate2propionate
     COMMENT succinate to propionate pathway from B.theta
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS  minimum(4, [OAD_beta, Biotin_lipoyl, OAD_gamma, Glyoxalase_4, MeaB, B12-binding, MM_CoA_mutase, AcetylCoA_hydro, AcetylCoA_hyd_C, HMGL-like, PYC_OADA]) and minimum(1, [CT_Vparvula, CT_Btheta, CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3])
+    CONDITIONS  minimum(4, [OAD_beta, Biotin_lipoyl, OAD_gamma, Glyoxalase_4, MeaB, B12-binding, MM_CoA_mutase, AcetylCoA_hydro, AcetylCoA_hyd_C, HMGL-like, PYC_OADA]) and minimum(1, [CT_Vparvula, CT_Btheta, CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3]) and not Cytidylate_kin
 
 RULE acrylate2propionate
     COMMENT acrylate to propionate pathway
@@ -150,11 +150,11 @@ RULE Threonine2propionate
     COMMENT Threonine to propionate pathway via tdcABCDEFG operon
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(2, [SDH_alpha, SDH_beta, MmgE_PrpD, Acetate_kinase, Butyrate_kinase, Trp_Tyr_perm, PALP]) and (PFL-like or PFL_acetate2 or PFL_acetate1) and Gly_radical and not NRDD
+    CONDITIONS minimum(3, [SDH_alpha, SDH_beta, MmgE_PrpD, Acetate_kinase, Butyrate_kinase, Trp_Tyr_perm, PALP]) and (PFL-like or PFL_acetate2 or PFL_acetate1) and Gly_radical and not NRDD
 
 RULE Pyruvate2acetate-formate
     COMMENT pryuvate to acetate and formate
-#    SUPERIORS Threonine2propionate
+    SUPERIORS Threonine2propionate
     CUTOFF 2
     NEIGHBOURHOOD 10
     CONDITIONS (PFL_acetate1 or PFL_acetate2) and Radical_SAM
@@ -175,7 +175,7 @@ RULE histidine2glutamate_hutHGIU_operon
     COMMENT Histidine to glutamate via hutHGIU operon
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(2, [Arginase, Urocanase, Amidohydro_3, Amidohydro_1, FGase]) and Lyase_aromatic and Urocanase_C
+    CONDITIONS minimum(3, [Arginase, Urocanase, Amidohydro_3, Amidohydro_1, FGase]) and Lyase_aromatic and Urocanase_C
 
 RULE Oxidative_glycerol
     COMMENT Glycerol degradation to glycerone phosphate
@@ -241,7 +241,7 @@ RULE Ech_complex
     COMMENT Fdred to Fdox 
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and  Proton_antipo_M and Proton_antipo_N and not (Oxidored_q4 or Oxidored_q3 or Molybdopterin or Molydop_binding)
+    CONDITIONS NADHdh and Oxidored_q6 and Complex1_30kDa and Complex1_49kDa and Proton_antipo_M and Proton_antipo_N and not (Oxidored_q4 or Oxidored_q3 or Molybdopterin or Molydop_binding)
 
 RULE Formate_dehydrogenase
     COMMENT formate to CO2 and H

@@ -21,6 +21,7 @@ Aminotran_1_2	Aminotransferase class I and II	19	Aminotran_1_2.hmm
 Dehydratase_LU	Dehydratase large subunit	25	Dehydratase_LU.hmm
 Dehydratase_MU	Dehydratase medium subunit	20	Dehydratase_MU.hmm
 Dehydratase_SU	Dehydratase small subunit	25	Dehydratase_SU.hmm
+Cytidylate_kin	Cytidylate kinase	20	Cytidylate_kin.hmm
 PTAC	Phosphate propanoyltransferase	25	PTAC.hmm
 Flavoprotein	Flavoprotein	22	Flavoprotein.hmm
 UbiD	3-octaprenyl-4-hydroxybenzoate carboxy-lyase	19	UbiD.hmm
