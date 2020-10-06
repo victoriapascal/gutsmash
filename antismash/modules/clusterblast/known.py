@@ -116,7 +116,7 @@ def perform_knownclusterblast(options: ConfigType, record: Record,
                                  prefix="knownclusterblast")
     clusters_by_number, _ = parse_all_clusters(blastoutput, record,
                                                min_seq_coverage=40,
-                                               min_perc_identity=45)
+                                               min_perc_identity=30)
 
     core_gene_accessions = get_core_gene_ids(record)
     for region in record.get_regions():

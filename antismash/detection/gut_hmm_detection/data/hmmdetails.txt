@@ -459,7 +459,7 @@ Nitrate_red_gam	Nitrate reductase gamma subunit	22	Nitrate_red_gam.hmm
 Proton_antipo_N	NADH dehydrogenase (ubiquinone)	24	Proton_antipo_N.hmm
 Proton_antipo_M	Membrane transport protein	21	Proton_antipo_M.hmm
 NADHdh	NADH dehydrogenase (ubiquinone)	15	NADHdh.hmm
-Oxidored_q6	NADH ubiquinone oxidoreductase, 20 Kd subunit	21	Oxidored_q6.hmm
+Oxidored_q6	NADH ubiquinone oxidoreductase, 20 Kd subunit	70	Oxidored_q6.hmm
 Complex1_30kDa	Respiratory-chain NADH dehydrogenase, 30 Kd subunit	21	Complex1_30kDa.hmm
 NiFeSe_Hases	Nickel-dependent hydrogenase	25	NiFeSe_Hases.hmm
 Complex1_49kDa	Respiratory-chain NADH dehydrogenase, 49 Kd subunit	24	Complex1_49kDa.hmm
