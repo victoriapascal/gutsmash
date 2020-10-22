@@ -24,7 +24,7 @@ How to install gutSMASH
 To be able to run gutSMASH, different binaries have to be installed, by either using apt-get install:
 
 ```
-sudo apt-get install hmmer2 hmmer diamond-aligner fasttree prodigal ncbi-blast+ muscle glimmerhmm
+sudo apt-get install -y hmmer2 hmmer diamond-aligner fasttree prodigal ncbi-blast+ muscle glimmerhmm
 ```
 
 or Homebrew for macOS systems:
