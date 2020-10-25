@@ -16,6 +16,8 @@ __pycache__
 *.hmm.h3p
 antismash/config/instance.cfg
 antismash/detection/hmm_detection/data/bgc_seeds.hmm
+antismash/modules/clusterblast/data/known/proteins.dmnd
+antismash/modules/clusterblast/data/known/proteins.fasta
 antismash/databases/*
 antismash.egg-info/*
 **/.ropeproject/*
