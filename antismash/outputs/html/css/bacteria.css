@@ -466,7 +466,7 @@ rect.Phenylacetate2toluene {
   background-color: #005db2;
 }
 .Arginine2putrescine a, .Arginine2putrescine a:link, .Arginine2putrescine a:visited {
-  color: white;
+  color: midnight;
 }
 rect.Arginine2putrescine {
   fill: #005db2;
@@ -486,7 +486,7 @@ rect.Arginine2putrescine {
 }
 .Putrescine2spermidine a, .Putrescine2spermidine a:link,
 .Putrescine2spermidine a:visited {
-  color: white;
+  color: midnight;
 }
 rect.Putrescine2spermidine {
   fill: #005db2;
@@ -659,13 +659,13 @@ rect.Hydroxy-L-proline2proline {
 }
 
 .Nitrate_reductase {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Nitrate_reductase a, .Nitrate_reductase a:link, .Nitrate_reductase a:visited {
   color: midnight;
 }
 rect.Nitrate_reductase {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Nitrate_reductase.active {
@@ -674,11 +674,11 @@ rect.Nitrate_reductase {
   border-style: solid;
 }
 .Nitrate_reductase:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .Molybdopterin_dependent_oxidoreductase {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Molybdopterin_dependent_oxidoreductase a,
 .Molybdopterin_dependent_oxidoreductase a:link,
@@ -686,7 +686,7 @@ rect.Nitrate_reductase {
   color: midnight;
 }
 rect.Molybdopterin_dependent_oxidoreductase {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Molybdopterin_dependent_oxidoreductase.active {
@@ -695,17 +695,17 @@ rect.Molybdopterin_dependent_oxidoreductase {
   border-style: solid;
 }
 .Molybdopterin_dependent_oxidoreductase:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .Ech_complex {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Ech_complex a, .Ech_complex a:link, .Ech_complex a:visited {
   color: midnight;
 }
 rect.Ech_complex {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Ech_complex.active {
@@ -714,17 +714,17 @@ rect.Ech_complex {
   border-style: solid;
 }
 .Ech_complex:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .Rnf_complex {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Rnf_complex a, .Rnf_complex a:link, .Rnf_complex a:visited {
   color: midnight;
 }
 rect.Rnf_complex {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Rnf_complex.active {
@@ -733,18 +733,18 @@ rect.Rnf_complex {
   border-style: solid;
 }
 .Rnf_complex:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .Respiratory_glycerol {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Respiratory_glycerol a, .Respiratory_glycerol a:link,
 .Respiratory_glycerol a:visited {
   color: midnight;
 }
 rect.Respiratory_glycerol {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Respiratory_glycerol.active {
@@ -753,18 +753,18 @@ rect.Respiratory_glycerol {
   border-style: solid;
 }
 .Respiratory_glycerol:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .Formate_dehydrogenase {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Formate_dehydrogenase a, .Formate_dehydrogenase a:link,
 .Formate_dehydrogenase a:visited {
   color: midnight;
 }
 rect.Formate_dehydrogenase {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Formate_dehydrogenase.active {
@@ -773,17 +773,17 @@ rect.Formate_dehydrogenase {
   border-style: solid;
 }
 .Formate_dehydrogenase:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .Sulfate2sulfide {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .Sulfate2sulfide a, .Sulfate2sulfide a:link, .Sulfate2sulfide a:visited {
   color: midnight;
 }
 rect.Sulfate2sulfide {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .Sulfate2sulfide.active {
@@ -792,18 +792,18 @@ rect.Sulfate2sulfide {
   border-style: solid;
 }
 .Sulfate2sulfide:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .NADH_dehydrogenase_I {
-  background-color: #7579e7;
+  background-color: #97afd5;
 }
 .NADH_dehydrogenase_I a, .NADH_dehydrogenase_I a:link,
 .NADH_dehydrogenase_I a:visited {
   color: midnight;
 }
 rect.NADH_dehydrogenase_I {
-  fill: #7579e7;
+  fill: #97afd5;
   stroke: orangered;
 }
 .NADH_dehydrogenase_I.active {
@@ -812,7 +812,7 @@ rect.NADH_dehydrogenase_I {
   border-style: solid;
 }
 .NADH_dehydrogenase_I:hover {
-  background-color: #9c9fee;
+  background-color: #b8c8e2;
 }
 
 .OD_aldehydes_related {

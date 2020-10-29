@@ -20,225 +20,225 @@
 }
 
 .hybrid {
-    @include secmet(black, #f4bf6c, black);
+    @include secmet(black, #ff9c49, black);
 }
 
-@mixin GR {
-    @include secmet(white, #893f75);
+@mixin SCFA {
+    @include secmet(black, #52bf90);
 }
 
-.TMA {
-    @include GR;
-}
-
-.proline2aminovalerate {
-    @include GR;
-}
-
+.Pyruvate2acetate-formate {
+    @include SCFA;
+}   
 .EUT_pathway {
-    @include GR;
+    @include SCFA;
+}
+.Leucine_reduction {
+    @include SCFA;
+}
+.acetate2butyrate {
+    @include SCFA;
+}
+.porA {
+    @include SCFA;
+}
+.PFOR_II_pathway {
+    @include SCFA;
+}
+.Lysine_degradation {
+    @include SCFA;
+}
+.glutamate2butyric {
+    @include SCFA;
+}
+.aminobutyrate2Butyrate {
+    @include SCFA;
+}
+.succinate2propionate {
+    @include SCFA;
+}
+.acrylate2propionate {
+    @include SCFA;
+}
+.Threonine2propionate {
+    @include SCFA;
+}
+.Glycine_reductase {
+    @include SCFA;
+}
+.Acetyl-CoA_pathway {
+    @include SCFA;
+}
+.Fumarate2succinate {
+    @include SCFA;
 }
 
+@mixin Aliphatic_amine-SCFA {
+    @include secmet(white, #680b0b);
+}
+.TMA {
+    @include Aliphatic_amine-SCFA;
+}
+
+@mixin alcohol-SCFA {
+    @include secmet(black, #d19d9d);
+}
 .pdu {
-    @include GR;
+    @include alcohol-SCFA;
+}
+
+@mixin Aromatic {
+    @include secmet(black, #e35d6a);
 }
 
 .p-cresol {
-    @include GR;
+    @include Aromatic;
 }
-
-.Threonine2propionate {
-    @include GR;
+.gallic_acid_met {
+    @include Aromatic;
 }
-
-.GR_AA_metabolism {
-    @include GR;
-}
-
-.GR_eut-pdu-related {
-    @include GR;
-}
-
-.GR_fatty_acids {
-    @include GR;
-}
-
-@mixin DR {
-    @include secmet(white, #b44e57);
-}
-
-.Leucine_reduction {
-    @include DR;
-}
-
 .AAA_reductive_branch {
-    @include DR;
+    @include Aromatic;
+}
+.caffeate_respiration {
+    @include Aromatic;
+}
+.Indoleacetate2scatole {
+    @include Aromatic;
+}
+.Phenylacetate2toluene {
+    @include Aromatic;
 }
 
-.glutamate2butyric {
-    @include DR;
+@mixin  Aliphatic_amine {
+    @include secmet(midnight, #005db2);
+}
+.Arginine2putrescine {
+    @include Aliphatic_amine;
+}
+.Putrescine2spermidine {
+    @include Aliphatic_amine;
 }
 
-@mixin OD {
-    @include secmet(midnight, #6eabf4);
+
+@mixin  npAA {
+    @include secmet(midnight, #facc0a);
+}
+.proline2aminovalerate  {
+    @include npAA;
+}
+.carnitine_degradaion_caiTABCDE  {
+    @include npAA;
 }
 
-.porA {
-    @include OD;
+@mixin  Other {
+    @include secmet(white, #a600c5);
 }
-
-.OD_lactate_related {
-    @include OD;
-}
-
-.OD_eut_pdu_related {
-    @include OD;
-}
-
-.OD_AA_metabolism {
-    @include OD;
-}
-
-.OD_fatty_acids {
-    @include OD;
-}
-
-.OD_aldehydes_related {
-    @include OD;
-}
-
-@mixin OD-GR {
-    @include secmet(midnight, #2d7aea);
-}
-
-.OD_GR_eut_related {
-    @include OD-GR;
-}
-
-.OD_GR_unassigned {
-    @include OD-GR;
-}
-
-@mixin FE {
-    @include secmet(black, #d19d9d);
-}
-
-.bai_operon {
-    @include FE;
-}
-
-.Flavoenzyme_AA_peptides_catabolism {
-    @include FE;
-}
-
-.Flavoenzyme_sugar_catabolism {
-    @include FE;
-}
-
-.Flavoenzyme_lipids_catabolism {
-    @include FE;
-}
-
-@mixin Other {
-    @include secmet(white, #68273c);
-}
-
-.hydroxybenzoate2phenol {
-    @include Other;
-}
-
-.arginine2spermitine_N_carbomyl_Putrescine {
-    @include Other;
-}
-
-.arginine2spermitine_via_agmatine {
-    @include Other;
-}
-
 .Arginine2_Hcarbonate {
     @include Other;
 }
-
-.gallic_acid_met {
+.bai_operon {
     @include Other;
 }
-
-.acetate2butyrate {
-    @include Other;
-}
-
-.Lysine_degradation {
-    @include Other;
-}
-
-.caffeate_respiration {
-    @include Other;
-}
-
-.carnitine_degradaion_caiTABCDE {
-    @include Other;
-}
-
-.aminobutyrate2Butyrate {
-    @include Other;
-}
-
-.succinate2propionate {
-    @include Other;
-}
-
-.acrylate2propionate {
-    @include Other;
-}
-
-.succinate2propionate {
-    @include Other;
-}
-
-.Glycine_reductase {
-    @include Other;
-}
-
 .Glycine_cleavage {
     @include Other;
 }
-
-.arginine_degradation_astABCDE_operon {
-    @include Other;
-}
-
 .histidine2glutamate_hutHGIU_operon {
     @include Other;
 }
-
-.Leucine2acetoacetate {
+.Oxidative_glycerol {
+    @include Other;
+}
+.Hydroxy-L-proline2proline {
     @include Other;
 }
 
-.Glycerol2glyceroneP {
-    @include Other;
+@mixin  E-MGC {
+    @include secmet(midnight, #97afd5);
+}  
+.Nitrate_reductase {
+    @include E-MGC;
+}
+.Molybdopterin_dependent_oxidoreductase {
+    @include E-MGC;
+}
+.Ech_complex {
+    @include E-MGC;
+}
+.Rnf_complex {
+    @include E-MGC;
+}
+.Respiratory_glycerol {
+    @include E-MGC;
+}
+.Formate_dehydrogenase {
+    @include E-MGC;
+}
+.Sulfate2sulfide {
+    @include E-MGC;
+}
+.NADH_dehydrogenase_I {
+    @include E-MGC;
 }
 
-.Pyruvate2succinyl {
-    @include Other;
+@mixin  Putative {
+    @include secmet(blue, #cecbc8);
+}    
+.OD_aldehydes_related {
+    @include Putative;
 }
-
-.TPP_fatty_acids {
-    @include Other;
-}
-
-.TPP_AA_metabolism {
-    @include Other;
-}
-
 .Others_HGD_unassigned {
-    @include Other;
+    @include Putative;
 }
-
-.fatty_acids-unassigned {
-    @include Other;
-}
-
 .OD_unknown {
-    @include Other;
+    @include Putative;
 }
+.OD_AA_metabolism {
+    @include Putative;
+}
+.fatty_acids-unassigned {
+    @include Putative;
+}
+.OD_GR_eut_related {
+    @include Putative;
+}
+.OD_fatty_acids {
+    @include Putative;
+}
+.OD_lactate_related {
+    @include Putative;
+}
+.OD_GR_unassigned {
+    @include Putative;
+}
+.OD_eut_pdu_related {
+    @include Putative;
+}
+.Flavoenzyme_sugar_catabolism {
+    @include Putative;
+}
+.GR_eut-pdu-related {
+    @include Putative;
+}
+.Flavoenzyme_lipids_catabolism {
+    @include Putative;
+}
+.GR_AA_metabolism {
+    @include Putative;
+}
+.HGD_related {
+    @include Putative;
+}
+.Flavoenzyme_AA_peptides_catabolism {
+    @include Putative;
+}
+.TPP_AA_metabolism {
+    @include Putative;
+}
+.TPP_fatty_acids {
+    @include Putative;
+}
+.GR_fatty_acids {
+    @include Putative;
+}
+
