@@ -90,6 +90,9 @@
 @mixin Aromatic {
     @include secmet(black, #e35d6a);
 }
+.hydroxybenzoate2phenol {
+    @include Aromatic;
+}
 
 .p-cresol {
     @include Aromatic;
