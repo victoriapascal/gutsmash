@@ -7,10 +7,7 @@ gutSMASH is a tool that has been developed to fulfil the need of systematically 
 
 Altogether, this new software provides a comprehensive toolkit to functionally characterize anaerobic bacterial genomes by not only predicting MGCs of known functions but also novel MGCs that may represent good candidates for further experimental characterization.
 
-This repository is used to port gutSMASH to be compatible with Python 3, along
-with mayor restructuring and code cleanup efforts. It is not feature-compatible
-with previous antiSMASH versions for now, and certainly is not
-production-quality code.
+This repository is used to port gutSMASH to be compatible with Python 3.
 
 Development & Funding
 ---------------------
@@ -38,6 +35,8 @@ Assuming python3 is installation, the python3 dependencies can be installed usin
 ```
 pip3 install biopython helperlibs bcbio-gff pysvg-py3 scikit-learn matplotlib pyScss Jinja2
 ```
+
+gutSMASH uses different databases that you will have to download the different databases available from here: https://gutsmash.bioinformatics.nl/download.html and place them in the correct path as detailed in the page.
 
 How to run gutSMASH from the command line
 -----------------------------------------
@@ -69,8 +68,7 @@ python3 gutsmash/run_gutsmash.py --help
 Publications
 ------------
 
-See http://antismash.secondarymetabolites.org/#!/about for information on citing
-gutSMASH.
+See XXXX for information on citing gutSMASH.
 
 License
 -------
