@@ -30,9 +30,7 @@
 .Pyruvate2acetate-formate {
     @include SCFA;
 }   
-.EUT_pathway {
-    @include SCFA;
-}
+
 .Leucine_reduction {
     @include SCFA;
 }
@@ -76,15 +74,20 @@
 @mixin Aliphatic_amine-SCFA {
     @include secmet(white, #680b0b);
 }
-.TMA {
-    @include Aliphatic_amine-SCFA;
-}
 
-@mixin alcohol-SCFA {
+
+@mixin SCFA-other {
     @include secmet(black, #d19d9d);
 }
 .pdu {
-    @include alcohol-SCFA;
+    @include SCFA-other;
+}
+
+.TMA {
+    @include SCFA-other;
+}
+.EUT_pathway {
+    @include SCFA-other;
 }
 
 @mixin Aromatic {
