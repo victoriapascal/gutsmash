@@ -72,11 +72,11 @@ See our [preprint](https://www.biorxiv.org/content/10.1101/2021.02.25.432841v1) 
 License
 -------
 
-antiSMASH is an open source tool available under the GNU Affero General Public
+gutSMASH is an open source tool available under the GNU Affero General Public
 License version 3.0 or greater. See the [`LICENSE.txt`](LICENSE.txt) file for
 details.
 
 Acknowledgements
 ----------------
 
-Some icons used courtesy of fontawesome.com
+Some icons used are courtesy of fontawesome.com
