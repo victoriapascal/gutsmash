@@ -74,7 +74,7 @@
      {% endif %}
      {% if records_without_regions %}
      <dl id="regionless-records">
-      <dt class="record-overview-header">No secondary metabolite regions were found in these records:</dt>
+      <dt class="record-overview-header">No primary metabolite regions were found in these records:</dt>
        {% for record in records_without_regions %}
          <dd>{{record.get_from_record()}}</dd>
        {% endfor %}
