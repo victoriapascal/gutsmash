@@ -353,10 +353,10 @@ class Cluster:
         acc = Text(self.full_description, 5, 20 + v_offset)
         if self.prefix == "knownclusterblast":
             desc = "%80s (%s), %s" % (self.description, self.similarity_string, self.cluster_type)
-            acc = Text('<a xlink:href="https://mibig.secondarymetabolites.org/go/'
-                       + self.accession + '/%s" target="_blank">' % self.ref_cluster_number
-                       + self.accession + '</a>: '
-                       + desc, 5, 20 + v_offset)
+            # acc = Text('<a xlink:href="https://mibig.secondarymetabolites.org/go/'
+            #            + self.accession + '/%s" target="_blank">' % self.ref_cluster_number
+            #            + self.accession + '</a>: '
+            #            + desc, 5, 20 + v_offset)
         elif self.prefix == "general":
             acc = Text('<a xlink:href="https://antismash-db.secondarymetabolites.org/go/'
                        + self.accession + '/%s" target="_blank">' % self.ref_cluster_number
