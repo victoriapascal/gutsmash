@@ -364,11 +364,11 @@ def add_antismash_comments(records: List[Tuple[Record, SeqRecord]], options: Con
             "Ending at    :: {end}\n"
         ).format(start=start, end=end))
     antismash_comment = (
-        "##antiSMASH-Data-START##\n"
+        "##gutSMASH-Data-START##\n"
         "Version      :: {version}\n"
         "Run date     :: {date}\n"
         "%s"
-        "##antiSMASH-Data-END##"
+        "##gutSMASH-Data-END##"
         ).format(
             version=options.version,
             date=str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
@@ -612,7 +612,7 @@ def run_antismash(sequence_file: Optional[str], options: ConfigType) -> int:
 
 def _run_antismash(sequence_file: Optional[str], options: ConfigType) -> int:
     """ The real run_antismash, assumes logging is set up around it """
-    logging.debug("antiSMASH version: %s", options.version)
+    logging.debug("gutSMASH version: %s", options.version)
     _log_found_executables(options)
 
     detection_modules = get_detection_modules()
@@ -699,10 +699,10 @@ def _run_antismash(sequence_file: Optional[str], options: ConfigType) -> int:
     if options.debug:
         log_module_runtimes(results.timings_by_record)
 
-    logging.debug("antiSMASH calculation finished at %s; runtime: %s",
+    logging.debug("gutSMASH calculation finished at %s; runtime: %s",
                   datetime.now().strftime("%Y-%m-%d %H:%M:%S"), str(running_time))
 
-    logging.info("antiSMASH status: SUCCESS")
+    logging.info("gutSMASH status: SUCCESS")
     return 0
 
 

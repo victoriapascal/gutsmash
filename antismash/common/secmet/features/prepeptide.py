@@ -133,7 +133,7 @@ class Prepeptide(CDSMotif):  # pylint: disable=too-many-instance-attributes
                 ],
                 "locus_tag": [self.locus_tag],
                 "aSTool": [self.tool],
-                "tool": ["antismash"],
+                "tool": ["gutsmash"],
             }
             leader = SeqFeature(leader_location, type=self.type)
             leader.qualifiers.update(leader_qualifiers)
@@ -156,7 +156,7 @@ class Prepeptide(CDSMotif):  # pylint: disable=too-many-instance-attributes
             "monoisotopic_mass": ["{:.1f}".format(self.monoisotopic_mass)],
             "core_sequence": [self._core],
             "aSTool": [self.tool],
-            "tool": ["antismash"],
+            "tool": ["gutsmash"],
         })
         if self._leader:
             core.qualifiers.update({
@@ -181,7 +181,7 @@ class Prepeptide(CDSMotif):  # pylint: disable=too-many-instance-attributes
             tail.qualifiers['note'] = ['tail peptide', self.peptide_class]
             tail.qualifiers['prepeptide'] = ['tail']
             tail.qualifiers['aSTool'] = [self.tool]
-            tail.qualifiers["tool"] = ["antismash"]
+            tail.qualifiers["tool"] = ["gutsmash"]
             features.append(tail)
 
         return features

@@ -33,13 +33,13 @@ def generate_html(region_layer: RegionLayer, _results: ClusterBlastResults,
                     "genes within the current region.")
 
     if options_layer.cb_general or region.clusterblast is not None:
-        tooltip = base_tooltip % "clusters from the antiSMASH database and other clusters of interest"
-        tooltip += "<br>Click on an accession to open that entry in the antiSMASH database (if applicable)."
+        tooltip = base_tooltip % "clusters from the gutSMASH database and other clusters of interest"
+        #tooltip += "<br>Click on an accession to open that entry in the gutSMASH database (if applicable)."
         div = generate_div(region_layer, record_layer, options_layer, "clusterblast", tooltip)
         html.add_detail_section("ClusterBlast", div, "clusterblast")
     if options_layer.cb_knownclusters or region.knownclusterblast is not None:
-        tooltip = base_tooltip % "clusters from the MiBIG database"
-        tooltip += "<br>Click on an accession to open that entry in the MiBIG database."
+        # tooltip = base_tooltip % "clusters from the MiBIG database"
+        # tooltip += "<br>Click on an accession to open that entry in the MiBIG database."
         div = generate_div(region_layer, record_layer, options_layer, "knownclusterblast", tooltip)
         html.add_detail_section("KnownClusterBlast", div, "knownclusterblast")
 

@@ -146,7 +146,7 @@ def generate_webpage(records: List[Record], results: List[Dict[str, module_resul
                        "Multiple genes and area features can be selected by clicking them while holding the Ctrl key."
                        )
         doc_target = "understanding_output/#the-antismash-5-region-concept"
-        svg_tooltip += "<br>More detailed help is available %s." % docs_link("here", doc_target)
+        # svg_tooltip += "<br>More detailed help is available %s." % docs_link("here", doc_target)
 
         aux = template.render(records=record_layers_with_regions, options=options_layer,
                               version=options.version, extra_data=js_domains,

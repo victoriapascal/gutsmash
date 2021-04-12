@@ -95,7 +95,7 @@ class Protocluster(CDSCollection):
         for key, val in sorted(core_qualifiers.items()):
             core_feature.qualifiers[key] = val
             # this doesn't go through to the Feature annotations, so add the tool explicitly
-            core_feature.qualifiers["tool"] = ["antismash"]
+            core_feature.qualifiers["tool"] = ["gutsmash"]
 
         shared_qualifiers["core_location"] = [str(self.core_location)]
         neighbourhood_feature = super().to_biopython(shared_qualifiers)[0]

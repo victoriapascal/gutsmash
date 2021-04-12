@@ -138,6 +138,7 @@ def perform_knownclusterblast(options: ConfigType, record: Record,
 
 def mibig_protein_homology(blastoutput: str, record: Record, clusters: Dict[str, ReferenceCluster]
                            ) -> Dict[int, Dict[str, List[MibigEntry]]]:
+
     """ Constructs a mapping of clusters and genes to MiBiG hits
 
         Arguments:

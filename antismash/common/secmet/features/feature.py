@@ -224,7 +224,7 @@ class Feature:
             # sorting helps with consistency and comparison testing
             quals["note"] = sorted(notes)
         if self.created_by_antismash:
-            quals["tool"] = ["antismash"]
+            quals["tool"] = ["gutsmash"]
         if self._original_codon_start is not None:
             start = int(self._original_codon_start)
             quals["codon_start"] = [str(start + 1)]
@@ -278,7 +278,7 @@ class Feature:
         else:
             assert isinstance(feature, Feature)
         if leftovers:
-            feature.created_by_antismash = leftovers.get("tool") == ["antismash"]
+            feature.created_by_antismash = leftovers.get("tool") == ["gutsmash"]
             if "codon_start" in leftovers:
                 codon_start = int(leftovers.pop("codon_start")[0]) - 1
                 if not 0 <= codon_start <= 2:

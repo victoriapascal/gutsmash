@@ -357,10 +357,10 @@ class Cluster:
             #            + self.accession + '/%s" target="_blank">' % self.ref_cluster_number
             #            + self.accession + '</a>: '
             #            + desc, 5, 20 + v_offset)
-        elif self.prefix == "general":
-            acc = Text('<a xlink:href="https://antismash-db.secondarymetabolites.org/go/'
-                       + self.accession + '/%s" target="_blank">' % self.ref_cluster_number
-                       + self.full_description.replace(":", "</a>:", 1), 5, 20 + v_offset)
+        # elif self.prefix == "general":
+            # acc = Text('<a xlink:href="https://antismash-db.secondarymetabolites.org/go/'
+            #            + self.accession + '/%s" target="_blank">' % self.ref_cluster_number
+            #            + self.full_description.replace(":", "</a>:", 1), 5, 20 + v_offset)
         # Don't do any linking for subclusterblast
 
         acc.set_class("clusterblast-acc")

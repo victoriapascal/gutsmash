@@ -199,7 +199,7 @@ class Region(CDSCollection):
         cluster_record.annotations["comment"] = record.annotations.get("comment", '')
 
         # update the antiSMASH annotation to include some cluster details
-        comment_end_marker = "##antiSMASH-Data-END"
+        comment_end_marker = "##gutSMASH-Data-END"
         cluster_comment = ("NOTE: This is a single cluster extracted from a larger record!\n"
                            "Orig. start  :: {start}\n"
                            "Orig. end    :: {end}\n"
