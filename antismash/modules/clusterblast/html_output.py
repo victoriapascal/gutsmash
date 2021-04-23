@@ -40,6 +40,7 @@ def generate_html(region_layer: RegionLayer, _results: ClusterBlastResults,
     if options_layer.cb_knownclusters or region.knownclusterblast is not None:
         # tooltip = base_tooltip % "clusters from the MiBIG database"
         # tooltip += "<br>Click on an accession to open that entry in the MiBIG database."
+        tooltip = base_tooltip  % "clusters from the gutSMASH KnownClusterBlast database"
         div = generate_div(region_layer, record_layer, options_layer, "knownclusterblast", tooltip)
         html.add_detail_section("KnownClusterBlast", div, "knownclusterblast")
 
