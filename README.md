@@ -32,7 +32,7 @@ brew install hmmer2 hmmer diamond fasttree prodigal blast muscle brewsci/science
 Assuming python3 is installated, the python3 dependencies can be installed using pip3 with the following command:
 
 ```
-pip3 install biopython helperlibs bcbio-gff pysvg-py3 scikit-learn matplotlib pyScss Jinja2
+pip3 install biopython==1.76 helperlibs==0.1.9 bcbio-gff==0.6.6 pysvg-py3==0.2.2.post3 scikit-learn==0.22.1 matplotlib==3.2.1 pyscss==1.3.7 jinja2==2.11.1
 ```
 
 gutSMASH uses various databases that you will have to download. The different databases are available from here: https://gutsmash.bioinformatics.nl/download.html.  After downloading, they need to be placed into the correct path as detailed on the download page.
