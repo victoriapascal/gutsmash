@@ -27,7 +27,7 @@ RULE OD_lactate_related
     SUPERIORS porA, AAA_reductive_branch, Threonine2propionate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [POR, PFOR_II, POR_N]) and minimum(2, [HAD, HAD_2, IDH, Ldh_1_N, Aldedh, Succ_CoA_lig, Ldh_1_C]) and not (Gly_radical or Gly_430_pcre or Gly_8-9_TMA)  
+    CONDITIONS minimum(1, [POR, PFOR_II, POR_N]) and minimum(2, [HAD, HAD_2, IDH, Ldh_1_N, Aldedh, Succ_CoA_lig, Ldh_1_C]) and not (PFL_acetate1 or PFL_acetate2 or Gly_radical_scatole or PFL_proline or PFL_toluene or Gly_radical or Gly_430_pcre or Gly_8-9_TMA)  
 
 RULE OD_eut_pdu_related
     COMMENT eut/pdu related
@@ -41,73 +41,73 @@ RULE OD_AA_metabolism
     SUPERIORS porA, AAA_reductive_branch
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [POR, PFOR_II, POR_N]) and minimum(2, [ALS_ss_C, Thr_dehydrat_C, IlvC, ILVD_EDD, Gly_reductase, Proline_reductase, TnaA, TPL, HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1, BcrAD_BadFG, Beta_elim_lyase, AlaDh_PNT_C, CPSase_L_D2, MAAL_C, Urocanase, OTCace, Homoserine_dh, PALP, Cys_Met_Meta_PP, Sacchrp_dh_C, Lyase_aromatic, BKACE, ELFV_dehydrog, OKR_DC_1_C, OKR_DC_1_7_arginine, OKR_DC_1_5_ornithine, OKR_DC_1_5_lysine, Arginase, Glu_syn_central, Glu_synthase, GRDB]) and not (Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
+    CONDITIONS minimum(1, [POR, PFOR_II, POR_N]) and minimum(2, [ALS_ss_C, Thr_dehydrat_C, IlvC, ILVD_EDD, Gly_reductase, Proline_reductase, TnaA, TPL, HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1, BcrAD_BadFG, Beta_elim_lyase, AlaDh_PNT_C, CPSase_L_D2, MAAL_C, Urocanase, OTCace, Homoserine_dh, PALP, Cys_Met_Meta_PP, Sacchrp_dh_C, Lyase_aromatic, BKACE, ELFV_dehydrog, OKR_DC_1_C, OKR_DC_1_7_arginine, OKR_DC_1_5_ornithine, OKR_DC_1_5_lysine, Arginase, Glu_syn_central, Glu_synthase, GRDB]) and not (Gly_radical_scatole or Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
 
 RULE OD_fatty_acids
     COMMENT fatty acids metabolism related clusters
     SUPERIORS porA, acetate2butyrate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [POR, PFOR_II, POR_N]) and (minimum(2, [CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3, Carboxyl_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, AcetylCoA_hyd_C, AcetylCoA_hydro, CoA_trans, CoA_trans_2_CAF, HpaB, ACP_syn_III_C, E1_dh, HCDH, Thiolase_N, Thiolase_C, Ketoacyl-synt_C, adh_short, adh_short_C2, Butyrate_kinase, ECH_1, ECH_2, ACD1_car, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HBT, HBT_2]) or FA_synthesis) and not (Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
+    CONDITIONS minimum(1, [POR, PFOR_II, POR_N]) and (minimum(2, [CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3, Carboxyl_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, AcetylCoA_hyd_C, AcetylCoA_hydro, CoA_trans, CoA_trans_2_CAF, HpaB, ACP_syn_III_C, E1_dh, HCDH, Thiolase_N, Thiolase_C, Ketoacyl-synt_C, adh_short, adh_short_C2, Butyrate_kinase, ECH_1, ECH_2, ACD1_car, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HBT, HBT_2]) or FA_synthesis) and not (Gly_radical_scatole or Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
 
 RULE OD_aldehydes_related
     COMMENT unknwon function
     SUPERIORS porA
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [PFOR_II, POR, POR_N]) and minimum(1, [AFOR_C, AFOR_N, Aldedh]) and not (Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
+    CONDITIONS minimum(1, [PFOR_II, POR, POR_N]) and minimum(1, [AFOR_C, AFOR_N, Aldedh]) and not (Gly_radical_scatole or Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
 
 RULE OD_unknown
     COMMENT unknwon function
     SUPERIORS porA
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [POR_N, PFOR_II, POR]) and minimum(2, [Succ_CoA_lig, CoA_binding_2, CoA_binding, Ligase_CoA, PTAC]) and not (Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
+    CONDITIONS minimum(1, [POR_N, PFOR_II, POR]) and minimum(2, [Succ_CoA_lig, CoA_binding_2, CoA_binding, Ligase_CoA, PTAC]) and not (Gly_radical_scatole or Gly_radical or Gly_430_pcre or Gly_8-9_TMA)
 
 RULE TPP_fatty_acids
     COMMENT fatty acids metabolsim
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS TPP_enzyme_C and (minimum(2, [CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3, Carboxyl_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, AcetylCoA_hyd_C, AcetylCoA_hydro, Butyrate_kinase, CoA_trans, CoA_trans_2_CAF, HpaB, ACP_syn_III_C, E1_dh, HCDH, Thiolase_N, Thiolase_C, Ketoacyl-synt_C, adh_short, adh_short_C2, ECH_1, ECH_2, ACD1_car, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HBT, HBT_2]) or FA_synthesis) and not (PFL-like or PFL_6_pcresol or PFL_9_tma or Gly_radical or Gly_430_pcre) and not (POR or POR_N)
+    CONDITIONS TPP_enzyme_C and (minimum(2, [CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3, Carboxyl_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, AcetylCoA_hyd_C, AcetylCoA_hydro, Butyrate_kinase, CoA_trans, CoA_trans_2_CAF, HpaB, ACP_syn_III_C, E1_dh, HCDH, Thiolase_N, Thiolase_C, Ketoacyl-synt_C, adh_short, adh_short_C2, ECH_1, ECH_2, ACD1_car, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HBT, HBT_2]) or FA_synthesis) and not (PFL-like or PFL_6_pcresol or PFL_9_tma or Gly_radical or Gly_430_pcre or PFL_acetate1 or PFL_acetate2 or Gly_radical_scatole or PFL_proline or PFL_toluene) and not (POR or POR_N)
 
 RULE TPP_AA_metabolism
     COMMENT AA metabolism
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS TPP_enzyme_C and not (PFL-like or PFL_6_pcresol or PFL_9_tma or Gly_radical or Gly_430_pcre or Gly_8-9_TMA) and minimum(2, [ALS_ss_C, Thr_dehydrat_C, IlvC, ILVD_EDD, Gly_reductase, Proline_reductase, TnaA, TPL, HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1, BcrAD_BadFG, Beta_elim_lyase, AlaDh_PNT_C, CPSase_L_D2, MAAL_C, Urocanase, OTCace, Homoserine_dh, PALP, Cys_Met_Meta_PP, Sacchrp_dh_C, Lyase_aromatic, BKACE, ELFV_dehydrog, OKR_DC_1_C, OKR_DC_1_7_arginine, OKR_DC_1_5_ornithine, OKR_DC_1_5_lysine, Arginase, Glu_syn_central, Glu_synthase, GRDB]) and not  (POR or POR_N or PFOR_II)
+    CONDITIONS TPP_enzyme_C and not (PFL-like or PFL_6_pcresol or PFL_9_tma or Gly_radical or Gly_430_pcre or Gly_8-9_TMA or PFL_acetate1 or PFL_acetate2 or Gly_radical_scatole or PFL_proline or PFL_toluene) and minimum(2, [ALS_ss_C, Thr_dehydrat_C, IlvC, ILVD_EDD, Gly_reductase, Proline_reductase, TnaA, TPL, HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1, BcrAD_BadFG, Beta_elim_lyase, AlaDh_PNT_C, CPSase_L_D2, MAAL_C, Urocanase, OTCace, Homoserine_dh, PALP, Cys_Met_Meta_PP, Sacchrp_dh_C, Lyase_aromatic, BKACE, ELFV_dehydrog, OKR_DC_1_C, OKR_DC_1_7_arginine, OKR_DC_1_5_ornithine, OKR_DC_1_5_lysine, Arginase, Glu_syn_central, Glu_synthase, GRDB]) and not  (POR or POR_N or PFOR_II)
 
 RULE GR_AA_metabolism
     COMMENT AA biosynthesis or degradation
     SUPERIORS glutamate2butyric, AAA_reductive_branch, Threonine2propionate
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma]) and not NRDD and minimum(2, [ALS_ss_C, Thr_dehydrat_C, IlvC, ILVD_EDD, Gly_reductase, Proline_reductase, TnaA, TPL, HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1, BcrAD_BadFG, Beta_elim_lyase, AlaDh_PNT_C, CPSase_L_D2, MAAL_C, Urocanase, OTCace, Homoserine_dh, PALP, Cys_Met_Meta_PP, Sacchrp_dh_C, Lyase_aromatic, BKACE, ELFV_dehydrog, OKR_DC_1_C, OKR_DC_1_7_arginine, OKR_DC_1_5_ornithine, OKR_DC_1_5_lysine, Arginase, Glu_syn_central, Glu_synthase, GRDB]) and not (POR or POR_N or PFOR_II)
+    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma, PFL_acetate1, PFL_acetate2, Gly_radical_scatole, PFL_proline, PFL_toluene]) and not NRDD and minimum(2, [ALS_ss_C, Thr_dehydrat_C, IlvC, ILVD_EDD, Gly_reductase, Proline_reductase, TnaA, TPL, HGD-D, HG2B2, HG2B1, HAAA1, HleuD1, HleuD2, HleuS1, HleuS2, Lactoyl-CoA2, Lactoyl-CoA1, BcrAD_BadFG, Beta_elim_lyase, AlaDh_PNT_C, CPSase_L_D2, MAAL_C, Urocanase, OTCace, Homoserine_dh, PALP, Cys_Met_Meta_PP, Sacchrp_dh_C, Lyase_aromatic, BKACE, ELFV_dehydrog, OKR_DC_1_C, OKR_DC_1_7_arginine, OKR_DC_1_5_ornithine, OKR_DC_1_5_lysine, Arginase, Glu_syn_central, Glu_synthase, GRDB]) and not (POR or POR_N or PFOR_II)
 
 RULE GR_eut-pdu-related
     COMMENT eut related pathway
     SUPERIORS TMA, EUT_pathway, pdu
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, PFL-like, PFL_6_pcresol]) and minimum(2, [Aldedh, PTAC, EutQ, PduV-EutP, EutN_CcmL]) and not (PFL_9_tma or Gly_8-9_TMA or NRDD) and not EutB and not EutC and not (POR or POR_N or PFOR_II)
+    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, PFL-like, PFL_6_pcresol, PFL_acetate1, PFL_acetate2, Gly_radical_scatole, PFL_proline, PFL_toluene]) and minimum(2, [Aldedh, PTAC, EutQ, PduV-EutP, EutN_CcmL]) and not (PFL_9_tma or Gly_8-9_TMA or NRDD) and not EutB and not EutC and not (POR or POR_N or PFOR_II)
 
 RULE GR_fatty_acids
     COMMENT fatty acids metabolsim
     SUPERIORS glutamate2butyric
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma]) and not NRDD and (minimum(2, [CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3, Carboxyl_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, AcetylCoA_hyd_C, AcetylCoA_hydro, Butyrate_kinase, CoA_trans, CoA_trans_2_CAF, HpaB, ACP_syn_III_C, E1_dh, HCDH, Thiolase_N, Thiolase_C, Ketoacyl-synt_C, adh_short, adh_short_C2, ECH_1, ECH_2, ACD1_car, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HBT, HBT_2]) or FA_synthesis) and not (POR or POR_N or PFOR_II)
+    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma, PFL_acetate1, PFL_acetate2, Gly_radical_scatole, PFL_proline, PFL_toluene]) and not NRDD and (minimum(2, [CT_Propionyl_CoA1, CT_Propionyl_CoA2, CT_Propionyl_CoA3, Carboxyl_trans, CoA_trans_230_acto, CoA_trans_6_Glutaconate, AcetylCoA_hyd_C, AcetylCoA_hydro, Butyrate_kinase, CoA_trans, CoA_trans_2_CAF, HpaB, ACP_syn_III_C, E1_dh, HCDH, Thiolase_N, Thiolase_C, Ketoacyl-synt_C, adh_short, adh_short_C2, ECH_1, ECH_2, ACD1_car, Acyl-CoA_dh_1, Acyl-CoA_dh_2, HBT, HBT_2]) or FA_synthesis) and not (POR or POR_N or PFOR_II)
 
 RULE OD_GR_eut_related
     COMMENT fatty acids metabolsim
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, PFL-like, PFL_6_pcresol]) and not NRDD and minimum(1, [POR, POR_N, PFOR_II]) and minimum(2, [Aldedh, PTAC, EutQ, PduV-EutP, EutN_CcmL])
+    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, PFL-like, PFL_6_pcresol, PFL_acetate1, PFL_acetate2, Gly_radical_scatole, PFL_proline, PFL_toluene]) and not NRDD and minimum(1, [POR, POR_N, PFOR_II]) and minimum(2, [Aldedh, PTAC, EutQ, PduV-EutP, EutN_CcmL])
 
 RULE OD_GR_unassigned
     COMMENT fatty acids metabolsim
     CUTOFF 10
     NEIGHBOURHOOD 10
-    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma]) and not NRDD and minimum(1, [POR, POR_N, PFOR_II]) and minimum(2, [adh_short, HpaB, Hacid_dh_C, ELFV_dehydrog, Cys_Met_Meta_PP, Transketolase_C, adh_short_C2, Hacid_dh])
+    CONDITIONS minimum(1, [Gly_radical, Gly_430_pcre, Gly_8-9_TMA, PFL-like, PFL_6_pcresol, PFL_9_tma, PFL_acetate1, PFL_acetate2, Gly_radical_scatole, PFL_proline, PFL_toluene]) and not NRDD and minimum(1, [POR, POR_N, PFOR_II]) and minimum(2, [adh_short, HpaB, Hacid_dh_C, ELFV_dehydrog, Cys_Met_Meta_PP, Transketolase_C, adh_short_C2, Hacid_dh])
 
 RULE fatty_acids-unassigned
     COMMENT fatty acids related unassigned
