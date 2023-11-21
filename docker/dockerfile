@@ -5,12 +5,12 @@ WORKDIR /
 RUN gdown "https://drive.google.com/u/0/uc?id=1OdGgvInnj8Q7IxchF8b3iWoXrb72uEjx&export=download" -O ClusterBlast.zip
 
 
-FROM alpine/git as git
+FROM alpine as downloader
 
 WORKDIR /
 
-RUN git clone https://github.com/victoriapascal/gutsmash.git && \
-    (find gutsmash/antismash/ -type f | xargs chmod go+rw) && \
+COPY . /gutsmash
+RUN (find gutsmash/antismash/ -type f | xargs chmod go+rw) && \
     (find gutsmash/antismash/ -name "*.py" | xargs chmod go+x) && \
     (find gutsmash/antismash/ -type d | xargs chmod go+rwx)
 
@@ -35,6 +35,6 @@ COPY --chown=$MAMBA_USER:$MAMBA_USER docker/env.yaml /tmp/env.yaml
 RUN micromamba install -y -n base -f /tmp/env.yaml && \
     micromamba clean --all --yes
 
-COPY --from=git /gutsmash /usr/share/gutsmash
+COPY --from=downloader /gutsmash /usr/share/gutsmash
 
 RUN echo "alias gutsmash='python /usr/share/gutsmash/run_gutsmash.py'" >> ~/.bashrc
