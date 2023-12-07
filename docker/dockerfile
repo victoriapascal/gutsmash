@@ -16,15 +16,23 @@ RUN (find gutsmash/antismash/ -type f | xargs chmod go+rw) && \
 
 RUN wget https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
 RUN gunzip Pfam-A.hmm.gz
-RUN mv Pfam-A.hmm gutsmash/antismash/databases/Pfam-A.hmm
+RUN mv Pfam-A.hmm gutsmash/antismash/databases/
 
 RUN wget https://gutsmash.bioinformatics.nl/static/databases_to_share/resfam.zip
 RUN unzip resfam.zip
-RUN mv resfam gutsmash/antismash/databases/resfam
+RUN mv resfam gutsmash/antismash/databases/
+
+RUN wget https://gutsmash.bioinformatics.nl/static/databases_to_share/smcogs.hmm.zip
+RUN unzip smcogs.hmm.zip
+RUN mv smcogs.hmm gutsmash/antismash/detection/genefunctions/gut_data/
+
+# RUN wget https://gutsmash.bioinformatics.nl/static/databases_to_share/KnownClusterBlast.zip
+# RUN mkdir -p gutsmash/antismash/modules/clusterblast/data/known
+# RUN unzip KnownClusterBlast.zip -d gutsmash/antismash/modules/clusterblast/data/known
 
 COPY --from=gdown /ClusterBlast.zip /ClusterBlast.zip
 RUN unzip ClusterBlast.zip -d ClusterBlast
-RUN mv ClusterBlast gutsmash/antismash/databases/ClusterBlast
+RUN mv ClusterBlast gutsmash/antismash/databases/
 
 
 FROM mambaorg/micromamba:1.1.0
@@ -37,4 +45,4 @@ RUN micromamba install -y -n base -f /tmp/env.yaml && \
 
 COPY --from=downloader /gutsmash /usr/share/gutsmash
 
-RUN echo "alias gutsmash='python /usr/share/gutsmash/run_gutsmash.py'" >> ~/.bashrc
+ENV PATH=/opt/conda/bin/:/opt/conda/condabin:/usr/share/gutsmash/:$PATH
