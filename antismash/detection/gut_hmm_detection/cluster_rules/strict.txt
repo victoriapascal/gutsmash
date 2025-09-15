@@ -297,11 +297,11 @@ RULE PAPS2sulfide
     NEIGHBOURHOOD 10
     CONDITIONS cds(NIR_SIR_ferr and NIR_SIR) and minimum(2, [NAD_binding_1, Flavodoxin_1, FAD_binding_1]) and cds(PAPS_reduct and not DUF3440) and not minimum(2, [PAPS_reduct,cysN,GTP_EFTU])
 
-RULE ButyrylCoA2butyrate
-    COMMENT Catalyze the Butyryl-CoA to butyrate, terminal step of acetate to butyrate pathway
-    CUTOFF 10
+RULE Adenylylsulfate_reductase
+    COMMENT  Reduce adenylyl-sulfate, adenosine5phosphosulfate (APS) to sulfite
+    CUTOFF 1
     NEIGHBOURHOOD 10
-    CONDITIONS PTA_PTB and Acetate_kinase
+    CONDITIONS FAD_binding_2 and Fer4_9
 
 RULE r-butyrobetaine2TMA
     COMMENT import r-butyrobetaine and degrade to TMA
