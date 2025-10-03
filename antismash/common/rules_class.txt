@@ -51,7 +51,7 @@ Anaerobic_sulfite_redutase,SF
 Phenylpyruvate_ferredoxin_oxidoreductase,Other
 Sulfate2PAPS,SF
 PAPS2sulfide,SF
-ButyrylCoA2butyrate,SCFA
+Adenylylsulfate_reductase,SF
 sulfoquinovose-ED_pathway,SF
 xanthine_dehydrogenase,Other
 r-butyrobetaine2TMA,Other

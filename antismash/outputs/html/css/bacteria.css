@@ -991,23 +991,23 @@ rect.uric_acid2SCFA {
   background-color: #74cba5;
 }
 
-.ButyrylCoA2butyrate {
-  background-color: #52bf90;
+.Adenylylsulfate_reductase {
+  background-color: #519bfc;
 }
-.ButyrylCoA2butyrate a, .ButyrylCoA2butyrate a:link, .ButyrylCoA2butyrate a:visited {
+.Adenylylsulfate_reductase a, .Adenylylsulfate_reductase a:link, .Adenylylsulfate_reductase a:visited {
   color: black;
 }
-rect.ButyrylCoA2butyrate {
-  fill: #52bf90;
+rect.Adenylylsulfate_reductase {
+  fill: #519bfc;
   stroke: orangered;
 }
-.ButyrylCoA2butyrate.active {
+.Adenylylsulfate_reductase.active {
   border-color: orangered;
   border-width: 2px;
   border-style: solid;
 }
-.ButyrylCoA2butyrate:hover {
-  background-color: #74cba5;
+.Adenylylsulfate_reductase:hover {
+  background-color: #81b5f7;
 }
 
 .Anaerobic_sulfite_redutase {
